@@ -157,6 +157,7 @@ class singleCircle extends circleManager
 
 	public function initXY( $x , $y )
 	{
+		debug($x,$y);
 		if( !is_numeric($x) || !is_numeric($y) )
 		{
 			// throw

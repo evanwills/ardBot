@@ -60,11 +60,11 @@ interface circleInterface
 
 abstract class abstractCircle implements circleInterface {
 
-	protected $_originX;
-	protected $_originY;
+	protected $_originX = 0;
+	protected $_originY = 0;
 
-	protected $_radiusPointX;
-	protected $_radiusPointY;
+	protected $_radiusPointX = 0;
+	protected $_radiusPointY = 0;
 
 
 	/**

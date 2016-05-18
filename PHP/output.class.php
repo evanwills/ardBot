@@ -17,26 +17,24 @@ abstract class outputFile implements view {
 
 	public function __construct( $fileName , $width , $height  )
 	{
-		if( !is_string($fileName) )
+		if( !is_string($fileName) || $fileName === '' )
+		{
+			$fileName = '../output/ardBod__'.date('Y-m-d_H-i-s');
+			// throw
+		}
+		if( !is_numeric($width) || !is_numeric($height) )
 		{
 			// throw
 		}
-		else
+		$fileName .= '.'.$this->ext;
+		if( !file_exists($fileName) )
 		{
-			if( !is_numeric($width) || !is_numeric($height) )
-			{
+			$dir = dirname($fileName);
+			if( !is_dir($dir) || !is_writable($dir) ) {
 				// throw
 			}
-			$fileName .= '.'.$this->ext;
-			if( !file_exists($fileName) )
-			{
-				$dir = dirname($fileName);
-				if( !is_dir($dir) || !is_writable($dir) ) {
-					// throw
-				}
-			}
-			$this->f = fopen($fileName,'w+');
 		}
+		$this->f = fopen($fileName,'w+');
 	}
 
 	public function setXY( $x , $y )

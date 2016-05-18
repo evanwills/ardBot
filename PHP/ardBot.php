@@ -11,13 +11,13 @@ if(!function_exists('debug'))
 //	if( substr_compare( $path , '192.168.' , 0 , 8 ) == 0 ) { $path = 'localhost'; }
 	switch($path)
 	{
+		case 'evan':		// home laptop
+		case 'localhost':	$root = 'c:/wamp/www/';	$inc = $root.'includes/'; $classes = $cls = $root.'classes/'; break; // home laptop
+
 		case '192.168.18.128':	// work laptop (debian)
 		case '192.168.1.128':	// raspberry Pi
 		case 'antechinus':	// work laptop (debian)
-		case 'evan':		// home laptop
 		case 'wombat':	$root = '/var/www/';	$inc = $root.'includes/'; $classes = $cls = $root.'classes/'; break; // home laptop
-
-		case 'localhost':	$root = 'c:/wamp/www/';	$inc = $root.'includes/'; $classes = $cls = $root.'classes/'; break; // home laptop
 
 		case 'burrawangcoop.net.au':	// DreamHost
 		case 'adra.net.au':		// DreamHost
@@ -60,6 +60,7 @@ if(!function_exists('debug'))
 	class emergency_log { public function write( $msg , $level = 0 , $die = false ){ echo $msg; if( $die === true ) { exit; } } }
 };
 
+
 // END: debug include
 // ==================================================================
 
@@ -69,7 +70,7 @@ require_once('circle-interface.class.php');
 require_once('circle-shape.class.php');
 require_once('circle-manager.class.php');
 require_once('boom.class.php');
-require_once('DM3_working-model.class.php');
+require_once('ardBot_working-model.class.php');
 require_once('output.class.php');
 
 define( 'TIMES' , 10000 );
@@ -79,7 +80,7 @@ define( 'WIDTH' , 5000 );
 
 define('OFFSET', WIDTH / 2);
 define('BOOM_ONE_LEN', WIDTH * 2);
-define('BOOM_TWO_LEN', WIDTH * 2.25);
+define('BOOM_TWO_LEN', WIDTH * 2.25);debug(BOOM_ONE_LEN,BOOM_TWO_LEN);
 
 /*
 {
@@ -175,12 +176,12 @@ define('BOOM_TWO_LEN', WIDTH * 2.25);
 
 $circleOne = new multiCircle(
 	new circle(
-		 180
+		 200
 		,new stepperFixed( 0 )
 		,new stepperFixed( BOOM_ONE_LEN )
 	)
 );
-$circleOne->initXY( OFFSET , OFFSET );
+$circleOne->initXY( OFFSET , OFFSET );exit;
 $circleOne->setChildCircle(
 	new multiCircle(
 		new circle(
@@ -203,7 +204,7 @@ $circleOne->setChildCircle(
 	//
 $circleTwo = new multiCircle(
 	new circle(
-		120
+		160
 		,new stepperFixed( 0 )
 		,new stepperFixed( BOOM_TWO_LEN )
 	)
@@ -249,7 +250,7 @@ $MD3 = new dm3WorkingModel(
 
 
 
-$output = new outputSVG( '.'.PATH_SEPARATOR.'output'.PATH_SEPARATOR.'MD3_'.date('Y-m-d_H-i-s') , WIDTH , WIDTH );
+$output = new outputSVG( '' , WIDTH , WIDTH );
 $output->openWrap();
 
 for( $a = TIMES ; $a >= 0 ; $a -= 1) {

@@ -110,6 +110,18 @@ abstract class stepper implements stepperInterface
 
 class stepperFixed extends stepper
 {
+
+	public function __construct( $step )
+	{
+		if( !is_numeric($step) )
+		{
+			// throw
+		}
+		$this->_step = $step;
+		$this->_min = $step;
+		$this->_max = $step;
+	}
+
 	protected function _updateStep()
 	{
 		// do nothing
@@ -129,17 +141,6 @@ class stepperFixed extends stepper
 			$this->_stepCumulative = $this->_cumulativeMin + ( $this->_stepCumulative - $this->_cumulativeMax );
 		}
 		return $this->_stepCumulative;
-	}
-
-	public function __construct( $step )
-	{
-		if( !is_numeric($step) )
-		{
-			// throw
-		}
-		$this->_step = $step;
-		$this->_min = $step;
-		$this->_max = $step;
 	}
 }
 
