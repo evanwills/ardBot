@@ -1,10 +1,11 @@
 # ardBot (Anal-Retentive Doodle Bot)
 
-ardBot is a robot/machine that draws patterns based on how two drawing arms connected at the "pen" end and connected to sparate rotating disks at the other
+ardBot is a robot/machine that draws patterns based on how two drawing arms connected at the "pen" end and connected to sparate rotating disks at the other end
 
 It is inspired by [Drawing Machine II](https://www.youtube.com/watch?v=BG9e06IWAxE) and [drawing machine maios 3](https://www.youtube.com/watch?v=rukYhTylK_M)
 
 ##Parameters:
+*	drawing space [x, y]
 *	drawing table rotation speed (negative = counter-clockwise)
 *	drawing arms configuration:
 	*	straight (symetrical/asymetrical)
