@@ -39,6 +39,6 @@ This project will contain both the driver code for the physical machine and the 
 * 	[drawing machine maios 9](https://www.youtube.com/watch?v=akI78l1gXkU)
 * 	[Maios 7 2a](https://www.youtube.com/watch?v=nnPEJYOR9nM)
 * 	[kunstmaschine maios 5 ](https://www.youtube.com/watch?v=W5mE010nZKA)
-* 	[Meccano guilloch� drawing machine](https://www.youtube.com/watch?v=Csf-62DfY48)
+* 	[Meccano guilloch&eacute; drawing machine](https://www.youtube.com/watch?v=Csf-62DfY48)
 * 	[drawing machine ](https://www.youtube.com/watch?v=2DjvtjgRdGA)
 *	[Master Guillocheur &ndash; M&eacute;tiers D'Art &ndash;  Vacheron Constantin](https://www.youtube.com/watch?v=gbQgvNlVf2c) (not quite the same thing but interesting and pssibly useful idea for working with porcelain)
