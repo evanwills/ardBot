@@ -4,12 +4,12 @@
 #include <EVAN_Circle-Shape.cpp>
 #include <EVAN_Circle-Manager.cpp>
 #include <EVAN_Boom.cpp>
-#include <EVAN_MD3_working-model.cpp>
+#include <EVAN_whirliDoodle_model.cpp>
 
 const int TIMES = 10000;
 const int WIDTH = 5000;
 incrementorInterface loopTimes;
-dm3WorkingModel MD3;
+whirliDoodleModel doodle;
 
 const double OFFSET = WIDTH / 2;
 const double BOOM_ONE_LEN = WIDTH * 2;
@@ -168,7 +168,7 @@ void setup() {
 	);
 
 
-	MD3 = new dm3WorkingModel(
+	doodle = new whirliDoodleModel(
 		 WIDTH	// width
 		,WIDTH	// height
 		,new straightBoom( // booms

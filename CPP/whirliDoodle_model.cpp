@@ -1,4 +1,4 @@
-class dm3WorkingModel {
+class whirliDoodleModel {
 	private:
 		unsigned int _width;
 		unsigned int _height;
@@ -10,7 +10,7 @@ class dm3WorkingModel {
 		double _y;
 
 	public:
-		dm3WorkingModel( unsigned int width , unsigned int height , boomIntegrator booms , circleManager firstCircle , circleManager secondCircle , circleShape	tableRotator ) {
+		whirliDoodleModel( unsigned int width , unsigned int height , boomIntegrator booms , circleManager firstCircle , circleManager secondCircle , circleShape	tableRotator ) {
 			_width = width;
 			_height = height;
 			_booms = booms;
