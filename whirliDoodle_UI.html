@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Asset ID: #416460 -->
+        <meta charset="utf-8" />
+		<title>WhirliDoodle user interface</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width, height=device-height" />
+
+		<script type="text/javascript" src="../ACU/acu-responsive/assets/js/jquery_1-11-3.min.js"></script>
+		<link rel="stylesheet" href="../ACU/acu-responsive/assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../ACU/acu-responsive/assets/css/bootstrap-theme.css" />
+		<link rel="stylesheet" href="ardBot.css" />
+
+		<style type="text/css">
+		</style>
+	</head>
+	<body class="body">
+		<h1>WhirliDoodle user interface</h1>
+
+
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation"><a href="#drawing-table" aria-controls="drawing-table" role="tab" data-toggle="tab">Drawing table</a></li>
+			<li role="presentation" class="active"><a href="#booms" aria-controls="booms" role="tab" data-toggle="tab">Booms</a></li>
+			<li role="presentation"><a href="#wheel-1" aria-controls="wheel-1" role="tab" data-toggle="tab">Wheel 1</a></li>
+			<li role="presentation"><a href="#wheel-2" aria-controls="wheel-2" role="tab" data-toggle="tab">Wheel 2</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane fade in" id="drawing-table">
+				<fieldset>
+					<legend>Drawing Table</legend>
+					<ul class="row">
+						<li class="col-sm-6">
+							<div class="input-group">
+								<label for="tableY" class="input-group-addon">Table width X:</label>
+								<input type="number" name="table-width" id="table-width" class="form-control" value="1000" required="required" pattern="^[0-9]+$" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="col-sm-6">
+							<div class="input-group">
+								<label for="tableX" class="input-group-addon">Table width Y:</label>
+								<input type="number" name="table-width" id="table-width" class="form-control" value="1000" required="required" pattern="^[0-9]+$" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="fine-control col-md-12">
+							<div class="input-group">
+								<label for="table-rotation-speed" class="input-group-addon">Table rotation Speed:</label>
+								<input type="number" name="table-rotation-speed" id="table-rotation-speed" value="0.00000" class="form-control" required="required" min="-2" max="2" step="0.0001" data-lastval="0" />
+								<span class="input-group-addon">(RPM)</span>
+							</div>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+			<div role="tabpanel" class="tab-pane fade in active" id="booms">
+				<fieldset>
+					<legend>Booms </legend>
+					<ul class="row">
+						<li class="col-xs-12">
+							<fieldset>
+								<legend class="h4">configuration</legend>
+								<p class="has-btns">
+									<input type="radio" name="boom-config" id="boom-config_V" value="v" checked="checked" class="boom-config controlled-by-label" />
+									<label for="boom-config_V" class="btn btn-default" title="Booms are anchored to the wheels at one end and to each at the other end">Straight (V)</label>
+
+									<input type="radio" name="boom-config" id="boom-config_Y" value="y" class="boom-config controlled-by-label" />
+									<label for="boom-config_Y" class="btn btn-default" title="One boom is long and is anchored to a wheel at one end and the pen at the other the other boom is short and anchored a wheel at one end and to apoint along the long boom's length at the other">Y</label>
+
+									<input type="radio" name="boom-config" id="boom-config_T" value="t" class="boom-config controlled-by-label" />
+									<label for="boom-config_T" class="btn btn-default" title="the wheels are joined by a straight boom. From that boom a second boom extends at right angles and hold the pen. ">T</label>
+
+									<input type="radio" name="boom-config" id="boom-config_X" value="x" class="boom-config controlled-by-label" />
+									<label for="boom-config_X" class="btn btn-default" title="two (primary) booms each have one end connected to a wheel. They pivot at a point along their length and have an additional (secondary) booms that connect the ends of primary booms to each other. (This makes the effective length of the boom dynamic)">Scissor (X)</label>
+								</p>
+							</fieldset>
+						</li>
+						<li class="col-xs-12 do-symetrical">
+							<fieldset>
+								<legend class="h5">Symetrical</legend>
+								<p class="has-btns">
+									<input type="radio" name="is-symetrical" id="is-symetrical_Y" value="y" class="is-symetrical controlled-by-label" checked="checked" />
+									<label for="is-symetrical_Y" class="btn btn-default">Symetrical</label>
+
+
+									<input type="radio" name="is-symetrical" id="is-symetrical_N" value="n" class="is-symetrical controlled-by-label" />
+									<label for="is-symetrical_N" class="btn btn-default">Not symetrical</label>
+								</p>
+							</fieldset>
+						</li>
+<!-- -->
+<!-- -->
+						<li class="clearfix"></li>
+<!-- -->
+<!-- -->
+						<li class="col-sm-6" id="boom-1-length_wrap">
+							<div class="input-group">
+								<label for="boom-1-length" class="input-group-addon">Boom 1 length:</label>
+								<input type="number" name="boom-1-length" id="boom-1-length" class="form-control" required="required" value="1250" pattern="^[0-9]+$" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="col-sm-6" id="boom-3-length_wrap">
+							<div class="input-group">
+								<label for="boom-3-length" class="input-group-addon">Boom 1 extension length:</label>
+								<input type="number" name="boom-3-length" id="boom-3-length" class="form-control" value="" pattern="^[0-9]+$" title="If not specified, will default to the length between the pivot and non-wheel end of the primary boom" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="col-sm-6" id="boom-1-relative-length_wrap">
+							<div class="input-group">
+								<input type="checkbox" name="boom-1-relative-length" id="boom-1-relative-length" class="form-control" value="variable" title="when the space between the two wheels is small boom is long as space between wheels increases boom length decreases in proportion" />
+								<label for="boom-1-relative-length" class="input-group-addon">Boom 1 length is varies</label>
+							</div>
+						</li>
+						<li class="col-sm-6" id="boom-2-length_wrap">
+							<div class="input-group">
+								<label for="boom-2-length" class="input-group-addon">Boom 2 length:</label>
+								<input type="number" name="boom-2-length" id="boom-2-length" class="form-control" value="1500" pattern="^[0-9]+$" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="col-sm-6" id="boom-4-length_wrap">
+							<div class="input-group">
+								<label for="boom-4-length" class="input-group-addon">Boom 2 extension length:</label>
+								<input type="number" name="boom-4-length" id="boom-2-length" class="form-control" value="" pattern="^[0-9]+$" title="If not specified, will default to the length between the pivot and non-wheel end of the primary boom" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+<!-- -->
+						<li class="fine-control col-xs-12" id="pivot-offset_boom-1_wrap">
+							<div class="input-group">
+								<label for="pivot-offset_boom-1" class="input-group-addon">Pivot Offset <span id="pivot-offset_boom-1_extra">Boom 1</span>:</label>
+								<input type="number" name="pivot-offset_boom-1" id="pivot-offset_boom-1" value="0" class="form-control" min="0" max="100" step="0.01" />
+								<span class="input-group-addon">%</span>
+							</div>
+						</li>
+						<li class="fine-control col-xs-12" id="pivot-offset_boom-2_wrap">
+							<div class="input-group">
+								<label for="pivot-offset_boom-2" class="input-group-addon">Pivot Offset boom 2:</label>
+								<input type="number" name="pivot-offset_boom-2" id="pivot-offset_boom-2" value="0" class="form-control" min="0" max="100" step="0.01" />
+								<span class="input-group-addon">%</span>
+							</div>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+			<div role="tabpanel" class="tab-pane fade in" id="wheel-1">
+				<fieldset>
+					<legend>Wheel 1</legend>
+					<ul class="row">
+						<li class="col-sm-6">
+							<div class="input-group">
+								<label for="wheel-1-offset" class="input-group-addon">Offset from table centre:</label>
+								<input type="number" name="wheel-1-offset" id="wheel-1-offset" class="form-control" required="required" value="1250" pattern="^[0-9]+$" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="col-sm-6">
+							<div class="input-group">
+								<label for="wheel-1-radius" class="input-group-addon">Radius:</label>
+								<input type="number" name="wheel-1-radius" id="wheel-1-radius" class="form-control" required="required" value="350" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="fine-control col-md-12">
+							<div class="input-group">
+								<label for="wheel-1-rotation-speed" class="input-group-addon">Rotation speed:</label>
+								<input type="number" name="wheel-1-rotation-speed" id="wheel-1-rotation-speed" value="0.00000" class="form-control" required="required" min="-10" max="10" step="0.001" data-lastval="0" />
+								<span class="input-group-addon">(RPM)</span>
+							</div>
+						</li>
+						<li class="col-md-12">
+							<input type="checkbox" name="wheel-1-has-child" id="wheel-1-has-child" value="v" class="boom-config show-hide-fieldset" />
+							<label for="wheel-1-has-child" class="btn btn-default">Has child wheel</label>
+							<fieldset>
+								<legend class="h4">Child Wheel</legend>
+								<ul class="row">
+									<li>
+										<div class="input-group">
+											<label for="wheel-1-child-radius" class="input-group-addon">Radius:</label>
+											<input type="number" name="wheel-1-child-radius" id="wheel-1-child-radius" class="form-control" value="100" required="required" />
+											<span class="input-group-addon">mm</span>
+										</div>
+									</li>
+									<li class="fine-control">
+										<div class="input-group">
+											<label for="wheel-1-child-rotation-speed" class="input-group-addon">Rotation speed:</label>
+											<input type="number" name="wheel-1-child-rotation-speed" id="wheel-1-child-rotation-speed" value="0.00000" class="form-control" required="required" min="-10" max="10" step="0.001" data-lastval="0" />
+											<span class="input-group-addon">(RPM)</span>
+										</div>
+									</li>
+									<li>
+										<input type="checkbox" name="wheel-1-has-grandchild" id="wheel-1-has-grandchild" value="v" class="boom-config show-hide-fieldset" />
+										<label for="wheel-1-has-grandchild" class="btn btn-default">Has grandchild wheel</label>
+										<fieldset>
+											<legend class="h4">Grand Child Wheel</legend>
+											<ul class="row">
+												<li>
+													<div class="input-group">
+														<label for="wheel-1-grandchild-radius" class="input-group-addon">Radius:</label>
+														<input type="number" name="wheel-1-grandchild-radius" id="wheel-1-grandchild-radius" value="" class="form-control" required="required" />
+														<span class="input-group-addon">mm</span>
+													</div>
+												</li>
+												<li class="fine-control col-md-12">
+													<div class="input-group">
+														<label for="wheel-1-grandchild-rotation-speed" class="input-group-addon">Rotation speed:</label>
+														<input type="number" name="wheel-1-grandchild-rotation-speed" id="wheel-1-grandchild-rotation-speed" value="0.00000" class="form-control" required="required" min="-10" max="10" step="0.001" data-lastval="0" />
+														<span class="input-group-addon">(RPM)</span>
+													</div>
+												</li>
+											</ul>
+										</fieldset>
+									</li>
+								</ul>
+							</fieldset>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+			<div role="tabpanel" class="tab-pane fade in" id="wheel-2">
+				<fieldset>
+					<legend>Wheel 2</legend>
+					<ul class="row">
+						<li class="col-sm-6 col-md-4">
+							<div class="input-group">
+								<label for="wheel-2-offset" class="input-group-addon">Offset from table centre:</label>
+								<input type="number" name="wheel-2-offset" id="wheel-2-offset" class="form-control" required="required" value="1500" pattern="^[0-9]+$" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="col-sm-6 col-md-5">
+							<div class="input-group">
+								<label for="wheel-2-angle-wheel-1" class="input-group-addon">Angle offset from Wheel 1:</label>
+								<input type="number" name="wheel-2-angle-wheel-1" id="wheel-2-angle-wheel-1" class="form-control" required="required" value="90" min="30" max="120" step="0.1" />
+								<span class="input-group-addon">Degrees</span>
+							</div>
+						</li>
+						<li class="col-sm-6 col-md-3">
+							<div class="input-group">
+								<label for="wheel-2-radius" class="input-group-addon">Radius:</label>
+								<input type="number" name="wheel-2-radius" id="wheel-2-radius" class="form-control" required="required" value="300" />
+								<span class="input-group-addon">mm</span>
+							</div>
+						</li>
+						<li class="fine-control col-md-12">
+							<div class="input-group">
+								<label for="wheel-2-rotation-speed" class="input-group-addon">Rotation speed:</label>
+								<input type="number" name="wheel-2-rotation-speed" id="wheel-2-rotation-speed" value="0.00000" class="form-control" required="required" min="-10" max="10" step="0.001" data-lastval="0" />
+								<span class="input-group-addon">(RPM)</span>
+							</div>
+						</li>
+						<li class="col-md-12">
+							<input type="checkbox" name="wheel-2-has-child" id="wheel-2-has-child" value="v" class="boom-config show-hide-fieldset" />
+							<label for="wheel-2-has-child" class="btn btn-default">Has child wheel</label>
+							<fieldset>
+								<legend class="h4">Child Wheel</legend>
+								<ul class="row">
+									<li>
+										<div class="input-group">
+											<label for="wheel-2-child-radius" class="input-group-addon">Radius:</label>
+											<input type="number" name="wheel-2-child-radius" id="wheel-2-child-radius" class="form-control" value="150" required="required" />
+											<span class="input-group-addon">mm</span>
+										</div>
+									</li>
+									<li class="fine-control">
+										<div class="input-group">
+											<label for="wheel-2-child-rotation-speed" class="input-group-addon">Rotation speed:</label>
+											<input type="number" name="wheel-2-child-rotation-speed" id="wheel-2-child-rotation-speed" value="0.00000" class="form-control" required="required" min="-10" max="10" step="0.001" data-lastval="0" />
+											<span class="input-group-addon">(RPM)</span>
+										</div>
+									</li>
+									<li>
+										<input type="checkbox" name="wheel-2-has-grandchild" id="wheel-2-has-grandchild" value="v" class="boom-config show-hide-fieldset" />
+										<label for="wheel-2-has-grandchild" class="btn btn-default">Has grandchild wheel</label>
+										<fieldset>
+											<legend class="h4">Grand Child Wheel</legend>
+											<ul class="row">
+												<li>
+													<div class="input-group">
+														<label for="wheel-2-grandchild-radius" class="input-group-addon">Radius:</label>
+														<input type="number" name="wheel-2-grandchild-radius" id="wheel-2-grandchild-radius" value="" class="form-control" required="required" />
+														<span class="input-group-addon">mm</span>
+													</div>
+												</li>
+												<li class="fine-control col-md-12">
+													<div class="input-group">
+														<label for="wheel-2-grandchild-rotation-speed" class="input-group-addon">Rotation speed:</label>
+														<input type="number" name="wheel-2-grandchild-rotation-speed" id="wheel-2-grandchild-rotation-speed" value="0.00000" class="form-control" required="required" min="-10" max="10" step="0.001" data-lastval="0" />
+														<span class="input-group-addon">(RPM)</span>
+													</div>
+												</li>
+											</ul>
+										</fieldset>
+									</li>
+								</ul>
+							</fieldset>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+
+		<div id="templates" style="display: none;">
+			<div id="fine-control">
+							<ul>
+								<li class="input-group">
+									<label for="{{ID}}_course" class="input-group-addon speed">Course control:</label>
+									<input type="range" name="{{ID}}_course" id="{{ID}}_course" value="" class="form-control course-input" min="{{MIN}}" max="{{MAX}}" step="{{STEP}}" data-id="{{ID}}" />
+								</li>
+								<li class="input-group">
+									<label for="{{ID}}_fine" class="input-group-addon speed" >Fine control:</label>
+									<input type="range" name="{{ID}}_fine" id="{{ID}}_fine" value="0" class="form-control fine-input" min="{{MIN_SUB}}" max="{{MAX_SUB}}" step="{{STEP_SUB}}" data-id="{{ID}}" />
+								</li>
+							</ul>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="../ACU/acu-responsive/assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="ardBot_UI.js"></script>
+<!--
+		<script type="text/javascript">
+
+		</script>
+-->
+	</body>
+</html>
