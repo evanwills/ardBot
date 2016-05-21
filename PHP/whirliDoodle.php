@@ -70,7 +70,7 @@ require_once('circle-interface.class.php');
 require_once('circle-shape.class.php');
 require_once('circle-manager.class.php');
 require_once('boom.class.php');
-require_once('ardBot_working-model.class.php');
+require_once('whirliDoodle_model.class.php');
 require_once('output.class.php');
 
 define( 'TIMES' , 10000 );
