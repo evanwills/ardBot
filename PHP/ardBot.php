@@ -235,7 +235,7 @@ $tableRotator = new circle( 0 , new stepperFixed( 0.13 ) , new stepperFixed( OFF
 $tableRotator->initXY( OFFSET , OFFSET );
 
 
-$MD3 = new dm3WorkingModel(
+$MD3 = new whirliDoodleModel(
 	 WIDTH	// width
 	,WIDTH	// height
 	,new straightBoom( // booms

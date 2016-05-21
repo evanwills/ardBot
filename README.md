@@ -1,6 +1,6 @@
-# ardBot (Anal-Retentive Doodle Bot)
+# whirliDoodle
 
-ardBot is a robot/machine that draws patterns based on how two drawing arms connected at the "pen" end and connected to sparate rotating disks at the other end. It basically creates a physical representation of algorithmic art. The configuration the physical configuration of the wheels and arms in relation to each other and the drawing table combined with the speed and direction of the rotation for the parameters of the algorithm.
+whirliDoodle is a robot/machine that draws patterns based on how two drawing arms connected at the "pen" end and connected to sparate rotating disks at the other end. It basically creates a physical representation of algorithmic art. The configuration the physical configuration of the wheels and arms in relation to each other and the drawing table combined with the speed and direction of the rotation for the parameters of the algorithm.
 
 It is inspired by [Drawing Machine II](https://www.youtube.com/watch?v=BG9e06IWAxE) and [drawing machine maios 3](https://www.youtube.com/watch?v=rukYhTylK_M) (and others - see bottom for more links).
 

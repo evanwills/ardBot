@@ -19,7 +19,7 @@ abstract class outputFile implements view {
 	{
 		if( !is_string($fileName) || $fileName === '' )
 		{
-			$fileName = '../output/ardBod__'.date('Y-m-d_H-i-s');
+			$fileName = '../output/whirliDoodle__'.date('Y-m-d_H-i-s');
 			// throw
 		}
 		if( !is_numeric($width) || !is_numeric($height) )

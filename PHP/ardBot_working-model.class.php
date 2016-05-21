@@ -1,6 +1,6 @@
 <?php
 
-class dm3WorkingModel {
+class whirliDoodleModel {
 	private $_width;
 	private $_height;
 	private $_booms;
