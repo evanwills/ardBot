@@ -45,20 +45,21 @@
 								<span class="input-group-addon">mm</span>
 							</div>
 						</li>
-						<li class="col-sm-6">
+						<li class="col-xs-5">
 								<input type="radio" name="table-oscillate" id="table-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
 								<label for="table-oscillate_N" class="btn btn-default">Rotate</label>
 
 								<input type="radio" name="table-oscillate" id="table-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
 								<label for="table-oscillate_Y" class="btn btn-default">Oscillate</label>
 						</li>
-						<li class="col-sm-6" id="table-oscillate_wrap">
+						<li class="col-xs-7" id="table-oscillate_wrap">
 							<div class="input-group">
 								<label for="table-oscillate-range" class="input-group-addon">Oscillation range:</label>
 								<input type="number" name="table-oscillate-range" id="table-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
 								<span class="input-group-addon">degrees</span>
 							</div>
 						</li>
+						<li class="clearfix"></li>
 						<li class="fine-control col-md-12">
 							<div class="input-group">
 								<label for="table-rotation-speed" class="input-group-addon">Table rotation Speed:</label>
@@ -73,7 +74,7 @@
 				<fieldset>
 					<legend>Booms </legend>
 					<ul class="row">
-						<li class="col-xs-12">
+						<li class="col-xs-12 li-close">
 							<fieldset>
 								<legend class="h4">configuration</legend>
 								<p class="has-btns">
@@ -91,7 +92,7 @@
 								</p>
 							</fieldset>
 						</li>
-						<li class="col-xs-12 do-symetrical">
+						<li class="col-xs-12 do-symetrical li-close">
 							<fieldset>
 								<legend class="h5">Symetrical</legend>
 								<p class="has-btns">
@@ -126,9 +127,17 @@
 						<li class="col-sm-6" id="boom-1-relative-length_wrap">
 							<div class="input-group">
 								<input type="checkbox" name="boom-1-relative-length" id="boom-1-relative-length" class="form-control" value="variable" title="when the space between the two wheels is small boom is long as space between wheels increases boom length decreases in proportion" />
-								<label for="boom-1-relative-length" class="input-group-addon">Boom 1 length is varies</label>
+								<label for="boom-1-relative-length" class="input-group-addon">Boom length is dynamic</label>
 							</div>
 						</li>
+						<li class="fine-control col-xs-12" id="pivot-offset_boom-1_wrap">
+							<div class="input-group">
+								<label for="pivot-offset_boom-1" class="input-group-addon">Pivot Offset <span id="pivot-offset_boom-1_extra">Boom 1</span>:</label>
+								<input type="number" name="pivot-offset_boom-1" id="pivot-offset_boom-1" value="0" class="form-control" min="0" max="100" step="0.01" />
+								<span class="input-group-addon">%</span>
+							</div>
+						</li>
+						<li class="clearfix"></li>
 						<li class="col-sm-6" id="boom-2-length_wrap">
 							<div class="input-group">
 								<label for="boom-2-length" class="input-group-addon">Boom 2 length:</label>
@@ -144,13 +153,6 @@
 							</div>
 						</li>
 <!-- -->
-						<li class="fine-control col-xs-12" id="pivot-offset_boom-1_wrap">
-							<div class="input-group">
-								<label for="pivot-offset_boom-1" class="input-group-addon">Pivot Offset <span id="pivot-offset_boom-1_extra">Boom 1</span>:</label>
-								<input type="number" name="pivot-offset_boom-1" id="pivot-offset_boom-1" value="0" class="form-control" min="0" max="100" step="0.01" />
-								<span class="input-group-addon">%</span>
-							</div>
-						</li>
 						<li class="fine-control col-xs-12" id="pivot-offset_boom-2_wrap">
 							<div class="input-group">
 								<label for="pivot-offset_boom-2" class="input-group-addon">Pivot Offset boom 2:</label>
@@ -165,28 +167,35 @@
 				<fieldset>
 					<legend>Wheel 1</legend>
 					<ul class="row">
-						<li class="col-sm-6">
+						<li class="col-md-12 col-lg-5">
 							<div class="input-group">
 								<label for="wheel-1-offset" class="input-group-addon">Offset from table centre:</label>
 								<input type="number" name="wheel-1-offset" id="wheel-1-offset" class="form-control" required="required" value="1250" pattern="^[0-9]+$" />
 								<span class="input-group-addon">mm</span>
 							</div>
 						</li>
-						<li class="col-sm-6">
+						<li class="col-sm-6 col-lg-3">
 							<div class="input-group">
 								<label for="wheel-1-radius" class="input-group-addon">Radius:</label>
 								<input type="number" name="wheel-1-radius" id="wheel-1-radius" class="form-control" required="required" value="350" />
 								<span class="input-group-addon">mm</span>
 							</div>
 						</li>
-						<li class="col-sm-6">
+						<li class="col-sm-6 col-lg-4">
+							<div class="input-group">
+								<label for="wheel-1-initial-angle" class="input-group-addon">Initial Angle:</label>
+								<input type="number" name="wheel-1-initial-angle" id="wheel-1-initial-angle" class="form-control" value="0" min="-180" max="180" />
+								<span class="input-group-addon">degrees</span>
+							</div>
+						</li>
+						<li class="col-xs-5">
 								<input type="radio" name="wheel-1-oscillate" id="wheel-1-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
 								<label for="wheel-1-oscillate_N" class="btn btn-default">Rotate</label>
 
 								<input type="radio" name="wheel-1-oscillate" id="wheel-1-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
 								<label for="wheel-1-oscillate_Y" class="btn btn-default">Oscillate</label>
 						</li>
-						<li class="col-sm-6" id="wheel-1-oscillate_wrap">
+						<li class="col-xs-7" id="wheel-1-oscillate_wrap">
 							<div class="input-group">
 								<label for="wheel-1-oscillate-range" class="input-group-addon">Oscillation range:</label>
 								<input type="number" name="wheel-1-oscillate-range" id="wheel-1-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
@@ -207,27 +216,35 @@
 							<fieldset>
 								<legend class="h4">Child Wheel</legend>
 								<ul class="row">
-									<li>
+									<li class="col-sm-5 col-md-4">
 										<div class="input-group">
 											<label for="wheel-1-child-radius" class="input-group-addon">Radius:</label>
 											<input type="number" name="wheel-1-child-radius" id="wheel-1-child-radius" class="form-control" value="100" required="required" />
 											<span class="input-group-addon">mm</span>
 										</div>
 									</li>
-									<li class="col-sm-6">
+									<li class="col-sm-7 col-md-8">
+										<div class="input-group">
+											<label for="wheel-1-child-initial-angle" class="input-group-addon">Initial Angle:</label>
+											<input type="number" name="wheel-1-child-initial-angle" id="wheel-1-child-initial-angle" class="form-control" value="0" min="-180" max="180" />
+											<span class="input-group-addon">degrees</span>
+										</div>
+									</li>
+									<li class="col-xs-5">
 											<input type="radio" name="wheel-1-child-oscillate" id="wheel-1-child-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
 											<label for="wheel-1-child-oscillate_N" class="btn btn-default">Rotate</label>
 
 											<input type="radio" name="wheel-1-child-oscillate" id="wheel-1-child-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
 											<label for="wheel-1-child-oscillate_Y" class="btn btn-default">Oscillate</label>
 									</li>
-									<li class="col-sm-6" id="wheel-1-child-oscillate_wrap">
+									<li class="col-xs-7" id="wheel-1-child-oscillate_wrap">
 										<div class="input-group">
 											<label for="wheel-1-child-oscillate-range" class="input-group-addon">Oscillation range:</label>
 											<input type="number" name="wheel-1-child-oscillate-range" id="wheel-1-child-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
 											<span class="input-group-addon">degrees</span>
 										</div>
 									</li>
+									<li class="clearfix"></li>
 									<li class="fine-control">
 										<div class="input-group">
 											<label for="wheel-1-child-rotation-speed" class="input-group-addon">Rotation speed:</label>
@@ -241,27 +258,35 @@
 										<fieldset>
 											<legend class="h4">Grand Child Wheel</legend>
 											<ul class="row">
-												<li>
+												<li class="col-sm-5 col-md-4">
 													<div class="input-group">
 														<label for="wheel-1-grandchild-radius" class="input-group-addon">Radius:</label>
 														<input type="number" name="wheel-1-grandchild-radius" id="wheel-1-grandchild-radius" value="" class="form-control" required="required" />
 														<span class="input-group-addon">mm</span>
 													</div>
 												</li>
-												<li class="col-sm-6">
+												<li class="col-sm-7 col-md-8">
+													<div class="input-group">
+														<label for="wheel-1-grandchild-initial-angle" class="input-group-addon">Initial Angle:</label>
+														<input type="number" name="wheel-1-grandchild-initial-angle" id="wheel-1-grandchild-initial-angle" class="form-control" value="0" min="-180" max="180" />
+														<span class="input-group-addon">degrees</span>
+													</div>
+												</li>
+												<li class="col-xs-5">
 														<input type="radio" name="wheel-1-grandchild-oscillate" id="wheel-1-grandchild-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
 														<label for="wheel-1-grandchild-oscillate_N" class="btn btn-default">Rotate</label>
 
 														<input type="radio" name="wheel-1-grandchild-oscillate" id="wheel-1-grandchild-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
 														<label for="wheel-1-grandchild-oscillate_Y" class="btn btn-default">Oscillate</label>
 												</li>
-												<li class="col-sm-6" id="wheel-1-grandchild-oscillate_wrap">
+												<li class="col-xs-7" id="wheel-1-grandchild-oscillate_wrap">
 													<div class="input-group">
 														<label for="wheel-1-child-oscillate-range" class="input-group-addon">Oscillation range:</label>
 														<input type="number" name="wheel-1-child-oscillate-range" id="wheel-1-child-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
 														<span class="input-group-addon">degrees</span>
 													</div>
 												</li>
+												<li class="clearfix"></li>
 												<li class="fine-control col-md-12">
 													<div class="input-group">
 														<label for="wheel-1-grandchild-rotation-speed" class="input-group-addon">Rotation speed:</label>
@@ -282,41 +307,49 @@
 				<fieldset>
 					<legend>Wheel 2</legend>
 					<ul class="row">
-						<li class="col-sm-6 col-md-4">
+						<li class="col-sm-6">
 							<div class="input-group">
 								<label for="wheel-2-offset" class="input-group-addon">Offset from table centre:</label>
 								<input type="number" name="wheel-2-offset" id="wheel-2-offset" class="form-control" required="required" value="1500" pattern="^[0-9]+$" />
 								<span class="input-group-addon">mm</span>
 							</div>
 						</li>
-						<li class="col-sm-6 col-md-5">
+						<li class="col-sm-6">
 							<div class="input-group">
 								<label for="wheel-2-angle-wheel-1" class="input-group-addon">Angle offset from Wheel 1:</label>
 								<input type="number" name="wheel-2-angle-wheel-1" id="wheel-2-angle-wheel-1" class="form-control" required="required" value="90" min="30" max="120" step="0.1" />
 								<span class="input-group-addon">Degrees</span>
 							</div>
 						</li>
-						<li class="col-sm-6 col-md-3">
+						<li class="col-sm-5 col-md-4">
 							<div class="input-group">
 								<label for="wheel-2-radius" class="input-group-addon">Radius:</label>
 								<input type="number" name="wheel-2-radius" id="wheel-2-radius" class="form-control" required="required" value="300" />
 								<span class="input-group-addon">mm</span>
 							</div>
 						</li>
-						<li class="col-sm-6">
+						<li class="col-sm-7 col-md-8">
+							<div class="input-group">
+								<label for="wheel-2-initial-angle" class="input-group-addon">Initial Angle:</label>
+								<input type="number" name="wheel-2-initial-angle" id="wheel-2-initial-angle" class="form-control" value="0" min="-180" max="180" />
+								<span class="input-group-addon">degrees</span>
+							</div>
+						</li>
+						<li class="col-xs-5">
 								<input type="radio" name="wheel-2-oscillate" id="wheel-2-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
 								<label for="wheel-2-oscillate_N" class="btn btn-default">Rotate</label>
 
 								<input type="radio" name="wheel-2-oscillate" id="wheel-2-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
 								<label for="wheel-2-oscillate_Y" class="btn btn-default">Oscillate</label>
 						</li>
-						<li class="col-sm-6" id="wheel-2-oscillate_wrap">
+						<li class="col-xs-7" id="wheel-2-oscillate_wrap">
 							<div class="input-group">
 								<label for="wheel-2-oscillate-range" class="input-group-addon">Oscillation range:</label>
 								<input type="number" name="wheel-2-oscillate-range" id="wheel-2-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
 								<span class="input-group-addon">degrees</span>
 							</div>
 						</li>
+						<li class="clearfix"></li>
 						<li class="fine-control col-md-12">
 							<div class="input-group">
 								<label for="wheel-2-rotation-speed" class="input-group-addon">Rotation speed:</label>
@@ -330,27 +363,35 @@
 							<fieldset>
 								<legend class="h4">Child Wheel</legend>
 								<ul class="row">
-									<li>
+									<li class="col-sm-5 col-md-4">
 										<div class="input-group">
 											<label for="wheel-2-child-radius" class="input-group-addon">Radius:</label>
 											<input type="number" name="wheel-2-child-radius" id="wheel-2-child-radius" class="form-control" value="150" required="required" />
 											<span class="input-group-addon">mm</span>
 										</div>
 									</li>
-									<li class="col-sm-6">
+									<li class="col-sm-7 col-md-8">
+										<div class="input-group">
+											<label for="wheel-2-child-initial-angle" class="input-group-addon">Initial Angle:</label>
+											<input type="number" name="wheel-2-child-initial-angle" id="wheel-2-child-initial-angle" class="form-control" value="0" min="-180" max="180" />
+											<span class="input-group-addon">degrees</span>
+										</div>
+									</li>
+									<li class="col-xs-5">
 											<input type="radio" name="wheel-2-child-oscillate" id="wheel-2-child-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
 											<label for="wheel-2-child-oscillate_N" class="btn btn-default">Rotate</label>
 
 											<input type="radio" name="wheel-2-child-oscillate" id="wheel-2-child-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
 											<label for="wheel-2-child-oscillate_Y" class="btn btn-default">Oscillate</label>
 									</li>
-									<li class="col-sm-6" id="wheel-2-child-oscillate_wrap">
+									<li class="col-xs-7" id="wheel-2-child-oscillate_wrap">
 										<div class="input-group">
 											<label for="wheel-2-child-oscillate-range" class="input-group-addon">Oscillation range:</label>
 											<input type="number" name="wheel-2-child-oscillate-range" id="wheel-2-child-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
 											<span class="input-group-addon">degrees</span>
 										</div>
 									</li>
+									<li class="clearfix"></li>
 									<li class="fine-control">
 										<div class="input-group">
 											<label for="wheel-2-child-rotation-speed" class="input-group-addon">Rotation speed:</label>
@@ -364,27 +405,35 @@
 										<fieldset>
 											<legend class="h4">Grand Child Wheel</legend>
 											<ul class="row">
-												<li>
+												<li class="col-sm-5 col-md-5">
 													<div class="input-group">
 														<label for="wheel-2-grandchild-radius" class="input-group-addon">Radius:</label>
 														<input type="number" name="wheel-2-grandchild-radius" id="wheel-2-grandchild-radius" value="" class="form-control" required="required" />
 														<span class="input-group-addon">mm</span>
 													</div>
 												</li>
-												<li class="col-sm-6">
+												<li class="col-sm-7 col-md-8">
+													<div class="input-group">
+														<label for="wheel-2-grandchild-initial-angle" class="input-group-addon">Initial Angle:</label>
+														<input type="number" name="wheel-2-grandchild-initial-angle" id="wheel-2-grandchild-initial-angle" class="form-control" value="0" min="-180" max="180" />
+														<span class="input-group-addon">degrees</span>
+													</div>
+												</li>
+												<li class="col-xs-5">
 														<input type="radio" name="wheel-2-grandchild-oscillate" id="wheel-2-grandchild-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
 														<label for="wheel-2-grandchild-oscillate_N" class="btn btn-default">Rotate</label>
 
 														<input type="radio" name="wheel-2-grandchild-oscillate" id="wheel-2-grandchild-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
 														<label for="wheel-2-grandchild-oscillate_Y" class="btn btn-default">Oscillate</label>
 												</li>
-												<li class="col-sm-6" id="wheel-2-grandchild-oscillate_wrap">
+												<li class="col-xs-7" id="wheel-2-grandchild-oscillate_wrap">
 													<div class="input-group">
 														<label for="wheel-2-grandchild-oscillate-range" class="input-group-addon">Oscillation range:</label>
 														<input type="number" name="wheel-2-grandchild-oscillate-range" id="wheel-2-grandchild-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
 														<span class="input-group-addon">degrees</span>
 													</div>
 												</li>
+												<li class="clearfix"></li>
 												<li class="fine-control col-md-12">
 													<div class="input-group">
 														<label for="wheel-2-grandchild-rotation-speed" class="input-group-addon">Rotation speed:</label>

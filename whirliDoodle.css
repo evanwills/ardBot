@@ -21,12 +21,23 @@ fieldset legend {
 fieldset > ul > li {
 	margin: 0.5em 0%;
 }
+fieldset > ul > li.li-close {
+	margin: 0%;
+}
 input.controlled-by-label {
 	position: absolute;
 	left: -1000em;
 }
 input.controlled-by-label + label.btn {
 	margin: 0 2em;
+}
+input.wheel-oscillate-control.controlled-by-label + label.btn {
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+input.wheel-oscillate-control.controlled-by-label + label.btn + input.wheel-oscillate-control.controlled-by-label + label.btn {
+	margin-left: 1.5em;
+	margin-right: 0;
 }
 input.controlled-by-label:checked + label.btn {
 	color: #333;

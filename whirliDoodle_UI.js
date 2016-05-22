@@ -193,24 +193,24 @@ $('document').ready(function () {
 		}
 
 		$.each(state, function(key, value) {
-//			console.log('key = ', key);
-//			console.log('value = ', value);
-//			console.log('symetrical = ', symetrical);
+			console.log('key = ', key);
+			console.log('value = ', value);
+			console.log('symetrical = ', symetrical);
 			if (key !== 'sym') {
 				if (symetrical === 'y' ) {
 					if (value['sym'] === true) {
-//						console.log('show ' + key);
+						console.log('show ' + key);
 						$('#' + key).removeClass('hide');
 					} else {
-//						console.log('hide ' + key);
+						console.log('hide ' + key);
 						$('#' + key).addClass('hide');
 					}
 				} else {
 					if (value['asym'] === true) {
-//						console.log('show ' + key);
+						console.log('show ' + key);
 						$('#' + key).removeClass('hide');
 					} else {
-//						console.log('hide ' + key);
+						console.log('hide ' + key);
 						$('#' + key).addClass('hide');
 					}
 				}
