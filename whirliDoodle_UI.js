@@ -223,7 +223,27 @@ $('document').ready(function () {
 		console.log('state = ', state);
 
 	}
-
 	$('.boom-config, .is-symetrical').on('change', boomShowHideFields);
+
+	function showHideOscillate() {
+		var id = $(this).attr('name');
+		console.log('wheel-1-grandchild-oscillate_wrap');
+		console.log('#' + id + '_wrap');
+		if ($(this).val() === 'n') {
+			// wheel-1-grandchild-oscillate_wrap
+			$('#' + id + '_wrap').addClass('hide');
+		} else {
+			$('#' + id + '_wrap').removeClass('hide');
+		}
+	}
+
+	$('.wheel-oscillate-control').on('change', showHideOscillate);
+	$('.wheel-oscillate-control').each(function () {
+		if ($(this).val() === 'n') {
+			$(this).trigger('change');
+		}
+	});
+
+//	$('.wheel-oscillate-control').trigger('change');
 	$('#boom-config_V').trigger('change');
 });

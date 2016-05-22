@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="../ACU/acu-responsive/assets/js/jquery_1-11-3.min.js"></script>
 		<link rel="stylesheet" href="../ACU/acu-responsive/assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../ACU/acu-responsive/assets/css/bootstrap-theme.css" />
-		<link rel="stylesheet" href="ardBot.css" />
+		<link rel="stylesheet" href="whirliDoodle.css" />
 
 		<style type="text/css">
 		</style>
@@ -21,8 +21,8 @@
 
 		<ul class="nav nav-tabs" role="tablist">
 			<li role="presentation"><a href="#drawing-table" aria-controls="drawing-table" role="tab" data-toggle="tab">Drawing table</a></li>
-			<li role="presentation" class="active"><a href="#booms" aria-controls="booms" role="tab" data-toggle="tab">Booms</a></li>
-			<li role="presentation"><a href="#wheel-1" aria-controls="wheel-1" role="tab" data-toggle="tab">Wheel 1</a></li>
+			<li role="presentation"><a href="#booms" aria-controls="booms" role="tab" data-toggle="tab">Booms</a></li>
+			<li role="presentation" class="active"><a href="#wheel-1" aria-controls="wheel-1" role="tab" data-toggle="tab">Wheel 1</a></li>
 			<li role="presentation"><a href="#wheel-2" aria-controls="wheel-2" role="tab" data-toggle="tab">Wheel 2</a></li>
 		</ul>
 
@@ -45,6 +45,20 @@
 								<span class="input-group-addon">mm</span>
 							</div>
 						</li>
+						<li class="col-sm-6">
+								<input type="radio" name="table-oscillate" id="table-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
+								<label for="table-oscillate_N" class="btn btn-default">Rotate</label>
+
+								<input type="radio" name="table-oscillate" id="table-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
+								<label for="table-oscillate_Y" class="btn btn-default">Oscillate</label>
+						</li>
+						<li class="col-sm-6" id="table-oscillate_wrap">
+							<div class="input-group">
+								<label for="table-oscillate-range" class="input-group-addon">Oscillation range:</label>
+								<input type="number" name="table-oscillate-range" id="table-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
+								<span class="input-group-addon">degrees</span>
+							</div>
+						</li>
 						<li class="fine-control col-md-12">
 							<div class="input-group">
 								<label for="table-rotation-speed" class="input-group-addon">Table rotation Speed:</label>
@@ -55,7 +69,7 @@
 					</ul>
 				</fieldset>
 			</div>
-			<div role="tabpanel" class="tab-pane fade in active" id="booms">
+			<div role="tabpanel" class="tab-pane fade in" id="booms">
 				<fieldset>
 					<legend>Booms </legend>
 					<ul class="row">
@@ -147,7 +161,7 @@
 					</ul>
 				</fieldset>
 			</div>
-			<div role="tabpanel" class="tab-pane fade in" id="wheel-1">
+			<div role="tabpanel" class="tab-pane fade in active" id="wheel-1">
 				<fieldset>
 					<legend>Wheel 1</legend>
 					<ul class="row">
@@ -165,6 +179,21 @@
 								<span class="input-group-addon">mm</span>
 							</div>
 						</li>
+						<li class="col-sm-6">
+								<input type="radio" name="wheel-1-oscillate" id="wheel-1-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
+								<label for="wheel-1-oscillate_N" class="btn btn-default">Rotate</label>
+
+								<input type="radio" name="wheel-1-oscillate" id="wheel-1-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
+								<label for="wheel-1-oscillate_Y" class="btn btn-default">Oscillate</label>
+						</li>
+						<li class="col-sm-6" id="wheel-1-oscillate_wrap">
+							<div class="input-group">
+								<label for="wheel-1-oscillate-range" class="input-group-addon">Oscillation range:</label>
+								<input type="number" name="wheel-1-oscillate-range" id="wheel-1-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
+								<span class="input-group-addon">degrees</span>
+							</div>
+						</li>
+						<li class="clearfix"></li>
 						<li class="fine-control col-md-12">
 							<div class="input-group">
 								<label for="wheel-1-rotation-speed" class="input-group-addon">Rotation speed:</label>
@@ -185,6 +214,20 @@
 											<span class="input-group-addon">mm</span>
 										</div>
 									</li>
+									<li class="col-sm-6">
+											<input type="radio" name="wheel-1-child-oscillate" id="wheel-1-child-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
+											<label for="wheel-1-child-oscillate_N" class="btn btn-default">Rotate</label>
+
+											<input type="radio" name="wheel-1-child-oscillate" id="wheel-1-child-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
+											<label for="wheel-1-child-oscillate_Y" class="btn btn-default">Oscillate</label>
+									</li>
+									<li class="col-sm-6" id="wheel-1-child-oscillate_wrap">
+										<div class="input-group">
+											<label for="wheel-1-child-oscillate-range" class="input-group-addon">Oscillation range:</label>
+											<input type="number" name="wheel-1-child-oscillate-range" id="wheel-1-child-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
+											<span class="input-group-addon">degrees</span>
+										</div>
+									</li>
 									<li class="fine-control">
 										<div class="input-group">
 											<label for="wheel-1-child-rotation-speed" class="input-group-addon">Rotation speed:</label>
@@ -203,6 +246,20 @@
 														<label for="wheel-1-grandchild-radius" class="input-group-addon">Radius:</label>
 														<input type="number" name="wheel-1-grandchild-radius" id="wheel-1-grandchild-radius" value="" class="form-control" required="required" />
 														<span class="input-group-addon">mm</span>
+													</div>
+												</li>
+												<li class="col-sm-6">
+														<input type="radio" name="wheel-1-grandchild-oscillate" id="wheel-1-grandchild-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
+														<label for="wheel-1-grandchild-oscillate_N" class="btn btn-default">Rotate</label>
+
+														<input type="radio" name="wheel-1-grandchild-oscillate" id="wheel-1-grandchild-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
+														<label for="wheel-1-grandchild-oscillate_Y" class="btn btn-default">Oscillate</label>
+												</li>
+												<li class="col-sm-6" id="wheel-1-grandchild-oscillate_wrap">
+													<div class="input-group">
+														<label for="wheel-1-child-oscillate-range" class="input-group-addon">Oscillation range:</label>
+														<input type="number" name="wheel-1-child-oscillate-range" id="wheel-1-child-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
+														<span class="input-group-addon">degrees</span>
 													</div>
 												</li>
 												<li class="fine-control col-md-12">
@@ -246,6 +303,20 @@
 								<span class="input-group-addon">mm</span>
 							</div>
 						</li>
+						<li class="col-sm-6">
+								<input type="radio" name="wheel-2-oscillate" id="wheel-2-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
+								<label for="wheel-2-oscillate_N" class="btn btn-default">Rotate</label>
+
+								<input type="radio" name="wheel-2-oscillate" id="wheel-2-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
+								<label for="wheel-2-oscillate_Y" class="btn btn-default">Oscillate</label>
+						</li>
+						<li class="col-sm-6" id="wheel-2-oscillate_wrap">
+							<div class="input-group">
+								<label for="wheel-2-oscillate-range" class="input-group-addon">Oscillation range:</label>
+								<input type="number" name="wheel-2-oscillate-range" id="wheel-2-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
+								<span class="input-group-addon">degrees</span>
+							</div>
+						</li>
 						<li class="fine-control col-md-12">
 							<div class="input-group">
 								<label for="wheel-2-rotation-speed" class="input-group-addon">Rotation speed:</label>
@@ -266,6 +337,20 @@
 											<span class="input-group-addon">mm</span>
 										</div>
 									</li>
+									<li class="col-sm-6">
+											<input type="radio" name="wheel-2-child-oscillate" id="wheel-2-child-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
+											<label for="wheel-2-child-oscillate_N" class="btn btn-default">Rotate</label>
+
+											<input type="radio" name="wheel-2-child-oscillate" id="wheel-2-child-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
+											<label for="wheel-2-child-oscillate_Y" class="btn btn-default">Oscillate</label>
+									</li>
+									<li class="col-sm-6" id="wheel-2-child-oscillate_wrap">
+										<div class="input-group">
+											<label for="wheel-2-child-oscillate-range" class="input-group-addon">Oscillation range:</label>
+											<input type="number" name="wheel-2-child-oscillate-range" id="wheel-2-child-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
+											<span class="input-group-addon">degrees</span>
+										</div>
+									</li>
 									<li class="fine-control">
 										<div class="input-group">
 											<label for="wheel-2-child-rotation-speed" class="input-group-addon">Rotation speed:</label>
@@ -284,6 +369,20 @@
 														<label for="wheel-2-grandchild-radius" class="input-group-addon">Radius:</label>
 														<input type="number" name="wheel-2-grandchild-radius" id="wheel-2-grandchild-radius" value="" class="form-control" required="required" />
 														<span class="input-group-addon">mm</span>
+													</div>
+												</li>
+												<li class="col-sm-6">
+														<input type="radio" name="wheel-2-grandchild-oscillate" id="wheel-2-grandchild-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
+														<label for="wheel-2-grandchild-oscillate_N" class="btn btn-default">Rotate</label>
+
+														<input type="radio" name="wheel-2-grandchild-oscillate" id="wheel-2-grandchild-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
+														<label for="wheel-2-grandchild-oscillate_Y" class="btn btn-default">Oscillate</label>
+												</li>
+												<li class="col-sm-6" id="wheel-2-grandchild-oscillate_wrap">
+													<div class="input-group">
+														<label for="wheel-2-grandchild-oscillate-range" class="input-group-addon">Oscillation range:</label>
+														<input type="number" name="wheel-2-grandchild-oscillate-range" id="wheel-2-grandchild-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
+														<span class="input-group-addon">degrees</span>
 													</div>
 												</li>
 												<li class="fine-control col-md-12">
@@ -321,7 +420,7 @@
 
 
 		<script type="text/javascript" src="../ACU/acu-responsive/assets/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="ardBot_UI.js"></script>
+		<script type="text/javascript" src="whirliDoodle_UI.js"></script>
 <!--
 		<script type="text/javascript">
 
