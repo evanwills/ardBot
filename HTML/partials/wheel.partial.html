@@ -1,0 +1,92 @@
+
+	<li id="wheel-{{UID}}-circle_wrap">
+		<input type="radio" name="wheel-{{UID}}-circle-ellipse" id="wheel-{{UID}}-circle-ellipse_N" class="wheel-circle-ellipse-control controlled-by-label" value="n" checked="checked" />
+		<label for="wheel-{{UID}}-circle-ellipse_N" class="btn btn-default">Circle</label>
+
+		<input type="radio" name="wheel-{{UID}}-circle-ellipse" id="wheel-{{UID}}-circle-ellipse_Y" class="wheel-circle-ellipse-control controlled-by-label" value="y" />
+		<label for="wheel-{{UID}}-circle-ellipse_Y" class="btn btn-default">Ellipse</label>
+	</li>
+	<li id="wheel-{{UID}}-circle_wrap">
+		<fieldset>
+			<legend>Radius</legend>
+			<div class="col-xs-12 col-sm-6">
+				<div class="input-group">
+					<label for="wheel-{{UID}}-radius" class="input-group-addon">Length:</label>
+					<input type="number" name="wheel-{{UID}}-radius" id="wheel-{{UID}}-radius" class="form-control" required="required" value="350" />
+					<span class="input-group-addon">mm</span>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-6">
+				<div class="input-group">
+					<label for="wheel-{{UID}}-initial-angle" class="input-group-addon">Initial Angle:</label>
+					<input type="number" name="wheel-{{UID}}-initial-angle" id="wheel-{{UID}}-initial-angle" class="form-control" value="0" min="-180" max="180" />
+					<span class="input-group-addon">degrees</span>
+				</div>
+			</div>
+		</fieldset>
+	</li>
+	<li id="wheel-{{UID}}-ellipse_wrap">
+		<fieldset>
+			<legend>Ellipse</legend>
+			<div class="col-xs-12 col-sm-6 col-lg-3">
+				<div class="input-group">
+					<label for="wheel-{{UID}}-ellipse_X" class="input-group-addon">X Length:</label>
+					<input type="number" name="wheel-{{UID}}-ellipse_X" id="wheel-{{UID}}-ellipse_X" class="form-control" required="required" value="350" />
+					<span class="input-group-addon">mm</span>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-3">
+				<div class="input-group">
+					<label for="wheel-{{UID}}-ellipse_Y" class="input-group-addon">Y Length:</label>
+					<input type="number" name="wheel-{{UID}}-ellipse_Y" id="wheel-{{UID}}-ellipse_Y" class="form-control" required="required" value="350" />
+					<span class="input-group-addon">mm</span>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-6">
+				<div class="input-group">
+					<label for="wheel-{{UID}}-initial-radius-angle" class="input-group-addon">Initial Radius Angle:</label>
+					<input type="number" name="wheel-{{UID}}-initial-radius-angle" id="wheel-{{UID}}-initial-radius-angle" class="form-control" value="0" min="-180" max="180" />
+					<span class="input-group-addon">degrees</span>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-6">
+				<div class="input-group">
+					<label for="wheel-{{UID}}-initial-orientation-angle" class="input-group-addon">Initial Ellipse orientation Angle:</label>
+					<input type="number" name="wheel-{{UID}}-initial-orientation-angle" id="wheel-{{UID}}-initial-orientation-angle" class="form-control" value="0" min="-180" max="180" />
+					<span class="input-group-addon">degrees</span>
+				</div>
+			</div>
+		</fieldset>
+	</li>
+	<li>
+		<fieldset>
+			<legend>Rotation</legend>
+			<div class="col-xs-5">
+				<input type="radio" name="wheel-{{UID}}-oscillate" id="wheel-{{UID}}-oscillate_N" class="wheel-oscillate-control controlled-by-label" value="n" checked="checked" />
+				<label for="wheel-{{UID}}-oscillate_N" class="btn btn-default">Rotate</label>
+
+				<input type="radio" name="wheel-{{UID}}-oscillate" id="wheel-{{UID}}-oscillate_Y" class="wheel-oscillate-control controlled-by-label" value="y" />
+				<label for="wheel-{{UID}}-oscillate_Y" class="btn btn-default">Oscillate</label>
+			</div>
+
+			<div class="col-xs-7">
+				<div class="input-group">
+					<label for="wheel-{{UID}}-oscillate-range" class="input-group-addon">Oscillation range:</label>
+					<input type="number" name="wheel-{{UID}}-oscillate-range" id="wheel-{{UID}}-oscillate-range" class="form-control" required="required" value="" min="0" max="360" />
+					<span class="input-group-addon">degrees</span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="fine-control col-xs-12">
+				<div class="input-group">
+					<label for="wheel-{{UID}}-rotation-speed" class="input-group-addon">Rotation speed:</label>
+					<input type="number" name="wheel-{{UID}}-rotation-speed" id="wheel-{{UID}}-rotation-speed" value="0.00000" class="form-control" required="required" min="-10" max="10" step="0.001" />
+					<span class="input-group-addon">(RPM)</span>
+				</div>
+			</div>
+		</fieldset>
+	</li>
+{{HAS_CHILD}}
