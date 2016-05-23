@@ -32,7 +32,7 @@ This project will contain both the driver code for the physical machine and the 
 		*	rotation speed (negative = counter-clockwise)
 
 
-## Videos that inspired ardBot
+## Videos that inspired whirliDoodle
 
 * 	[Drawing Machine II](https://www.youtube.com/watch?v=BG9e06IWAxE)
 * 	[drawing machine maios 3](https://www.youtube.com/watch?v=rukYhTylK_M)
