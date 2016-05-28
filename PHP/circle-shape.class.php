@@ -27,6 +27,8 @@ abstract class abstractCircleShape extends circleShapeInterface // interface
 	protected $_tmpAngle = 0;
 	protected $_tmpX = 0;
 	protected $_tmpY = 0;
+	protected $_cumulativeStep = 0;
+	protected $_cumulativeStepMethod = '_noAccumulate';
 
 
 	public function getRadiusPointX()
@@ -129,7 +131,7 @@ class circle extends abstractCircleShape
 	public function initXY( $originX , $originY )
 	{
 		// https://en.wikipedia.org/wiki/Rotation_matrix#In_two_dimensions
-		debug($originX,$originY);
+		// debug($originX,$originY);
 		if( !is_numeric($originX) || !is_numeric($originY) )
 		{
 			// throw
@@ -141,29 +143,14 @@ class circle extends abstractCircleShape
 		$this->_originY = 0;
 		$radius = $this->_radius->getStep();
 
-		switch($this->_initialAngle) {
-			case 0:
-				$this->_radiusPointY = $radius;
-				break;
-			case 90:
-				$this->_radiusPointX = $radius;
-			case 180:
-				$this->_radiusPointY = -$radius;
-				break;
-			case 270:
-				$this->_radiusPointX = -$radius;
-				break;
-			default:
-				// radius is used as the Y coordinate (12 O'Clock)
-				$this->_radiusPointX = $this->_getRadiusX( $this->_initialAngle , $radius );
-				$this->_radiusPointY = $this->_getRadiusY( $this->_initialAngle , $radius );
-		}
+		$this->_radiusPointX = ( 0 * rad2deg(cos($this->_initialAngle)) ) - ( $radius * rad2deg(sin($this->_initialAngle)) );
+		$this->_radiusPointY = ( 0 * rad2deg(sin($this->_initialAngle)) ) + ( $radius * rad2deg(cos($this->_initialAngle)) );
 
 		$this->_originX = $tmpOx;
 		$this->_originY = $tmpOy;
 
 		$this->_radiusPointX += $this->_originX;
-		$this->_radiusPointY += $this->_originY;debug($this);
+		$this->_radiusPointY += $this->_originY; // debug($this);
 	}
 
 
@@ -174,12 +161,26 @@ class circle extends abstractCircleShape
 			// throw
 		}
 
-		// make origin 0,0
 		$relativeX = $this->_getPositiveDiff( $x , $this->_originX , $xIsNeg );
 		$relativeY = $this->_getPositiveDiff( $y , $this->_originY , $yIsNeg );
 
-		debug('$this->_originX = '.$this->_originX,'$x = '.$x,'$relativeX = '.$relativeX);
-		debug('$this->_originY = '.$this->_originY,'$y = '.$y,'$relativeY = '.$relativeY);
+		// make origin 0,0
+		$tmpOx = $this->_originX;
+		$tmpOy = $this->_originY;
+		$this->_originX = 0;
+		$this->_originY = 0;
+
+		$relativeX = ($relativeX * rad2deg(cos($this->_initialAngle)) ) - ( $relativeY * rad2deg(sin($this->_initialAngle)) );
+		$relativeY = ($relativeX * rad2deg(sin($this->_initialAngle)) ) + ( $relativeY * rad2deg(cos($this->_initialAngle)) );
+
+		$this->_originX = $tmpOx;
+		$this->_originY = $tmpOy;
+
+		$this->_tmpX = $relativeX + $this->_originX;
+		$this->_tmpY = $relativeY + $this->_originY;
+
+		// debug('$this->_originX = '.$this->_originX,'$x = '.$x,'$relativeX = '.$relativeX);
+		// debug('$this->_originY = '.$this->_originY,'$y = '.$y,'$relativeY = '.$relativeY);
 
 /*
  * unnecessary with new equation
@@ -190,7 +191,7 @@ class circle extends abstractCircleShape
 
 		// get the new angle (calculate current angle then add angle step)
  */
-
+/*
 		$step = $this->_angleStep->getStep();
 
 		$this->_tmpX = $this->_setPosNeg(
@@ -203,6 +204,7 @@ class circle extends abstractCircleShape
 							,$yIsNeg
 						)
 						+ $this->_originY;
+*/
 	}
 
 	public function rotate()
@@ -217,21 +219,21 @@ class circle extends abstractCircleShape
 
 	private function _getRadiusX( $angle , $radius )
 	{
-		debug(
-			 "$radius * sin($angle)"
-			,"$radius * ".sin($angle)
-			,$radius * sin($angle)
-		);
+//		debug(
+//			 "$radius * sin($angle)"
+//			,"$radius * ".sin($angle)
+//			,$radius * sin($angle)
+//		);
 		return $radius * sin($angle);
 	}
 
 	private function _getRadiusY( $angle , $radius )
 	{
-		debug(
-			 "$radius * cos($angle)"
-			,"$radius * ".cos($angle)
-			,$radius * cos($angle)
-		);
+//		debug(
+//			 "$radius * cos($angle)"
+//			,"$radius * ".cos($angle)
+//			,$radius * cos($angle)
+//		);
 		return $radius * cos($angle);
 
 	}
@@ -241,12 +243,12 @@ class circle extends abstractCircleShape
 		// see https://en.wikipedia.org/wiki/Rotation_matrix#In_two_dimensions
 		// in particular see https://upload.wikimedia.org/math/6/7/9/6794b4de87caedcc56ae6b759bb33c88.png
 
-		debug(
-			"($x * cos($angle)) - ($y * cos($angle))",
-			"($x * ".cos($angle).") - ($y * ".sin($angle).")",
-			($x * cos($angle)).' - '.($y * sin($angle)),
-			($x * cos($angle)) - ($y * sin($angle))
-		);
+//		debug(
+//			"($x * cos($angle)) - ($y * cos($angle))",
+//			"($x * ".cos($angle).") - ($y * ".sin($angle).")",
+//			($x * cos($angle)).' - '.($y * sin($angle)),
+//			($x * cos($angle)) - ($y * sin($angle))
+//		);
 
 		return ($x * cos($angle)) - ($y * sin($angle));
 	}
@@ -256,12 +258,12 @@ class circle extends abstractCircleShape
 		// see https://en.wikipedia.org/wiki/Rotation_matrix#In_two_dimensions
 		// in particular see https://upload.wikimedia.org/math/6/7/9/6794b4de87caedcc56ae6b759bb33c88.png
 
-		debug(
-			"($x * sin($angle)) - ($y * cos($angle))",
-			"($x * ".sin($angle).") - ($y * ".cos($angle).")",
-			($x * sin($angle)).' - '.($y * cos($angle)),
-			($x * sin($angle)) - ($y * cos($angle))
-		);
+//		debug(
+//			"($x * sin($angle)) - ($y * cos($angle))",
+//			"($x * ".sin($angle).") - ($y * ".cos($angle).")",
+//			($x * sin($angle)).' - '.($y * cos($angle)),
+//			($x * sin($angle)) - ($y * cos($angle))
+//		);
 		return rad2deg( ( $x * sin($angle) ) - ( $y * cos($angle) ) );
 	}
 }
