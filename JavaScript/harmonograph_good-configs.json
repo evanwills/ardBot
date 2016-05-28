@@ -1,0 +1,7602 @@
+{
+	"configs": [
+		{
+			"steps": 10000,
+			"pendulums": [
+				{
+					"ampX": -67.16,
+					"ampY": 78.23,
+					"phaseX": 0.38240163911195757,
+					"phaseY": 1.5739379194484864,
+					"damping": 34.83,
+					"frequency": 0.51
+				},
+				{
+					"ampX": -89.46,
+					"ampY": -100.72,
+					"phaseX": 1.06499990956694,
+					"phaseY": 0.9349728802933623,
+					"damping": 152.78,
+					"frequency": 0.51
+				},
+				{
+					"ampX": -90.6,
+					"ampY": 56.25,
+					"phaseX": 0.9091420073638463,
+					"phaseY": 1.6378169700714789,
+					"damping": 134.47,
+					"frequency": 0.5
+				},
+			]
+		},
+		{
+			"steps": 776,
+			"pendulums": [
+				{
+					"ampX": 5.03,
+					"ampY": -55.38,
+					"phaseX": 1.3756685164219302,
+					"phaseY": 0.7056366165813075,
+					"damping": 190.55,
+					"frequency": 0.8
+				},
+				{
+					"ampX": -68.76,
+					"ampY": -13.77,
+					"phaseX": 0.6192428186075881,
+					"phaseY": 1.6751670160641576,
+					"damping": 25.18,
+					"frequency": 0.79
+				},
+				{
+					"ampX": 15.08,
+					"ampY": -92.91,
+					"phaseX": 0.2439970294288073,
+					"phaseY": 0.8517206749732327,
+					"damping": 85.54,
+					"frequency": 1.48
+				},
+			]
+		},
+		{
+			"steps": 3913,
+			"pendulums": [
+				{
+					"ampX": -31.42,
+					"ampY": 12.96,
+					"phaseX": 0.2755874888899046,
+					"phaseY": 1.1760028499937791,
+					"damping": 80.36,
+					"frequency": 1.48
+				},
+				{
+					"ampX": 86.09,
+					"ampY": -6.64,
+					"phaseX": 0.6330309196983434,
+					"phaseY": 1.2208578117700335,
+					"damping": 18.98,
+					"frequency": 0.69
+				},
+				{
+					"ampX": -48.99,
+					"ampY": -14.73,
+					"phaseX": 0.4359832471481835,
+					"phaseY": 1.2500048102783388,
+					"damping": 175.33,
+					"frequency": 0.73
+				}
+			]
+		},
+		{
+			"steps": 6823,
+			"pendulums": [
+				{
+					"ampX": 90.58,
+					"ampY": -84.5,
+					"phaseX": 0.28553586562627226,
+					"phaseY": 0.07243116395776468,
+					"damping": 89.66,
+					"frequency": 0.84
+				},
+				{
+					"ampX": -77.22,
+					"ampY": -53.32,
+					"phaseX": 1.7058848108992575,
+					"phaseY": 0.2988003679414292,
+					"damping": 131.75,
+					"frequency": 0.67
+				},
+				{
+					"ampX": -45.55,
+					"ampY": -1.55,
+					"phaseX": 1.7242107680451983,
+					"phaseY": 1.346870583764024,
+					"damping": 25.15,
+					"frequency": 1.44
+				}
+			]
+		},
+		{
+			"steps": 5874,
+			"pendulums": [
+				{
+					"ampX": -41.44,
+					"ampY": 25.08,
+					"phaseX": 0.9142034621946299,
+					"phaseY": 0.9211847792026071,
+					"damping": 27.15,
+					"frequency": 0.85
+				},
+				{
+					"ampX": 59.07,
+					"ampY": -86.39,
+					"phaseX": 0.7604399550939294,
+					"phaseY": 1.5671311353657085,
+					"damping": 180.12,
+					"frequency": 1.21
+				},
+				{
+					"ampX": 45.46,
+					"ampY": 40.89,
+					"phaseX": 0.6646213791594406,
+					"phaseY": 0.00034906585039886593,
+					"damping": 137.24,
+					"frequency": 1.22
+				}
+			]
+		},
+		{
+			"steps": 4806,
+			"pendulums": [
+				{
+					"ampX": -71.3,
+					"ampY": -69.52,
+					"phaseX": 0.7126179335892847,
+					"phaseY": 0.8520697408236316,
+					"damping": 165.31,
+					"frequency": 1.5
+				},
+				{
+					"ampX": -0.59,
+					"ampY": 86.38,
+					"phaseX": 1.3980087308474578,
+					"phaseY": 1.2234758056480248,
+					"damping": 32.19,
+					"frequency": 1.3
+				},
+				{
+					"ampX": -69.66,
+					"ampY": -23.92,
+					"phaseX": 1.0011208589439473,
+					"phaseY": 0.19669860669976091,
+					"damping": 124.45,
+					"frequency": 1.4
+				}
+			]
+		},
+		{
+			"steps": 4806,
+			"pendulums": [
+				{
+					"ampX": -71.3,
+					"ampY": -69.52,
+					"phaseX": 0.7126179335892847,
+					"phaseY": 0.8520697408236316,
+					"damping": 165.31,
+					"frequency": 1.5
+				},
+				{
+					"ampX": -0.59,
+					"ampY": 86.38,
+					"phaseX": 1.3980087308474578,
+					"phaseY": 1.2234758056480248,
+					"damping": 32.19,
+					"frequency": 1.3
+				},
+				{
+					"ampX": -69.66,
+					"ampY": -23.92,
+					"phaseX": 1.0011208589439473,
+					"phaseY": 0.19669860669976091,
+					"damping": 124.45,
+					"frequency": 1.4
+				}
+			]
+		},
+		{
+			"steps": 4806,
+			"pendulums": [
+				{
+					"ampX": -71.3,
+					"ampY": -69.52,
+					"phaseX": 0.7126179335892847,
+					"phaseY": 0.8520697408236316,
+					"damping": 165.31,
+					"frequency": 1.5
+				},
+				{
+					"ampX": -0.59,
+					"ampY": 86.38,
+					"phaseX": 1.3980087308474578,
+					"phaseY": 1.2234758056480248,
+					"damping": 32.19,
+					"frequency": 1.3
+				},
+				{
+					"ampX": -69.66,
+					"ampY": -23.92,
+					"phaseX": 1.0011208589439473,
+					"phaseY": 0.19669860669976091,
+					"damping": 124.45,
+					"frequency": 1.4
+				}
+			]
+		},
+		{
+			"steps": 4806,
+			"pendulums": [
+				{
+					"ampX": -71.3,
+					"ampY": -69.52,
+					"phaseX": 0.7126179335892847,
+					"phaseY": 0.8520697408236316,
+					"damping": 165.31,
+					"frequency": 1.5
+				},
+				{
+					"ampX": -0.59,
+					"ampY": 86.38,
+					"phaseX": 1.3980087308474578,
+					"phaseY": 1.2234758056480248,
+					"damping": 32.19,
+					"frequency": 1.3
+				},
+				{
+					"ampX": -69.66,
+					"ampY": -23.92,
+					"phaseX": 1.0011208589439473,
+					"phaseY": 0.19669860669976091,
+					"damping": 124.45,
+					"frequency": 1.4
+				}
+			]
+		},
+		{
+			"steps": 4806,
+			"pendulums": [
+				{
+					"ampX": -71.3,
+					"ampY": -69.52,
+					"phaseX": 0.7126179335892847,
+					"phaseY": 0.8520697408236316,
+					"damping": 165.31,
+					"frequency": 1.5
+				},
+				{
+					"ampX": -0.59,
+					"ampY": 86.38,
+					"phaseX": 1.3980087308474578,
+					"phaseY": 1.2234758056480248,
+					"damping": 32.19,
+					"frequency": 1.3
+				},
+				{
+					"ampX": -69.66,
+					"ampY": -23.92,
+					"phaseX": 1.0011208589439473,
+					"phaseY": 0.19669860669976091,
+					"damping": 124.45,
+					"frequency": 1.4
+				}
+			]
+		},
+		{
+			"steps": 2352,
+			"pendulums": [
+				{
+					"ampX": 10.96,
+					"ampY": -52.7,
+					"phaseX": 1.2370893738135806,
+					"phaseY": 1.2498302773531393,
+					"damping": 189.23,
+					"frequency": 1.03
+				},
+				{
+					"ampX": 21.26,
+					"ampY": -19.89,
+					"phaseX": 1.1671016708086084,
+					"phaseY": 0.19442967867216832,
+					"damping": 131.97,
+					"frequency": 1.45
+				},
+				{
+					"ampX": 80.18,
+					"ampY": -14.66,
+					"phaseX": 1.65282680163863,
+					"phaseY": 0.2696533694331239,
+					"damping": 38.21,
+					"frequency": 0.62
+				}
+			]
+		},
+		{
+			"steps": 2352,
+			"pendulums": [
+				{
+					"ampX": 10.96,
+					"ampY": -52.7,
+					"phaseX": 1.2370893738135806,
+					"phaseY": 1.2498302773531393,
+					"damping": 189.23,
+					"frequency": 1.03
+				},
+				{
+					"ampX": 21.26,
+					"ampY": -19.89,
+					"phaseX": 1.1671016708086084,
+					"phaseY": 0.19442967867216832,
+					"damping": 131.97,
+					"frequency": 1.45
+				},
+				{
+					"ampX": 80.18,
+					"ampY": -14.66,
+					"phaseX": 1.65282680163863,
+					"phaseY": 0.2696533694331239,
+					"damping": 38.21,
+					"frequency": 0.62
+				}
+			]
+		},
+		{
+			"steps": 1000,
+			"pendulums": [
+				{
+					"ampX": 10.96,
+					"ampY": -52.7,
+					"phaseX": 1.2370893738135806,
+					"phaseY": 1.2498302773531393,
+					"damping": 189.23,
+					"frequency": 1.03
+				},
+				{
+					"ampX": 21.26,
+					"ampY": -19.89,
+					"phaseX": 1.1671016708086084,
+					"phaseY": 0.19442967867216832,
+					"damping": 131.97,
+					"frequency": 1.45
+				},
+				{
+					"ampX": 80.18,
+					"ampY": -14.66,
+					"phaseX": 1.65282680163863,
+					"phaseY": 0.2696533694331239,
+					"damping": 38.21,
+					"frequency": 0.62
+				}
+			]
+		},
+		{
+			"steps": 3026,
+			"pendulums": [
+				{
+					"ampX": 35.89,
+					"ampY": -99.83,
+					"phaseX": 0.9171705219230202,
+					"phaseY": 0.24504422698000386,
+					"damping": 172,
+					"frequency": 1.44
+				},
+				{
+					"ampX": 44.98,
+					"ampY": -14.69,
+					"phaseX": 1.0156070917355002,
+					"phaseY": 1.494001839707146,
+					"damping": 145.09,
+					"frequency": 1.32
+				},
+				{
+					"ampX": 1.16,
+					"ampY": 52.74,
+					"phaseX": 0.0879645943005142,
+					"phaseY": 1.0374237073854293,
+					"damping": 48.77,
+					"frequency": 0.84
+				}
+			]
+		},
+		{
+			"steps": 3026,
+			"pendulums": [
+				{
+					"ampX": 35.89,
+					"ampY": -99.83,
+					"phaseX": 0.9171705219230202,
+					"phaseY": 0.24504422698000386,
+					"damping": 172,
+					"frequency": 1.44
+				},
+				{
+					"ampX": 44.98,
+					"ampY": -14.69,
+					"phaseX": 1.0156070917355002,
+					"phaseY": 1.494001839707146,
+					"damping": 145.09,
+					"frequency": 1.32
+				},
+				{
+					"ampX": 1.16,
+					"ampY": 52.74,
+					"phaseX": 0.0879645943005142,
+					"phaseY": 1.0374237073854293,
+					"damping": 48.77,
+					"frequency": 0.84
+				}
+			]
+		},
+		{
+			"steps": 3026,
+			"pendulums": [
+				{
+					"ampX": 35.89,
+					"ampY": -99.83,
+					"phaseX": 0.9171705219230202,
+					"phaseY": 0.24504422698000386,
+					"damping": 172,
+					"frequency": 1.44
+				},
+				{
+					"ampX": 44.98,
+					"ampY": -14.69,
+					"phaseX": 1.0156070917355002,
+					"phaseY": 1.494001839707146,
+					"damping": 145.09,
+					"frequency": 1.32
+				},
+				{
+					"ampX": 1.16,
+					"ampY": 52.74,
+					"phaseX": 0.0879645943005142,
+					"phaseY": 1.0374237073854293,
+					"damping": 48.77,
+					"frequency": 0.84
+				}
+			]
+		},
+		{
+			"steps": 3026,
+			"pendulums": [
+				{
+					"ampX": 35.89,
+					"ampY": -99.83,
+					"phaseX": 0.9171705219230202,
+					"phaseY": 0.24504422698000386,
+					"damping": 172,
+					"frequency": 1.44
+				},
+				{
+					"ampX": 44.98,
+					"ampY": -14.69,
+					"phaseX": 1.0156070917355002,
+					"phaseY": 1.494001839707146,
+					"damping": 145.09,
+					"frequency": 1.32
+				},
+				{
+					"ampX": 1.16,
+					"ampY": 52.74,
+					"phaseX": 0.0879645943005142,
+					"phaseY": 1.0374237073854293,
+					"damping": 48.77,
+					"frequency": 0.84
+				}
+			]
+		},
+		{
+			"steps": 3026,
+			"pendulums": [
+				{
+					"ampX": 35.89,
+					"ampY": -99.83,
+					"phaseX": 0.9171705219230202,
+					"phaseY": 0.24504422698000386,
+					"damping": 172,
+					"frequency": 1.44
+				},
+				{
+					"ampX": 44.98,
+					"ampY": -14.69,
+					"phaseX": 1.0156070917355002,
+					"phaseY": 1.494001839707146,
+					"damping": 145.09,
+					"frequency": 1.32
+				},
+				{
+					"ampX": 1.16,
+					"ampY": 52.74,
+					"phaseX": 0.0879645943005142,
+					"phaseY": 1.0374237073854293,
+					"damping": 48.77,
+					"frequency": 0.84
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 3500,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 5369,
+			"pendulums": [
+				{
+					"ampX": -59.61,
+					"ampY": -70.46,
+					"phaseX": 1.4240141367021735,
+					"phaseY": 0.048520153205442354,
+					"damping": 171.18,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -2.68,
+					"ampY": 64.89,
+					"phaseX": 0.16336281798666924,
+					"phaseY": 1.2246975361244212,
+					"damping": 3.41,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -97.78,
+					"ampY": -73.47,
+					"phaseX": 0.74176493209759,
+					"phaseY": 1.2384856372151762,
+					"damping": 64.88,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 1598,
+			"pendulums": [
+				{
+					"ampX": -12.78,
+					"ampY": -7.61,
+					"phaseX": 0.6206390820091836,
+					"phaseY": 1.6154767556459515,
+					"damping": 35.25,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 85.99,
+					"ampY": -25.74,
+					"phaseX": 1.1047934165124105,
+					"phaseY": 0.14713125594312196,
+					"damping": 104.37,
+					"frequency": 1.37
+				},
+				{
+					"ampX": 101.98,
+					"ampY": -65.92,
+					"phaseX": 1.429424657383356,
+					"phaseY": 1.5241960357666477,
+					"damping": 188.25,
+					"frequency": 1.49
+				}
+			]
+		},
+		{
+			"steps": 1598,
+			"pendulums": [
+				{
+					"ampX": -12.78,
+					"ampY": -7.61,
+					"phaseX": 0.6206390820091836,
+					"phaseY": 1.6154767556459515,
+					"damping": 35.25,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 85.99,
+					"ampY": -25.74,
+					"phaseX": 1.1047934165124105,
+					"phaseY": 0.14713125594312196,
+					"damping": 104.37,
+					"frequency": 1.37
+				},
+				{
+					"ampX": 101.98,
+					"ampY": -65.92,
+					"phaseX": 1.429424657383356,
+					"phaseY": 1.5241960357666477,
+					"damping": 188.25,
+					"frequency": 1.49
+				}
+			]
+		},
+		{
+			"steps": 1598,
+			"pendulums": [
+				{
+					"ampX": -12.78,
+					"ampY": -7.61,
+					"phaseX": 0.6206390820091836,
+					"phaseY": 1.6154767556459515,
+					"damping": 35.25,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 85.99,
+					"ampY": -25.74,
+					"phaseX": 1.1047934165124105,
+					"phaseY": 0.14713125594312196,
+					"damping": 104.37,
+					"frequency": 1.37
+				},
+				{
+					"ampX": 101.98,
+					"ampY": -65.92,
+					"phaseX": 1.429424657383356,
+					"phaseY": 1.5241960357666477,
+					"damping": 188.25,
+					"frequency": 1.49
+				}
+			]
+		},
+		{
+			"steps": 1598,
+			"pendulums": [
+				{
+					"ampX": -12.78,
+					"ampY": -7.61,
+					"phaseX": 0.6206390820091836,
+					"phaseY": 1.6154767556459515,
+					"damping": 35.25,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 85.99,
+					"ampY": -25.74,
+					"phaseX": 1.1047934165124105,
+					"phaseY": 0.14713125594312196,
+					"damping": 104.37,
+					"frequency": 1.37
+				},
+				{
+					"ampX": 101.98,
+					"ampY": -65.92,
+					"phaseX": 1.429424657383356,
+					"phaseY": 1.5241960357666477,
+					"damping": 188.25,
+					"frequency": 1.49
+				}
+			]
+		},
+		{
+			"steps": 3164,
+			"pendulums": [
+				{
+					"ampX": 18.57,
+					"ampY": 15.36,
+					"phaseX": 0.029670597283903602,
+					"phaseY": 0.08464846872172498,
+					"damping": 134.28,
+					"frequency": 1.35
+				},
+				{
+					"ampX": -39.31,
+					"ampY": 34.95,
+					"phaseX": 0.5904448859496817,
+					"phaseY": 0.9302604913129776,
+					"damping": 163.73,
+					"frequency": 0.91
+				},
+				{
+					"ampX": -7.78,
+					"ampY": 52.27,
+					"phaseX": 0.7478735844795703,
+					"phaseY": 0.36669367584400864,
+					"damping": 90.99,
+					"frequency": 0.9
+				}
+			]
+		},
+		{
+			"steps": 1554,
+			"pendulums": [
+				{
+					"ampX": -104.26,
+					"ampY": 16.32,
+					"phaseX": 0.13456488532876282,
+					"phaseY": 1.5163420541326733,
+					"damping": 6.96,
+					"frequency": 0.89
+				},
+				{
+					"ampX": 64.14,
+					"ampY": -56.05,
+					"phaseX": 1.2131783630612585,
+					"phaseY": 1.4458307523521026,
+					"damping": 118.67,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -93.1,
+					"ampY": -48.53,
+					"phaseX": 0.114493598930828,
+					"phaseY": 1.2985249634837812,
+					"damping": 93.05,
+					"frequency": 0.86
+				}
+			]
+		},
+		{
+			"steps": 3609,
+			"pendulums": [
+				{
+					"ampX": 94.02,
+					"ampY": 80.78,
+					"phaseX": 0.7466518540031741,
+					"phaseY": 0.44837508483734323,
+					"damping": 174.42,
+					"frequency": 1.3
+				},
+				{
+					"ampX": 54.53,
+					"ampY": -92.81,
+					"phaseX": 0.5555383009097951,
+					"phaseY": 0.3492403833240654,
+					"damping": 66.09,
+					"frequency": 1.34
+				},
+				{
+					"ampX": -11.5,
+					"ampY": 66.1,
+					"phaseX": 0.9257226352577924,
+					"phaseY": 0.0996583002888762,
+					"damping": 118.93,
+					"frequency": 1.4
+				}
+			]
+		},
+		{
+			"steps": 4716,
+			"pendulums": [
+				{
+					"ampX": -83.31,
+					"ampY": 104.35,
+					"phaseX": 0.032812189937493394,
+					"phaseY": 1.3624040141067737,
+					"damping": 73.29,
+					"frequency": 0.76
+				},
+				{
+					"ampX": -102.39,
+					"ampY": -66.84,
+					"phaseX": 1.0398671683382217,
+					"phaseY": 0.9763371835656279,
+					"damping": 116.67,
+					"frequency": 0.83
+				},
+				{
+					"ampX": 99.58,
+					"ampY": 58.53,
+					"phaseX": 1.4165092209185979,
+					"phaseY": 0.23684117949563052,
+					"damping": 79.28,
+					"frequency": 0.69
+				}
+			]
+		},
+		{
+			"steps": 493,
+			"pendulums": [
+				{
+					"ampX": 34.42,
+					"ampY": 77.73,
+					"phaseX": 0.8461356213668508,
+					"phaseY": 0.12793263417118436,
+					"damping": 102.95,
+					"frequency": 0.94
+				},
+				{
+					"ampX": -85.68,
+					"ampY": -70.68,
+					"phaseX": 49,
+					"phaseY": 0.54,
+					"damping": 17.5,
+					"frequency": 1.49
+				},
+				{
+					"ampX": 34.42,
+					"ampY": 77.73,
+					"phaseX": 48.48,
+					"phaseY": 7.33,
+					"damping": 102.95,
+					"frequency": 0.94
+				}
+			]
+		},
+		{
+			"steps": 0,
+			"pendulums": [
+				{
+					"ampX": 1.36,
+					"ampY": -87.71,
+					"phaseX": 0.7164576579436722,
+					"phaseY": 0.9402088680493452,
+					"damping": 104.57,
+					"frequency": 1.5
+				},
+				{
+					"ampX": -65.34,
+					"ampY": 71.55,
+					"phaseX": 15.48,
+					"phaseY": 31.19,
+					"damping": 154.46,
+					"frequency": 0.52
+				},
+				{
+					"ampX": 1.36,
+					"ampY": -87.71,
+					"phaseX": 41.05,
+					"phaseY": 53.87,
+					"damping": 104.57,
+					"frequency": 1.5
+				}
+			]
+		},
+		{
+			"steps": 895,
+			"pendulums": [
+				{
+					"ampX": -63.55,
+					"ampY": -99.94,
+					"phaseX": 1.0986847641304305,
+					"phaseY": 1.1623892818282235,
+					"damping": 79.55,
+					"frequency": 1.36
+				},
+				{
+					"ampX": 21.01,
+					"ampY": 58.65,
+					"phaseX": 92.14,
+					"phaseY": 44.23,
+					"damping": 92.96,
+					"frequency": 0.9
+				},
+				{
+					"ampX": -63.55,
+					"ampY": -99.94,
+					"phaseX": 62.95,
+					"phaseY": 66.6,
+					"damping": 79.55,
+					"frequency": 1.36
+				}
+			]
+		},
+		{
+			"steps": 2464,
+			"pendulums": [
+				{
+					"ampX": -69.99,
+					"ampY": -93.81,
+					"phaseX": 0.5787511799613196,
+					"phaseY": 0.6647959120846402,
+					"damping": 89.93,
+					"frequency": 1.35
+				},
+				{
+					"ampX": 101.56,
+					"ampY": 94.05,
+					"phaseX": 13.82,
+					"phaseY": 48.4,
+					"damping": 112.36,
+					"frequency": 0.7
+				},
+				{
+					"ampX": -69.99,
+					"ampY": -93.81,
+					"phaseX": 33.16,
+					"phaseY": 38.09,
+					"damping": 89.93,
+					"frequency": 1.35
+				}
+			]
+		},
+		{
+			"steps": 2719,
+			"pendulums": [
+				{
+					"ampX": 58.28,
+					"ampY": -17.81,
+					"phaseX": 1.128355361414334,
+					"phaseY": 1.0332349171806432,
+					"damping": 73.78,
+					"frequency": 0.63
+				},
+				{
+					"ampX": 32.64,
+					"ampY": -70.98,
+					"phaseX": 30.25,
+					"phaseY": 26.13,
+					"damping": 160.21,
+					"frequency": 1.37
+				},
+				{
+					"ampX": 58.28,
+					"ampY": -17.81,
+					"phaseX": 64.65,
+					"phaseY": 59.2,
+					"damping": 73.78,
+					"frequency": 0.63
+				}
+			]
+		},
+		{
+			"steps": 3380,
+			"pendulums": [
+				{
+					"ampX": 46.09,
+					"ampY": 92.94,
+					"phaseX": 1.209338638706871,
+					"phaseY": 0.5761331860833281,
+					"damping": 112.81,
+					"frequency": 0.96
+				},
+				{
+					"ampX": 58.11,
+					"ampY": 77.85,
+					"phaseX": 10.89,
+					"phaseY": 1.85,
+					"damping": 165.01,
+					"frequency": 0.8
+				},
+				{
+					"ampX": 46.09,
+					"ampY": 92.94,
+					"phaseX": 69.29,
+					"phaseY": 33.01,
+					"damping": 112.81,
+					"frequency": 0.96
+				}
+			]
+		},
+		{
+			"steps": 3101,
+			"pendulums": [
+				{
+					"ampX": 11.96,
+					"ampY": 91.95,
+					"phaseX": 1.242325361569564,
+					"phaseY": 1.6929693744344996,
+					"damping": 146.6,
+					"frequency": 0.57
+				},
+				{
+					"ampX": -62.48,
+					"ampY": 64.13,
+					"phaseX": 50.88,
+					"phaseY": 37.36,
+					"damping": 120.24,
+					"frequency": 0.87
+				},
+				{
+					"ampX": 11.96,
+					"ampY": 91.95,
+					"phaseX": 71.18,
+					"phaseY": 97,
+					"damping": 146.6,
+					"frequency": 0.57
+				}
+			]
+		},
+		{
+			"steps": 3857,
+			"pendulums": [
+				{
+					"ampX": -101.97,
+					"ampY": 56.95,
+					"phaseX": 1.2327260506835949,
+					"phaseY": 0.6948155752189427,
+					"damping": 124.03,
+					"frequency": 1.07
+				},
+				{
+					"ampX": -72.61,
+					"ampY": 41.69,
+					"phaseX": 60.63,
+					"phaseY": 41.02,
+					"damping": 141.98,
+					"frequency": 1.3
+				},
+				{
+					"ampX": -101.97,
+					"ampY": 56.95,
+					"phaseX": 70.63,
+					"phaseY": 39.81,
+					"damping": 124.03,
+					"frequency": 1.07
+				}
+			]
+		},
+		{
+			"steps": 6115,
+			"pendulums": [
+				{
+					"ampX": 69.16,
+					"ampY": 90.19,
+					"phaseX": 0.36425021489121656,
+					"phaseY": 1.3836970309811045,
+					"damping": 163.2,
+					"frequency": 1.43
+				},
+				{
+					"ampX": -86.11,
+					"ampY": 68.42,
+					"phaseX": 49.49,
+					"phaseY": 61.58,
+					"damping": 147.7,
+					"frequency": 0.95
+				},
+				{
+					"ampX": 69.16,
+					"ampY": 90.19,
+					"phaseX": 20.87,
+					"phaseY": 79.28,
+					"damping": 163.2,
+					"frequency": 1.43
+				}
+			]
+		},
+		{
+			"steps": 3423,
+			"pendulums": [
+				{
+					"ampX": -78.71,
+					"ampY": -66.57,
+					"phaseX": 0.01710422666954443,
+					"phaseY": 0.5853834311188981,
+					"damping": 96.99,
+					"frequency": 1.15
+				},
+				{
+					"ampX": -81.58,
+					"ampY": 29.15,
+					"phaseX": 20.07,
+					"phaseY": 22.46,
+					"damping": 92.13,
+					"frequency": 1.34
+				},
+				{
+					"ampX": -78.71,
+					"ampY": -66.57,
+					"phaseX": 0.98,
+					"phaseY": 33.54,
+					"damping": 96.99,
+					"frequency": 1.15
+				}
+			]
+		},
+		{
+			"steps": 2052,
+			"pendulums": [
+				{
+					"ampX": -71.05,
+					"ampY": -44.77,
+					"phaseX": 0.33108895910332425,
+					"phaseY": 0.6323327879975454,
+					"damping": 14.42,
+					"frequency": 0.88
+				},
+				{
+					"ampX": -99.42,
+					"ampY": 99.45,
+					"phaseX": 89.24,
+					"phaseY": 52.92,
+					"damping": 43.99,
+					"frequency": 0.89
+				},
+				{
+					"ampX": -71.05,
+					"ampY": -44.77,
+					"phaseX": 18.97,
+					"phaseY": 36.23,
+					"damping": 14.42,
+					"frequency": 0.88
+				}
+			]
+		},
+		{
+			"steps": 1320,
+			"pendulums": [
+				{
+					"ampX": 80.58,
+					"ampY": 22.28,
+					"phaseX": 0.2892010570554604,
+					"phaseY": 0.09267698328089889,
+					"damping": 115.98,
+					"frequency": 1.1
+				},
+				{
+					"ampX": -62.06,
+					"ampY": -48.11,
+					"phaseX": 16.05,
+					"phaseY": 56.48,
+					"damping": 191.05,
+					"frequency": 0.82
+				},
+				{
+					"ampX": 80.58,
+					"ampY": 22.28,
+					"phaseX": 16.57,
+					"phaseY": 5.31,
+					"damping": 115.98,
+					"frequency": 1.1
+				}
+			]
+		},
+		{
+			"steps": 2335,
+			"pendulums": [
+				{
+					"ampX": -70.56,
+					"ampY": 29.36,
+					"phaseX": 1.4119713648634127,
+					"phaseY": 1.3091714719209466,
+					"damping": 114.9,
+					"frequency": 0.92
+				},
+				{
+					"ampX": 85.64,
+					"ampY": -39.21,
+					"phaseX": 10.77,
+					"phaseY": 41.33,
+					"damping": 98.17,
+					"frequency": 1.23
+				},
+				{
+					"ampX": -70.56,
+					"ampY": 29.36,
+					"phaseX": 80.9,
+					"phaseY": 75.01,
+					"damping": 114.9,
+					"frequency": 0.92
+				}
+			]
+		},
+		{
+			"steps": 2105,
+			"pendulums": [
+				{
+					"ampX": 33.93,
+					"ampY": 100.91,
+					"phaseX": 1.6933184402848982,
+					"phaseY": 0.2848377339254746,
+					"damping": 109.08,
+					"frequency": 1.23
+				},
+				{
+					"ampX": -30.97,
+					"ampY": -4.1,
+					"phaseX": 62.3,
+					"phaseY": 38.91,
+					"damping": 159.82,
+					"frequency": 0.98
+				},
+				{
+					"ampX": 33.93,
+					"ampY": 100.91,
+					"phaseX": 97.02,
+					"phaseY": 16.32,
+					"damping": 109.08,
+					"frequency": 1.23
+				}
+			]
+		},
+		{
+			"steps": 2950,
+			"pendulums": [
+				{
+					"ampX": -84.81,
+					"ampY": -92.18,
+					"phaseX": 0.8014551925157961,
+					"phaseY": 0.40701078156507764,
+					"damping": 152.23,
+					"frequency": 1.21
+				},
+				{
+					"ampX": -89.84,
+					"ampY": -49.28,
+					"phaseX": 38.72,
+					"phaseY": 96.83,
+					"damping": 4.67,
+					"frequency": 1.13
+				},
+				{
+					"ampX": -84.81,
+					"ampY": -92.18,
+					"phaseX": 45.92,
+					"phaseY": 23.32,
+					"damping": 152.23,
+					"frequency": 1.21
+				}
+			]
+		},
+		{
+			"steps": 1780,
+			"pendulums": [
+				{
+					"ampX": 71.81,
+					"ampY": -39.81,
+					"phaseX": 0.36931166972200014,
+					"phaseY": 0.0645771823237902,
+					"damping": 29.57,
+					"frequency": 1.49
+				},
+				{
+					"ampX": -101.69,
+					"ampY": 63.26,
+					"phaseX": 53.95,
+					"phaseY": 81.79,
+					"damping": 142.02,
+					"frequency": 1.45
+				},
+				{
+					"ampX": 71.81,
+					"ampY": -39.81,
+					"phaseX": 21.16,
+					"phaseY": 3.7,
+					"damping": 29.57,
+					"frequency": 1.49
+				}
+			]
+		},
+		{
+			"steps": 1436,
+			"pendulums": [
+				{
+					"ampX": -19.51,
+					"ampY": 41.49,
+					"phaseX": 1.0344566476570392,
+					"phaseY": 0.8758062186507546,
+					"damping": 9.85,
+					"frequency": 1.1
+				},
+				{
+					"ampX": 66.46,
+					"ampY": -53.01,
+					"phaseX": 46.94,
+					"phaseY": 91.86,
+					"damping": 21.04,
+					"frequency": 1.06
+				},
+				{
+					"ampX": -19.51,
+					"ampY": 41.49,
+					"phaseX": 59.27,
+					"phaseY": 50.18,
+					"damping": 9.85,
+					"frequency": 1.1
+				}
+			]
+		},
+		{
+			"steps": 4395,
+			"pendulums": [
+				{
+					"ampX": -60.69,
+					"ampY": 43.4,
+					"phaseX": 1.6282176591855102,
+					"phaseY": 1.2632693125934957,
+					"damping": 186.07,
+					"frequency": 0.91
+				},
+				{
+					"ampX": -39.06,
+					"ampY": -101.21,
+					"phaseX": 37.38,
+					"phaseY": 19.69,
+					"damping": 44.85,
+					"frequency": 1.34
+				},
+				{
+					"ampX": -60.69,
+					"ampY": 43.4,
+					"phaseX": 93.29,
+					"phaseY": 72.38,
+					"damping": 186.07,
+					"frequency": 0.91
+				}
+			]
+		},
+		{
+			"steps": 12242,
+			"pendulums": [
+				{
+					"ampX": -31.83,
+					"ampY": 71.52,
+					"phaseX": 1.020668546566284,
+					"phaseY": 0.3036872898470133,
+					"damping": 54.36,
+					"frequency": 1.14
+				},
+				{
+					"ampX": 34.13,
+					"ampY": -45.99,
+					"phaseX": 57.15,
+					"phaseY": 28.88,
+					"damping": 66.82,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -31.83,
+					"ampY": 71.52,
+					"phaseX": 58.48,
+					"phaseY": 17.4,
+					"damping": 54.36,
+					"frequency": 1.14
+				}
+			]
+		},
+		{
+			"steps": 15638,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 11933,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 32831,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 14276,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 23525,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 13682,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 7158,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 12757,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 9840,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 2935,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 842,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1262,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 2381,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 560,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 514,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 735,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 565,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1055,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 570,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 855,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1030,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 733,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1083,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1654,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 915,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1127,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1012,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 980,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1565,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 530,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 570,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1243,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1227,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 1685,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 4819,
+			"pendulums": [
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 1.5048228810695108,
+					"phaseY": 0.9606292202976789,
+					"damping": 63.21,
+					"frequency": 0.55
+				},
+				{
+					"ampX": -66,
+					"ampY": -80.28,
+					"phaseX": 53.75,
+					"phaseY": 0.01,
+					"damping": 177.18,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 93.69,
+					"ampY": 91.29,
+					"phaseX": 86.22,
+					"phaseY": 55.04,
+					"damping": 63.21,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 2737,
+			"pendulums": [
+				{
+					"ampX": -0.53,
+					"ampY": 71.93,
+					"phaseX": 0.7904596182282319,
+					"phaseY": 1.4323917171117462,
+					"damping": 92.86,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 73.84,
+					"ampY": 25.22,
+					"phaseX": 49.66,
+					"phaseY": 87.2,
+					"damping": 138.35,
+					"frequency": 0.59
+				},
+				{
+					"ampX": -0.53,
+					"ampY": 71.93,
+					"phaseX": 45.29,
+					"phaseY": 82.07,
+					"damping": 92.86,
+					"frequency": 0.7
+				}
+			]
+		},
+		{
+			"steps": 7213,
+			"pendulums": [
+				{
+					"ampX": -0.53,
+					"ampY": 71.93,
+					"phaseX": 0.7904596182282319,
+					"phaseY": 1.4323917171117462,
+					"damping": 92.86,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 73.84,
+					"ampY": 25.22,
+					"phaseX": 49.66,
+					"phaseY": 87.2,
+					"damping": 138.35,
+					"frequency": 0.59
+				},
+				{
+					"ampX": -0.53,
+					"ampY": 71.93,
+					"phaseX": 45.29,
+					"phaseY": 82.07,
+					"damping": 92.86,
+					"frequency": 0.7
+				}
+			]
+		},
+		{
+			"steps": 1442,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 2122,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 919,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 1586,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 1994,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 610,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 795,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 601,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 1650,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 1175,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 514,
+			"pendulums": [
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 0.5482079180514189,
+					"phaseY": 1.4261085318045665,
+					"damping": 55.34,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -82.37,
+					"ampY": 90.8,
+					"phaseX": 68.51,
+					"phaseY": 82.16,
+					"damping": 129.89,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -66.36,
+					"ampY": -61.74,
+					"phaseX": 31.41,
+					"phaseY": 81.71,
+					"damping": 55.34,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 2041,
+			"pendulums": [
+				{
+					"ampX": -88.73,
+					"ampY": 20.88,
+					"phaseX": 1.3058553463421572,
+					"phaseY": 1.1344640137963142,
+					"damping": 57.72,
+					"frequency": 1.09
+				},
+				{
+					"ampX": -72.03,
+					"ampY": -44.36,
+					"phaseX": 65.57,
+					"phaseY": 89.76,
+					"damping": 153.23,
+					"frequency": 1.07
+				},
+				{
+					"ampX": -88.73,
+					"ampY": 20.88,
+					"phaseX": 74.82,
+					"phaseY": 65,
+					"damping": 57.72,
+					"frequency": 1.09
+				}
+			]
+		},
+		{
+			"steps": 2041,
+			"pendulums": [
+				{
+					"ampX": 94.34,
+					"ampY": -55.09,
+					"phaseX": 0.9665633397544597,
+					"phaseY": 0.1850049007113989,
+					"damping": 97.71,
+					"frequency": 0.63
+				},
+				{
+					"ampX": -100.48,
+					"ampY": -60.47,
+					"phaseX": 84.36,
+					"phaseY": 47.31,
+					"damping": 45.66,
+					"frequency": 0.97
+				},
+				{
+					"ampX": 94.34,
+					"ampY": -55.09,
+					"phaseX": 55.38,
+					"phaseY": 10.6,
+					"damping": 97.71,
+					"frequency": 0.63
+				}
+			]
+		},
+		{
+			"steps": 732,
+			"pendulums": [
+				{
+					"ampX": -67.83,
+					"ampY": -10.59,
+					"phaseX": 1.661204382048203,
+					"phaseY": 0.11431906600562858,
+					"damping": 125.35,
+					"frequency": 0.83
+				},
+				{
+					"ampX": 1.59,
+					"ampY": 28.8,
+					"phaseX": 19.4,
+					"phaseY": 69.51,
+					"damping": 140.44,
+					"frequency": 1.43
+				},
+				{
+					"ampX": -67.83,
+					"ampY": -10.59,
+					"phaseX": 95.18,
+					"phaseY": 6.55,
+					"damping": 125.35,
+					"frequency": 0.83
+				}
+			]
+		},
+		{
+			"steps": 1227,
+			"pendulums": [
+				{
+					"ampX": -84.74,
+					"ampY": -84.76,
+					"phaseX": 0.7466518540031741,
+					"phaseY": 1.057844059633763,
+					"damping": 45.43,
+					"frequency": 1.04
+				},
+				{
+					"ampX": -17.22,
+					"ampY": -12.31,
+					"phaseX": 96.96,
+					"phaseY": 33.45,
+					"damping": 129.98,
+					"frequency": 0.54
+				},
+				{
+					"ampX": -84.74,
+					"ampY": -84.76,
+					"phaseX": 42.78,
+					"phaseY": 60.61,
+					"damping": 45.43,
+					"frequency": 1.04
+				}
+			]
+		},
+		{
+			"steps": 450,
+			"pendulums": [
+				{
+					"ampX": -21.77,
+					"ampY": -31.77,
+					"phaseX": 1.7289231570255827,
+					"phaseY": 0.9245009047813962,
+					"damping": 83.2,
+					"frequency": 0.91
+				},
+				{
+					"ampX": 48.84,
+					"ampY": -99.6,
+					"phaseX": 5.03,
+					"phaseY": 73.18,
+					"damping": 193.83,
+					"frequency": 1.36
+				},
+				{
+					"ampX": -21.77,
+					"ampY": -31.77,
+					"phaseX": 99.06,
+					"phaseY": 52.97,
+					"damping": 83.2,
+					"frequency": 0.91
+				}
+			]
+		},
+		{
+			"steps": 802,
+			"pendulums": [
+				{
+					"ampX": 95.71,
+					"ampY": -40.82,
+					"phaseX": 0.06998770300497262,
+					"phaseY": 1.0157816246606999,
+					"damping": 98.78,
+					"frequency": 1.31
+				},
+				{
+					"ampX": 71.75,
+					"ampY": 32.8,
+					"phaseX": 65.97,
+					"phaseY": 80.05,
+					"damping": 33.64,
+					"frequency": 1.29
+				},
+				{
+					"ampX": 95.71,
+					"ampY": -40.82,
+					"phaseX": 4.01,
+					"phaseY": 58.2,
+					"damping": 98.78,
+					"frequency": 1.31
+				}
+			]
+		},
+		{
+			"steps": 774,
+			"pendulums": [
+				{
+					"ampX": 95.97,
+					"ampY": 87.4,
+					"phaseX": 1.7324138155295716,
+					"phaseY": 0.0066322511575784525,
+					"damping": 198.32,
+					"frequency": 1.39
+				},
+				{
+					"ampX": -97.24,
+					"ampY": 20.59,
+					"phaseX": 75.3,
+					"phaseY": 57.09,
+					"damping": 87.33,
+					"frequency": 1.42
+				},
+				{
+					"ampX": 95.97,
+					"ampY": 87.4,
+					"phaseX": 99.26,
+					"phaseY": 0.38,
+					"damping": 198.32,
+					"frequency": 1.39
+				}
+			]
+		},
+		{
+			"steps": 645,
+			"pendulums": [
+				{
+					"ampX": 42.76,
+					"ampY": 101.22,
+					"phaseX": 0.27890361446869383,
+					"phaseY": 0.4389503068765739,
+					"damping": 185.56,
+					"frequency": 1.16
+				},
+				{
+					"ampX": 24.66,
+					"ampY": -57.99,
+					"phaseX": 76.44,
+					"phaseY": 23.09,
+					"damping": 107.82,
+					"frequency": 0.83
+				},
+				{
+					"ampX": 42.76,
+					"ampY": 101.22,
+					"phaseX": 15.98,
+					"phaseY": 25.15,
+					"damping": 185.56,
+					"frequency": 1.16
+				}
+			]
+		},
+		{
+			"steps": 818,
+			"pendulums": [
+				{
+					"ampX": 92.04,
+					"ampY": -29.96,
+					"phaseX": 0.44488442633335457,
+					"phaseY": 1.5470598489677738,
+					"damping": 81.66,
+					"frequency": 1.33
+				},
+				{
+					"ampX": -76.3,
+					"ampY": -21.51,
+					"phaseX": 1.75,
+					"phaseY": 76.6,
+					"damping": 90.48,
+					"frequency": 1.4
+				},
+				{
+					"ampX": 92.04,
+					"ampY": -29.96,
+					"phaseX": 25.49,
+					"phaseY": 88.64,
+					"damping": 81.66,
+					"frequency": 1.33
+				}
+			]
+		},
+		{
+			"steps": 909,
+			"pendulums": [
+				{
+					"ampX": -52.26,
+					"ampY": 95.93,
+					"phaseX": 0.7834783012202545,
+					"phaseY": 0.32201324699295375,
+					"damping": 154.31,
+					"frequency": 1.1
+				},
+				{
+					"ampX": -90.05,
+					"ampY": 5.04,
+					"phaseX": 56,
+					"phaseY": 56.93,
+					"damping": 72.31,
+					"frequency": 1.5
+				},
+				{
+					"ampX": -52.26,
+					"ampY": 95.93,
+					"phaseX": 44.89,
+					"phaseY": 18.45,
+					"damping": 154.31,
+					"frequency": 1.1
+				}
+			]
+		},
+		{
+			"steps": 983,
+			"pendulums": [
+				{
+					"ampX": 32.57,
+					"ampY": 74.91,
+					"phaseX": 0.8061675814961808,
+					"phaseY": 0.8770279491271507,
+					"damping": 128.53,
+					"frequency": 0.66
+				},
+				{
+					"ampX": 67.59,
+					"ampY": -17.17,
+					"phaseX": 99.01,
+					"phaseY": 56.52,
+					"damping": 171.03,
+					"frequency": 0.88
+				},
+				{
+					"ampX": 32.57,
+					"ampY": 74.91,
+					"phaseX": 46.19,
+					"phaseY": 50.25,
+					"damping": 128.53,
+					"frequency": 0.66
+				}
+			]
+		},
+		{
+			"steps": 1013,
+			"pendulums": [
+				{
+					"ampX": -97.59,
+					"ampY": -47.85,
+					"phaseX": 1.6887805842297132,
+					"phaseY": 1.7186257144388162,
+					"damping": 113.6,
+					"frequency": 0.92
+				},
+				{
+					"ampX": -75.59,
+					"ampY": 34.27,
+					"phaseX": 29.1,
+					"phaseY": 65.71,
+					"damping": 193.61,
+					"frequency": 1.16
+				},
+				{
+					"ampX": -97.59,
+					"ampY": -47.85,
+					"phaseX": 96.76,
+					"phaseY": 98.47,
+					"damping": 113.6,
+					"frequency": 0.92
+				}
+			]
+		},
+		{
+			"steps": 839,
+			"pendulums": [
+				{
+					"ampX": -65.89,
+					"ampY": -42.33,
+					"phaseX": 0.42568580456141697,
+					"phaseY": 1.246863217624749,
+					"damping": 50.63,
+					"frequency": 0.68
+				},
+				{
+					"ampX": 65.69,
+					"ampY": -74.83,
+					"phaseX": 40.61,
+					"phaseY": 72.12,
+					"damping": 130.23,
+					"frequency": 1.15
+				},
+				{
+					"ampX": -65.89,
+					"ampY": -42.33,
+					"phaseX": 24.39,
+					"phaseY": 71.44,
+					"damping": 50.63,
+					"frequency": 0.68
+				}
+			]
+		},
+		{
+			"steps": 835,
+			"pendulums": [
+				{
+					"ampX": 1.16,
+					"ampY": 12.58,
+					"phaseX": 1.4090043051350223,
+					"phaseY": 0.6403613025567194,
+					"damping": 71.78,
+					"frequency": 1.42
+				},
+				{
+					"ampX": 104.47,
+					"ampY": 5.79,
+					"phaseX": 26.16,
+					"phaseY": 76.65,
+					"damping": 40.46,
+					"frequency": 0.81
+				},
+				{
+					"ampX": 1.16,
+					"ampY": 12.58,
+					"phaseX": 80.73,
+					"phaseY": 36.69,
+					"damping": 71.78,
+					"frequency": 1.42
+				}
+			]
+		},
+		{
+			"steps": 696,
+			"pendulums": [
+				{
+					"ampX": -101.22,
+					"ampY": 32.74,
+					"phaseX": 1.2135274289116573,
+					"phaseY": 0.4904375198104066,
+					"damping": 21.87,
+					"frequency": 1.41
+				},
+				{
+					"ampX": -51.72,
+					"ampY": -89.14,
+					"phaseX": 98.93,
+					"phaseY": 21.95,
+					"damping": 118.91,
+					"frequency": 1.42
+				},
+				{
+					"ampX": -101.22,
+					"ampY": 32.74,
+					"phaseX": 69.53,
+					"phaseY": 28.1,
+					"damping": 21.87,
+					"frequency": 1.41
+				}
+			]
+		},
+		{
+			"steps": 826,
+			"pendulums": [
+				{
+					"ampX": -94.56,
+					"ampY": 91.09,
+					"phaseX": 1.2983504305585818,
+					"phaseY": 1.611287965441165,
+					"damping": 162.26,
+					"frequency": 1.17
+				},
+				{
+					"ampX": -63.97,
+					"ampY": 33.44,
+					"phaseX": 9.46,
+					"phaseY": 15.56,
+					"damping": 149.09,
+					"frequency": 0.65
+				},
+				{
+					"ampX": -94.56,
+					"ampY": 91.09,
+					"phaseX": 74.39,
+					"phaseY": 92.32,
+					"damping": 162.26,
+					"frequency": 1.17
+				}
+			]
+		},
+		{
+			"steps": 558,
+			"pendulums": [
+				{
+					"ampX": 57.47,
+					"ampY": -35.73,
+					"phaseX": 1.6706291600089722,
+					"phaseY": 0.20036379812894903,
+					"damping": 109.05,
+					"frequency": 0.85
+				},
+				{
+					"ampX": -91.6,
+					"ampY": -1.39,
+					"phaseX": 39.44,
+					"phaseY": 86.39,
+					"damping": 85.26,
+					"frequency": 1.19
+				},
+				{
+					"ampX": 57.47,
+					"ampY": -35.73,
+					"phaseX": 95.72,
+					"phaseY": 11.48,
+					"damping": 109.05,
+					"frequency": 0.85
+				}
+			]
+		},
+		{
+			"steps": 924,
+			"pendulums": [
+				{
+					"ampX": -13.02,
+					"ampY": -56.9,
+					"phaseX": 0.21781709064889232,
+					"phaseY": 1.319817980358112,
+					"damping": 187.57,
+					"frequency": 0.8
+				},
+				{
+					"ampX": -103.96,
+					"ampY": 10.26,
+					"phaseX": 9.41,
+					"phaseY": 7.15,
+					"damping": 168.2,
+					"frequency": 1.4
+				},
+				{
+					"ampX": -13.02,
+					"ampY": -56.9,
+					"phaseX": 12.48,
+					"phaseY": 75.62,
+					"damping": 187.57,
+					"frequency": 0.8
+				}
+			]
+		},
+		{
+			"steps": 959,
+			"pendulums": [
+				{
+					"ampX": -44.99,
+					"ampY": 64.87,
+					"phaseX": 0.7342600163140144,
+					"phaseY": 1.6552702625914224,
+					"damping": 160.04,
+					"frequency": 0.76
+				},
+				{
+					"ampX": 16.99,
+					"ampY": 15.02,
+					"phaseX": 53.91,
+					"phaseY": 95,
+					"damping": 84.71,
+					"frequency": 1
+				},
+				{
+					"ampX": -44.99,
+					"ampY": 64.87,
+					"phaseX": 42.07,
+					"phaseY": 94.84,
+					"damping": 160.04,
+					"frequency": 0.76
+				}
+			]
+		},
+		{
+			"steps": 797,
+			"pendulums": [
+				{
+					"ampX": 98.02,
+					"ampY": -9.59,
+					"phaseX": 0.790110552377833,
+					"phaseY": 1.699950691442477,
+					"damping": 116.28,
+					"frequency": 0.91
+				},
+				{
+					"ampX": 90.45,
+					"ampY": -83.53,
+					"phaseX": 43.93,
+					"phaseY": 82.37,
+					"damping": 175.58,
+					"frequency": 1.22
+				},
+				{
+					"ampX": 98.02,
+					"ampY": -9.59,
+					"phaseX": 45.27,
+					"phaseY": 97.4,
+					"damping": 116.28,
+					"frequency": 0.91
+				}
+			]
+		},
+		{
+			"steps": 736,
+			"pendulums": [
+				{
+					"ampX": 71.01,
+					"ampY": 34.53,
+					"phaseX": 1.2157963569392498,
+					"phaseY": 0.25935592684635733,
+					"damping": 179.44,
+					"frequency": 1.17
+				},
+				{
+					"ampX": 64.9,
+					"ampY": 7.95,
+					"phaseX": 8.02,
+					"phaseY": 2.76,
+					"damping": 169.4,
+					"frequency": 1.12
+				},
+				{
+					"ampX": 71.01,
+					"ampY": 34.53,
+					"phaseX": 69.66,
+					"phaseY": 14.86,
+					"damping": 179.44,
+					"frequency": 1.17
+				}
+			]
+		},
+		{
+			"steps": 1071,
+			"pendulums": [
+				{
+					"ampX": -11.12,
+					"ampY": 100.53,
+					"phaseX": 0.790110552377833,
+					"phaseY": 0.40002946455710037,
+					"damping": 64.36,
+					"frequency": 1.45
+				},
+				{
+					"ampX": -72.81,
+					"ampY": -72.05,
+					"phaseX": 78.25,
+					"phaseY": 47.39,
+					"damping": 124.14,
+					"frequency": 1.27
+				},
+				{
+					"ampX": -11.12,
+					"ampY": 100.53,
+					"phaseX": 45.27,
+					"phaseY": 22.92,
+					"damping": 64.36,
+					"frequency": 1.45
+				}
+			]
+		},
+		{
+			"steps": 846,
+			"pendulums": [
+				{
+					"ampX": -51.65,
+					"ampY": 46.19,
+					"phaseX": 1.0693632326969258,
+					"phaseY": 1.0177014868378937,
+					"damping": 72.31,
+					"frequency": 1.35
+				},
+				{
+					"ampX": -75.01,
+					"ampY": 72.78,
+					"phaseX": 5.57,
+					"phaseY": 2.04,
+					"damping": 36.42,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -51.65,
+					"ampY": 46.19,
+					"phaseX": 61.27,
+					"phaseY": 58.31,
+					"damping": 72.31,
+					"frequency": 1.35
+				}
+			]
+		},
+		{
+			"steps": 592,
+			"pendulums": [
+				{
+					"ampX": 74.4,
+					"ampY": 49.79,
+					"phaseX": 1.0300933245270534,
+					"phaseY": 0.3134611336581816,
+					"damping": 34.32,
+					"frequency": 1.34
+				},
+				{
+					"ampX": 29.11,
+					"ampY": -19.17,
+					"phaseX": 3.97,
+					"phaseY": 26.39,
+					"damping": 13.61,
+					"frequency": 1.28
+				},
+				{
+					"ampX": 74.4,
+					"ampY": 49.79,
+					"phaseX": 59.02,
+					"phaseY": 17.96,
+					"damping": 34.32,
+					"frequency": 1.34
+				}
+			]
+		},
+		{
+			"steps": 558,
+			"pendulums": [
+				{
+					"ampX": -31.9,
+					"ampY": 50.39,
+					"phaseX": 1.655619328441821,
+					"phaseY": 1.1911872144861297,
+					"damping": 39.15,
+					"frequency": 0.66
+				},
+				{
+					"ampX": -27.14,
+					"ampY": -76.4,
+					"phaseX": 17.68,
+					"phaseY": 7.13,
+					"damping": 81.93,
+					"frequency": 1.26
+				},
+				{
+					"ampX": -31.9,
+					"ampY": 50.39,
+					"phaseX": 94.86,
+					"phaseY": 68.25,
+					"damping": 39.15,
+					"frequency": 0.66
+				}
+			]
+		},
+		{
+			"steps": 728,
+			"pendulums": [
+				{
+					"ampX": -9.12,
+					"ampY": -50.23,
+					"phaseX": 0.05253441048502932,
+					"phaseY": 0.36250488563922223,
+					"damping": 172.7,
+					"frequency": 0.73
+				},
+				{
+					"ampX": 12.72,
+					"ampY": -50.46,
+					"phaseX": 77.93,
+					"phaseY": 76.76,
+					"damping": 33.08,
+					"frequency": 1.28
+				},
+				{
+					"ampX": -9.12,
+					"ampY": -50.23,
+					"phaseX": 3.01,
+					"phaseY": 20.77,
+					"damping": 172.7,
+					"frequency": 0.73
+				}
+			]
+		},
+		{
+			"steps": 784,
+			"pendulums": [
+				{
+					"ampX": 56.5,
+					"ampY": -44.92,
+					"phaseX": 0.9714502616600437,
+					"phaseY": 1.0786134777324956,
+					"damping": 67.67,
+					"frequency": 1.39
+				},
+				{
+					"ampX": -67,
+					"ampY": 12.22,
+					"phaseX": 36.46,
+					"phaseY": 18.98,
+					"damping": 45.9,
+					"frequency": 0.6
+				},
+				{
+					"ampX": 56.5,
+					"ampY": -44.92,
+					"phaseX": 55.66,
+					"phaseY": 61.8,
+					"damping": 67.67,
+					"frequency": 1.39
+				}
+			]
+		},
+		{
+			"steps": 364,
+			"pendulums": [
+				{
+					"ampX": -15.59,
+					"ampY": -103.36,
+					"phaseX": 1.4229669391509767,
+					"phaseY": 0.19949113350295186,
+					"damping": 64.39,
+					"frequency": 1.11
+				},
+				{
+					"ampX": -101.91,
+					"ampY": 84.31,
+					"phaseX": 78.26,
+					"phaseY": 10.56,
+					"damping": 35.18,
+					"frequency": 1.32
+				},
+				{
+					"ampX": -15.59,
+					"ampY": -103.36,
+					"phaseX": 81.53,
+					"phaseY": 11.43,
+					"damping": 64.39,
+					"frequency": 1.11
+				}
+			]
+		},
+		{
+			"steps": 1241,
+			"pendulums": [
+				{
+					"ampX": -55.94,
+					"ampY": -58.16,
+					"phaseX": 0.07330382858376185,
+					"phaseY": 0.27035150113392165,
+					"damping": 55.21,
+					"frequency": 0.54
+				},
+				{
+					"ampX": -17.92,
+					"ampY": -98.54,
+					"phaseX": 55.27,
+					"phaseY": 6.48,
+					"damping": 136.57,
+					"frequency": 1.28
+				},
+				{
+					"ampX": -55.94,
+					"ampY": -58.16,
+					"phaseX": 4.2,
+					"phaseY": 15.49,
+					"damping": 55.21,
+					"frequency": 0.54
+				}
+			]
+		},
+		{
+			"steps": 753,
+			"pendulums": [
+				{
+					"ampX": -38.04,
+					"ampY": 39.31,
+					"phaseX": 0.5146975964131277,
+					"phaseY": 0.23352505391684128,
+					"damping": 199.36,
+					"frequency": 1.03
+				},
+				{
+					"ampX": -74.24,
+					"ampY": -40.18,
+					"phaseX": 81.04,
+					"phaseY": 8.18,
+					"damping": 158.31,
+					"frequency": 0.98
+				},
+				{
+					"ampX": -38.04,
+					"ampY": 39.31,
+					"phaseX": 29.49,
+					"phaseY": 13.38,
+					"damping": 199.36,
+					"frequency": 1.03
+				}
+			]
+		},
+		{
+			"steps": 671,
+			"pendulums": [
+				{
+					"ampX": 95.37,
+					"ampY": 53.5,
+					"phaseX": 0.041189770347066175,
+					"phaseY": 1.636246173744684,
+					"damping": 29.14,
+					"frequency": 1.39
+				},
+				{
+					"ampX": -89.34,
+					"ampY": 103.13,
+					"phaseX": 31.05,
+					"phaseY": 97.2,
+					"damping": 57.96,
+					"frequency": 0.94
+				},
+				{
+					"ampX": 95.37,
+					"ampY": 53.5,
+					"phaseX": 2.36,
+					"phaseY": 93.75,
+					"damping": 29.14,
+					"frequency": 1.39
+				}
+			]
+		},
+		{
+			"steps": 1148,
+			"pendulums": [
+				{
+					"ampX": -2.36,
+					"ampY": 57.94,
+					"phaseX": 0.33353242005611633,
+					"phaseY": 0.9798278420696166,
+					"damping": 48.35,
+					"frequency": 1.09
+				},
+				{
+					"ampX": 98.67,
+					"ampY": -19.02,
+					"phaseX": 53.39,
+					"phaseY": 33.15,
+					"damping": 182.98,
+					"frequency": 1.36
+				},
+				{
+					"ampX": -2.36,
+					"ampY": 57.94,
+					"phaseX": 19.11,
+					"phaseY": 56.14,
+					"damping": 48.35,
+					"frequency": 1.09
+				}
+			]
+		},
+		{
+			"steps": 711,
+			"pendulums": [
+				{
+					"ampX": -21.81,
+					"ampY": 23.5,
+					"phaseX": 0.2234021442552742,
+					"phaseY": 0.9138543963442308,
+					"damping": 173.46,
+					"frequency": 1.24
+				},
+				{
+					"ampX": -75.52,
+					"ampY": -57.05,
+					"phaseX": 79.76,
+					"phaseY": 9.96,
+					"damping": 21.14,
+					"frequency": 1.2
+				},
+				{
+					"ampX": -21.81,
+					"ampY": 23.5,
+					"phaseX": 12.8,
+					"phaseY": 52.36,
+					"damping": 173.46,
+					"frequency": 1.24
+				}
+			]
+		},
+		{
+			"steps": 911,
+			"pendulums": [
+				{
+					"ampX": -70.31,
+					"ampY": -96.73,
+					"phaseX": 1.0140362954087054,
+					"phaseY": 1.3458233862128275,
+					"damping": 133.24,
+					"frequency": 1.48
+				},
+				{
+					"ampX": -104.07,
+					"ampY": 19.64,
+					"phaseX": 7.69,
+					"phaseY": 17.51,
+					"damping": 166.21,
+					"frequency": 0.87
+				},
+				{
+					"ampX": -70.31,
+					"ampY": -96.73,
+					"phaseX": 58.1,
+					"phaseY": 77.11,
+					"damping": 133.24,
+					"frequency": 1.48
+				}
+			]
+		},
+		{
+			"steps": 778,
+			"pendulums": [
+				{
+					"ampX": -83.75,
+					"ampY": 47.27,
+					"phaseX": 0.44261549830576197,
+					"phaseY": 1.628741257961108,
+					"damping": 85.68,
+					"frequency": 1.11
+				},
+				{
+					"ampX": -81.08,
+					"ampY": -64.76,
+					"phaseX": 91.14,
+					"phaseY": 3.25,
+					"damping": 168.93,
+					"frequency": 1
+				},
+				{
+					"ampX": -83.75,
+					"ampY": 47.27,
+					"phaseX": 25.36,
+					"phaseY": 93.32,
+					"damping": 85.68,
+					"frequency": 1.11
+				}
+			]
+		},
+		{
+			"steps": 926,
+			"pendulums": [
+				{
+					"ampX": -48.69,
+					"ampY": 45.88,
+					"phaseX": 0.2015855286053451,
+					"phaseY": 0.4818854064756343,
+					"damping": 55.59,
+					"frequency": 0.74
+				},
+				{
+					"ampX": 101.61,
+					"ampY": 55.05,
+					"phaseX": 97.79,
+					"phaseY": 28.94,
+					"damping": 186.8,
+					"frequency": 1.33
+				},
+				{
+					"ampX": -48.69,
+					"ampY": 45.88,
+					"phaseX": 11.55,
+					"phaseY": 27.61,
+					"damping": 55.59,
+					"frequency": 0.74
+				}
+			]
+		},
+		{
+			"steps": 548,
+			"pendulums": [
+				{
+					"ampX": -80.66,
+					"ampY": -33.92,
+					"phaseX": 1.1796680414229672,
+					"phaseY": 1.6474162809574477,
+					"damping": 90,
+					"frequency": 0.8
+				},
+				{
+					"ampX": 62.58,
+					"ampY": 5.43,
+					"phaseX": 9.04,
+					"phaseY": 82.01,
+					"damping": 37.88,
+					"frequency": 1.4
+				},
+				{
+					"ampX": -80.66,
+					"ampY": -33.92,
+					"phaseX": 67.59,
+					"phaseY": 94.39,
+					"damping": 90,
+					"frequency": 0.8
+				}
+			]
+		},
+		{
+			"steps": 473,
+			"pendulums": [
+				{
+					"ampX": -36.17,
+					"ampY": -22.34,
+					"phaseX": 1.5981979960512074,
+					"phaseY": 1.36659280431156,
+					"damping": 183.58,
+					"frequency": 0.99
+				},
+				{
+					"ampX": -21.5,
+					"ampY": 22.36,
+					"phaseX": 55.87,
+					"phaseY": 87.59,
+					"damping": 123.24,
+					"frequency": 1.47
+				},
+				{
+					"ampX": -36.17,
+					"ampY": -22.34,
+					"phaseX": 91.57,
+					"phaseY": 78.3,
+					"damping": 183.58,
+					"frequency": 0.99
+				}
+			]
+		},
+		{
+			"steps": 462,
+			"pendulums": [
+				{
+					"ampX": 11.1,
+					"ampY": -91.34,
+					"phaseX": 0.34295719801688573,
+					"phaseY": 0.13264502315156904,
+					"damping": 39.12,
+					"frequency": 0.79
+				},
+				{
+					"ampX": 6.15,
+					"ampY": -99.64,
+					"phaseX": 33.54,
+					"phaseY": 35.6,
+					"damping": 94.77,
+					"frequency": 1.17
+				},
+				{
+					"ampX": 11.1,
+					"ampY": -91.34,
+					"phaseX": 19.65,
+					"phaseY": 7.6,
+					"damping": 39.12,
+					"frequency": 0.79
+				}
+			]
+		},
+		{
+			"steps": 1093,
+			"pendulums": [
+				{
+					"ampX": -104.64,
+					"ampY": -60.41,
+					"phaseX": 0.03735004599267865,
+					"phaseY": 0.5307546255314757,
+					"damping": 120.64,
+					"frequency": 1.13
+				},
+				{
+					"ampX": -61.8,
+					"ampY": 40.15,
+					"phaseX": 39.42,
+					"phaseY": 0.04,
+					"damping": 99.02,
+					"frequency": 0.87
+				},
+				{
+					"ampX": -104.64,
+					"ampY": -60.41,
+					"phaseX": 2.14,
+					"phaseY": 30.41,
+					"damping": 120.64,
+					"frequency": 1.13
+				}
+			]
+		},
+		{
+			"steps": 654,
+			"pendulums": [
+				{
+					"ampX": 67.74,
+					"ampY": 49.11,
+					"phaseX": 1.4159856221429994,
+					"phaseY": 0.23125612588924865,
+					"damping": 139.75,
+					"frequency": 1.02
+				},
+				{
+					"ampX": -89.49,
+					"ampY": 62.14,
+					"phaseX": 29.88,
+					"phaseY": 84.99,
+					"damping": 55.12,
+					"frequency": 0.97
+				},
+				{
+					"ampX": 67.74,
+					"ampY": 49.11,
+					"phaseX": 81.13,
+					"phaseY": 13.25,
+					"damping": 139.75,
+					"frequency": 1.02
+				}
+			]
+		},
+		{
+			"steps": 533,
+			"pendulums": [
+				{
+					"ampX": -65.36,
+					"ampY": -38.05,
+					"phaseX": 0.7754497866610806,
+					"phaseY": 0.45832346157371096,
+					"damping": 74.58,
+					"frequency": 1.33
+				},
+				{
+					"ampX": -64.16,
+					"ampY": -27.19,
+					"phaseX": 84.32,
+					"phaseY": 18.6,
+					"damping": 122.3,
+					"frequency": 1.22
+				},
+				{
+					"ampX": -65.36,
+					"ampY": -38.05,
+					"phaseX": 44.43,
+					"phaseY": 26.26,
+					"damping": 74.58,
+					"frequency": 1.33
+				}
+			]
+		},
+		{
+			"steps": 464,
+			"pendulums": [
+				{
+					"ampX": -28.46,
+					"ampY": 77.92,
+					"phaseX": 0.7052875507309084,
+					"phaseY": 0.8499753457212385,
+					"damping": 91.42,
+					"frequency": 1.06
+				},
+				{
+					"ampX": 80.66,
+					"ampY": 22.18,
+					"phaseX": 69.07,
+					"phaseY": 92.37,
+					"damping": 46.26,
+					"frequency": 0.8
+				},
+				{
+					"ampX": -28.46,
+					"ampY": 77.92,
+					"phaseX": 40.41,
+					"phaseY": 48.7,
+					"damping": 91.42,
+					"frequency": 1.06
+				}
+			]
+		},
+		{
+			"steps": 482,
+			"pendulums": [
+				{
+					"ampX": 90.18,
+					"ampY": 55.85,
+					"phaseX": 0.8243190057169218,
+					"phaseY": 0.34766958699727046,
+					"damping": 150.88,
+					"frequency": 1.18
+				},
+				{
+					"ampX": 31.18,
+					"ampY": 68.98,
+					"phaseX": 88.76,
+					"phaseY": 93.91,
+					"damping": 145.22,
+					"frequency": 1.46
+				},
+				{
+					"ampX": 90.18,
+					"ampY": 55.85,
+					"phaseX": 47.23,
+					"phaseY": 19.92,
+					"damping": 150.88,
+					"frequency": 1.18
+				}
+			]
+		},
+		{
+			"steps": 590,
+			"pendulums": [
+				{
+					"ampX": 42.82,
+					"ampY": 69.69,
+					"phaseX": 0.4307472593922005,
+					"phaseY": 1.0370746415350307,
+					"damping": 46.41,
+					"frequency": 1.03
+				},
+				{
+					"ampX": 96.45,
+					"ampY": -52.92,
+					"phaseX": 65.16,
+					"phaseY": 57.15,
+					"damping": 10.1,
+					"frequency": 1.38
+				},
+				{
+					"ampX": 42.82,
+					"ampY": 69.69,
+					"phaseX": 24.68,
+					"phaseY": 59.42,
+					"damping": 46.41,
+					"frequency": 1.03
+				}
+			]
+		},
+		{
+			"steps": 1172,
+			"pendulums": [
+				{
+					"ampX": -36.57,
+					"ampY": 89.46,
+					"phaseX": 0.9564404300928925,
+					"phaseY": 1.6172220848979457,
+					"damping": 116.47,
+					"frequency": 0.67
+				},
+				{
+					"ampX": 101.08,
+					"ampY": -97.41,
+					"phaseX": 23.97,
+					"phaseY": 66.73,
+					"damping": 93.86,
+					"frequency": 0.66
+				},
+				{
+					"ampX": -36.57,
+					"ampY": 89.46,
+					"phaseX": 54.8,
+					"phaseY": 92.66,
+					"damping": 116.47,
+					"frequency": 0.67
+				}
+			]
+		},
+		{
+			"steps": 1580,
+			"pendulums": [
+				{
+					"ampX": -41.27,
+					"ampY": -80.18,
+					"phaseX": 0.34417892849328174,
+					"phaseY": 0.5927138139772743,
+					"damping": 190.8,
+					"frequency": 0.62
+				},
+				{
+					"ampX": -14.17,
+					"ampY": 103.97,
+					"phaseX": 64.34,
+					"phaseY": 35.84,
+					"damping": 120.21,
+					"frequency": 0.5
+				},
+				{
+					"ampX": -41.27,
+					"ampY": -80.18,
+					"phaseX": 19.72,
+					"phaseY": 33.96,
+					"damping": 190.8,
+					"frequency": 0.62
+				}
+			]
+		},
+		{
+			"steps": 809,
+			"pendulums": [
+				{
+					"ampX": 52.57,
+					"ampY": 15.92,
+					"phaseX": 1.660855316197804,
+					"phaseY": 0.03560471674068433,
+					"damping": 198.25,
+					"frequency": 0.82
+				},
+				{
+					"ampX": 73.55,
+					"ampY": -63.54,
+					"phaseX": 32.92,
+					"phaseY": 45.68,
+					"damping": 119.08,
+					"frequency": 0.78
+				},
+				{
+					"ampX": 52.57,
+					"ampY": 15.92,
+					"phaseX": 95.16,
+					"phaseY": 2.04,
+					"damping": 198.25,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 470,
+			"pendulums": [
+				{
+					"ampX": -97.1,
+					"ampY": 51.59,
+					"phaseX": 1.5756832487004806,
+					"phaseY": 0.14748032179352083,
+					"damping": 77.53,
+					"frequency": 0.89
+				},
+				{
+					"ampX": -76.89,
+					"ampY": -16.09,
+					"phaseX": 38.65,
+					"phaseY": 77.54,
+					"damping": 43.62,
+					"frequency": 1.33
+				},
+				{
+					"ampX": -97.1,
+					"ampY": 51.59,
+					"phaseX": 90.28,
+					"phaseY": 8.45,
+					"damping": 77.53,
+					"frequency": 0.89
+				}
+			]
+		},
+		{
+			"steps": 605,
+			"pendulums": [
+				{
+					"ampX": -39.88,
+					"ampY": 98.67,
+					"phaseX": 1.0965903690280372,
+					"phaseY": 0.1059414855960558,
+					"damping": 146.84,
+					"frequency": 1.16
+				},
+				{
+					"ampX": -28.59,
+					"ampY": -72.47,
+					"phaseX": 74.9,
+					"phaseY": 70.59,
+					"damping": 124.7,
+					"frequency": 1.08
+				},
+				{
+					"ampX": -39.88,
+					"ampY": 98.67,
+					"phaseX": 62.83,
+					"phaseY": 6.07,
+					"damping": 146.84,
+					"frequency": 1.16
+				}
+			]
+		},
+		{
+			"steps": 844,
+			"pendulums": [
+				{
+					"ampX": 53.11,
+					"ampY": -15.23,
+					"phaseX": 1.6821483330721345,
+					"phaseY": 0.48659779545601906,
+					"damping": 58.86,
+					"frequency": 0.6
+				},
+				{
+					"ampX": -37.6,
+					"ampY": 36.91,
+					"phaseX": 74.2,
+					"phaseY": 96.57,
+					"damping": 174.91,
+					"frequency": 1.16
+				},
+				{
+					"ampX": 53.11,
+					"ampY": -15.23,
+					"phaseX": 96.38,
+					"phaseY": 27.88,
+					"damping": 58.86,
+					"frequency": 0.6
+				}
+			]
+		},
+		{
+			"steps": 643,
+			"pendulums": [
+				{
+					"ampX": -101.79,
+					"ampY": -10.25,
+					"phaseX": 0.7267551005304388,
+					"phaseY": 1.6203636775515355,
+					"damping": 189.14,
+					"frequency": 0.9
+				},
+				{
+					"ampX": 98.72,
+					"ampY": 44.23,
+					"phaseX": 83.68,
+					"phaseY": 85.76,
+					"damping": 147.48,
+					"frequency": 1.16
+				},
+				{
+					"ampX": -101.79,
+					"ampY": -10.25,
+					"phaseX": 41.64,
+					"phaseY": 92.84,
+					"damping": 189.14,
+					"frequency": 0.9
+				}
+			]
+		},
+		{
+			"steps": 561,
+			"pendulums": [
+				{
+					"ampX": -88.67,
+					"ampY": -40.98,
+					"phaseX": 1.0330603842554436,
+					"phaseY": 0.5722934617289407,
+					"damping": 48.25,
+					"frequency": 1.24
+				},
+				{
+					"ampX": 55.54,
+					"ampY": 1.04,
+					"phaseX": 31.54,
+					"phaseY": 15.57,
+					"damping": 185.88,
+					"frequency": 0.74
+				},
+				{
+					"ampX": -88.67,
+					"ampY": -40.98,
+					"phaseX": 59.19,
+					"phaseY": 32.79,
+					"damping": 48.25,
+					"frequency": 1.24
+				}
+			]
+		},
+		{
+			"steps": 696,
+			"pendulums": [
+				{
+					"ampX": -35.17,
+					"ampY": -44.67,
+					"phaseX": 0.24801128670839426,
+					"phaseY": 1.5262904308690413,
+					"damping": 43.78,
+					"frequency": 0.65
+				},
+				{
+					"ampX": 6.59,
+					"ampY": 29.59,
+					"phaseX": 4.73,
+					"phaseY": 65.47,
+					"damping": 190.95,
+					"frequency": 1
+				},
+				{
+					"ampX": -35.17,
+					"ampY": -44.67,
+					"phaseX": 14.21,
+					"phaseY": 87.45,
+					"damping": 43.78,
+					"frequency": 0.65
+				}
+			]
+		},
+		{
+			"steps": 996,
+			"pendulums": [
+				{
+					"ampX": 88.19,
+					"ampY": 46.42,
+					"phaseX": 0.684518132632176,
+					"phaseY": 0.6279694648675597,
+					"damping": 132.62,
+					"frequency": 1.19
+				},
+				{
+					"ampX": 27.3,
+					"ampY": 41.91,
+					"phaseX": 4.56,
+					"phaseY": 68.48,
+					"damping": 147.17,
+					"frequency": 1.18
+				},
+				{
+					"ampX": 88.19,
+					"ampY": 46.42,
+					"phaseX": 39.22,
+					"phaseY": 35.98,
+					"damping": 132.62,
+					"frequency": 1.19
+				}
+			]
+		},
+		{
+			"steps": 796,
+			"pendulums": [
+				{
+					"ampX": -25.67,
+					"ampY": 52.46,
+					"phaseX": 0.24172810140121462,
+					"phaseY": 0.4960225734167885,
+					"damping": 130.48,
+					"frequency": 0.6
+				},
+				{
+					"ampX": 95.79,
+					"ampY": -63.02,
+					"phaseX": 21.54,
+					"phaseY": 62.55,
+					"damping": 82.28,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -25.67,
+					"ampY": 52.46,
+					"phaseX": 13.85,
+					"phaseY": 28.42,
+					"damping": 130.48,
+					"frequency": 0.6
+				}
+			]
+		},
+		{
+			"steps": 1106,
+			"pendulums": [
+				{
+					"ampX": 83.87,
+					"ampY": 59.44,
+					"phaseX": 1.4760249484116044,
+					"phaseY": 0.7136651311404814,
+					"damping": 155.79,
+					"frequency": 1.12
+				},
+				{
+					"ampX": -37.14,
+					"ampY": 99.84,
+					"phaseX": 60.71,
+					"phaseY": 84.15,
+					"damping": 114.81,
+					"frequency": 1.08
+				},
+				{
+					"ampX": 83.87,
+					"ampY": 59.44,
+					"phaseX": 84.57,
+					"phaseY": 40.89,
+					"damping": 155.79,
+					"frequency": 1.12
+				}
+			]
+		},
+		{
+			"steps": 483,
+			"pendulums": [
+				{
+					"ampX": -66.58,
+					"ampY": -99.4,
+					"phaseX": 0.8337437836776912,
+					"phaseY": 0.37768925013157295,
+					"damping": 189.38,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -39.63,
+					"ampY": -52.51,
+					"phaseX": 91.91,
+					"phaseY": 5.71,
+					"damping": 144.1,
+					"frequency": 1.14
+				},
+				{
+					"ampX": -66.58,
+					"ampY": -99.4,
+					"phaseX": 47.77,
+					"phaseY": 21.64,
+					"damping": 189.38,
+					"frequency": 0.58
+				}
+			]
+		},
+		{
+			"steps": 1189,
+			"pendulums": [
+				{
+					"ampX": -93.19,
+					"ampY": 66.1,
+					"phaseX": 1.0442304914682075,
+					"phaseY": 0.5375614096142535,
+					"damping": 29.54,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 1.29,
+					"ampY": 83.43,
+					"phaseX": 4.35,
+					"phaseY": 51.72,
+					"damping": 193.55,
+					"frequency": 1.07
+				},
+				{
+					"ampX": -93.19,
+					"ampY": 66.1,
+					"phaseX": 59.83,
+					"phaseY": 30.8,
+					"damping": 29.54,
+					"frequency": 0.7
+				}
+			]
+		},
+		{
+			"steps": 1117,
+			"pendulums": [
+				{
+					"ampX": 27.72,
+					"ampY": -59.66,
+					"phaseX": 0.9740682555380354,
+					"phaseY": 0.481710873550435,
+					"damping": 100.53,
+					"frequency": 0.5
+				},
+				{
+					"ampX": -54.26,
+					"ampY": -42.55,
+					"phaseX": 88.16,
+					"phaseY": 88.81,
+					"damping": 109.27,
+					"frequency": 0.83
+				},
+				{
+					"ampX": 27.72,
+					"ampY": -59.66,
+					"phaseX": 55.81,
+					"phaseY": 27.6,
+					"damping": 100.53,
+					"frequency": 0.5
+				}
+			]
+		},
+		{
+			"steps": 1767,
+			"pendulums": [
+				{
+					"ampX": -33.35,
+					"ampY": -16.64,
+					"phaseX": 0.6044075199656364,
+					"phaseY": 1.7343336777067655,
+					"damping": 70.85,
+					"frequency": 0.8
+				},
+				{
+					"ampX": -38.56,
+					"ampY": 68.08,
+					"phaseX": 44.33,
+					"phaseY": 94.24,
+					"damping": 121.11,
+					"frequency": 1.21
+				},
+				{
+					"ampX": -33.35,
+					"ampY": -16.64,
+					"phaseX": 34.63,
+					"phaseY": 99.37,
+					"damping": 70.85,
+					"frequency": 0.8
+				}
+			]
+		},
+		{
+			"steps": 818,
+			"pendulums": [
+				{
+					"ampX": -37.67,
+					"ampY": -80.27,
+					"phaseX": 1.6779595428673484,
+					"phaseY": 0.9485864484589182,
+					"damping": 158.82,
+					"frequency": 0.75
+				},
+				{
+					"ampX": 4.94,
+					"ampY": -86.62,
+					"phaseX": 61.66,
+					"phaseY": 30.16,
+					"damping": 57.48,
+					"frequency": 1.12
+				},
+				{
+					"ampX": -37.67,
+					"ampY": -80.27,
+					"phaseX": 96.14,
+					"phaseY": 54.35,
+					"damping": 158.82,
+					"frequency": 0.75
+				}
+			]
+		},
+		{
+			"steps": 726,
+			"pendulums": [
+				{
+					"ampX": 19.31,
+					"ampY": -20.14,
+					"phaseX": 1.3234831717873,
+					"phaseY": 1.7388715337619505,
+					"damping": 74.11,
+					"frequency": 0.6
+				},
+				{
+					"ampX": 42.9,
+					"ampY": -68.6,
+					"phaseX": 12.31,
+					"phaseY": 99.44,
+					"damping": 35.29,
+					"frequency": 0.63
+				},
+				{
+					"ampX": 19.31,
+					"ampY": -20.14,
+					"phaseX": 75.83,
+					"phaseY": 99.63,
+					"damping": 74.11,
+					"frequency": 0.6
+				}
+			]
+		},
+		{
+			"steps": 1363,
+			"pendulums": [
+				{
+					"ampX": -45.31,
+					"ampY": 20,
+					"phaseX": 1.3760175822723293,
+					"phaseY": 0.7456046564519776,
+					"damping": 77.63,
+					"frequency": 1.07
+				},
+				{
+					"ampX": -103.21,
+					"ampY": 59.63,
+					"phaseX": 77.37,
+					"phaseY": 12.29,
+					"damping": 155.7,
+					"frequency": 0.66
+				},
+				{
+					"ampX": -45.31,
+					"ampY": 20,
+					"phaseX": 78.84,
+					"phaseY": 42.72,
+					"damping": 77.63,
+					"frequency": 1.07
+				}
+			]
+		},
+		{
+			"steps": 510,
+			"pendulums": [
+				{
+					"ampX": 80.01,
+					"ampY": 20.92,
+					"phaseX": 0.15341444125030154,
+					"phaseY": 1.0389945037122243,
+					"damping": 179.59,
+					"frequency": 0.76
+				},
+				{
+					"ampX": -56.26,
+					"ampY": -83.68,
+					"phaseX": 85.62,
+					"phaseY": 58.13,
+					"damping": 138.96,
+					"frequency": 0.81
+				},
+				{
+					"ampX": 80.01,
+					"ampY": 20.92,
+					"phaseX": 8.79,
+					"phaseY": 59.53,
+					"damping": 179.59,
+					"frequency": 0.76
+				}
+			]
+		},
+		{
+			"steps": 560,
+			"pendulums": [
+				{
+					"ampX": -90.49,
+					"ampY": -54.56,
+					"phaseX": 1.1971213339429108,
+					"phaseY": 0.3729768611511882,
+					"damping": 136.38,
+					"frequency": 1.31
+				},
+				{
+					"ampX": -103.31,
+					"ampY": 39.73,
+					"phaseX": 43.87,
+					"phaseY": 3.61,
+					"damping": 85.64,
+					"frequency": 0.88
+				},
+				{
+					"ampX": -90.49,
+					"ampY": -54.56,
+					"phaseX": 68.59,
+					"phaseY": 21.37,
+					"damping": 136.38,
+					"frequency": 1.31
+				}
+			]
+		},
+		{
+			"steps": 616,
+			"pendulums": [
+				{
+					"ampX": 70.82,
+					"ampY": 76.57,
+					"phaseX": 0.9005898940290741,
+					"phaseY": 1.0471975511965976,
+					"damping": 50.83,
+					"frequency": 1.38
+				},
+				{
+					"ampX": -11.43,
+					"ampY": -9.9,
+					"phaseX": 68.82,
+					"phaseY": 73.11,
+					"damping": 141.12,
+					"frequency": 1.44
+				},
+				{
+					"ampX": 70.82,
+					"ampY": 76.57,
+					"phaseX": 51.6,
+					"phaseY": 60,
+					"damping": 50.83,
+					"frequency": 1.38
+				}
+			]
+		},
+		{
+			"steps": 588,
+			"pendulums": [
+				{
+					"ampX": -61.73,
+					"ampY": -74.88,
+					"phaseX": 0.42690753503781304,
+					"phaseY": 0.9464920533565249,
+					"damping": 9.11,
+					"frequency": 0.93
+				},
+				{
+					"ampX": -78.28,
+					"ampY": -77.8,
+					"phaseX": 57.77,
+					"phaseY": 21.31,
+					"damping": 143.34,
+					"frequency": 1.41
+				},
+				{
+					"ampX": -61.73,
+					"ampY": -74.88,
+					"phaseX": 24.46,
+					"phaseY": 54.23,
+					"damping": 9.11,
+					"frequency": 0.93
+				}
+			]
+		},
+		{
+			"steps": 762,
+			"pendulums": [
+				{
+					"ampX": 83.38,
+					"ampY": -78.28,
+					"phaseX": 1.362578547031973,
+					"phaseY": 1.2877039221214164,
+					"damping": 85.55,
+					"frequency": 0.54
+				},
+				{
+					"ampX": -24.45,
+					"ampY": 78.47,
+					"phaseX": 35.22,
+					"phaseY": 71.02,
+					"damping": 126.63,
+					"frequency": 1.35
+				},
+				{
+					"ampX": 83.38,
+					"ampY": -78.28,
+					"phaseX": 78.07,
+					"phaseY": 73.78,
+					"damping": 85.55,
+					"frequency": 0.54
+				}
+			]
+		},
+		{
+			"steps": 603,
+			"pendulums": [
+				{
+					"ampX": -29.46,
+					"ampY": -44.5,
+					"phaseX": 0.6386159733047253,
+					"phaseY": 1.3627530799571725,
+					"damping": 128.2,
+					"frequency": 0.56
+				},
+				{
+					"ampX": 4.84,
+					"ampY": 102.4,
+					"phaseX": 55.55,
+					"phaseY": 59.06,
+					"damping": 66.83,
+					"frequency": 1.4
+				},
+				{
+					"ampX": -29.46,
+					"ampY": -44.5,
+					"phaseX": 36.59,
+					"phaseY": 78.08,
+					"damping": 128.2,
+					"frequency": 0.56
+				}
+			]
+		},
+		{
+			"steps": 557,
+			"pendulums": [
+				{
+					"ampX": -81.15,
+					"ampY": -43.09,
+					"phaseX": 0.7204719152232593,
+					"phaseY": 1.7030922840960667,
+					"damping": 186.78,
+					"frequency": 1.31
+				},
+				{
+					"ampX": 88.84,
+					"ampY": -26.12,
+					"phaseX": 35.69,
+					"phaseY": 94.83,
+					"damping": 81.36,
+					"frequency": 1.05
+				},
+				{
+					"ampX": -81.15,
+					"ampY": -43.09,
+					"phaseX": 41.28,
+					"phaseY": 97.58,
+					"damping": 186.78,
+					"frequency": 1.31
+				}
+			]
+		},
+		{
+			"steps": 576,
+			"pendulums": [
+				{
+					"ampX": -30.23,
+					"ampY": -46.23,
+					"phaseX": 0.5811946409141118,
+					"phaseY": 0.9072221451866523,
+					"damping": 130.42,
+					"frequency": 1.17
+				},
+				{
+					"ampX": 52.27,
+					"ampY": -62.1,
+					"phaseX": 83.79,
+					"phaseY": 97.95,
+					"damping": 114.85,
+					"frequency": 0.93
+				},
+				{
+					"ampX": -30.23,
+					"ampY": -46.23,
+					"phaseX": 33.3,
+					"phaseY": 51.98,
+					"damping": 130.42,
+					"frequency": 1.17
+				}
+			]
+		},
+		{
+			"steps": 508,
+			"pendulums": [
+				{
+					"ampX": -44.71,
+					"ampY": -76.83,
+					"phaseX": 0.9875072907783915,
+					"phaseY": 1.0728538912009142,
+					"damping": 10.97,
+					"frequency": 0.66
+				},
+				{
+					"ampX": 30.78,
+					"ampY": -93.85,
+					"phaseX": 30.08,
+					"phaseY": 78.41,
+					"damping": 115.56,
+					"frequency": 1.38
+				},
+				{
+					"ampX": -44.71,
+					"ampY": -76.83,
+					"phaseX": 56.58,
+					"phaseY": 61.47,
+					"damping": 10.97,
+					"frequency": 0.66
+				}
+			]
+		},
+		{
+			"steps": 844,
+			"pendulums": [
+				{
+					"ampX": -86.81,
+					"ampY": -81.95,
+					"phaseX": 0.8539896030008254,
+					"phaseY": 0.8367108434060815,
+					"damping": 83.5,
+					"frequency": 0.82
+				},
+				{
+					"ampX": 101.39,
+					"ampY": 37.06,
+					"phaseX": 38.95,
+					"phaseY": 43.76,
+					"damping": 21.24,
+					"frequency": 1.24
+				},
+				{
+					"ampX": -86.81,
+					"ampY": -81.95,
+					"phaseX": 48.93,
+					"phaseY": 47.94,
+					"damping": 83.5,
+					"frequency": 0.82
+				}
+			]
+		},
+		{
+			"steps": 464,
+			"pendulums": [
+				{
+					"ampX": 12.86,
+					"ampY": -44.51,
+					"phaseX": 1.7105971998796423,
+					"phaseY": 1.3538519007720013,
+					"damping": 92.11,
+					"frequency": 0.94
+				},
+				{
+					"ampX": 70.42,
+					"ampY": -7.31,
+					"phaseX": 26.94,
+					"phaseY": 46.56,
+					"damping": 187.33,
+					"frequency": 1.25
+				},
+				{
+					"ampX": 12.86,
+					"ampY": -44.51,
+					"phaseX": 98.01,
+					"phaseY": 77.57,
+					"damping": 92.11,
+					"frequency": 0.94
+				}
+			]
+		},
+		{
+			"steps": 1548,
+			"pendulums": [
+				{
+					"ampX": -95.55,
+					"ampY": 39.42,
+					"phaseX": 1.6896532488557106,
+					"phaseY": 0.7094763409356949,
+					"damping": 142.8,
+					"frequency": 1
+				},
+				{
+					"ampX": 87.04,
+					"ampY": -50.3,
+					"phaseX": 1.39,
+					"phaseY": 77.49,
+					"damping": 168.83,
+					"frequency": 0.73
+				},
+				{
+					"ampX": -95.55,
+					"ampY": 39.42,
+					"phaseX": 96.81,
+					"phaseY": 40.65,
+					"damping": 142.8,
+					"frequency": 1
+				}
+			]
+		},
+		{
+			"steps": 853,
+			"pendulums": [
+				{
+					"ampX": -84.4,
+					"ampY": -87.51,
+					"phaseX": 0.3560471674068432,
+					"phaseY": 0.5818927726149095,
+					"damping": 198.87,
+					"frequency": 0.54
+				},
+				{
+					"ampX": 29.14,
+					"ampY": -10.9,
+					"phaseX": 7.09,
+					"phaseY": 1.37,
+					"damping": 153.94,
+					"frequency": 0.77
+				},
+				{
+					"ampX": -84.4,
+					"ampY": -87.51,
+					"phaseX": 20.4,
+					"phaseY": 33.34,
+					"damping": 198.87,
+					"frequency": 0.54
+				}
+			]
+		},
+		{
+			"steps": 1338,
+			"pendulums": [
+				{
+					"ampX": -16.64,
+					"ampY": 59.5,
+					"phaseX": 0.4194026192542374,
+					"phaseY": 0.17383479349863523,
+					"damping": 82.37,
+					"frequency": 1.24
+				},
+				{
+					"ampX": 55.78,
+					"ampY": 81.07,
+					"phaseX": 37.68,
+					"phaseY": 18.8,
+					"damping": 89.52,
+					"frequency": 0.93
+				},
+				{
+					"ampX": -16.64,
+					"ampY": 59.5,
+					"phaseX": 24.03,
+					"phaseY": 9.96,
+					"damping": 82.37,
+					"frequency": 1.24
+				}
+			]
+		},
+		{
+			"steps": 639,
+			"pendulums": [
+				{
+					"ampX": 38.95,
+					"ampY": 87.22,
+					"phaseX": 0.9121090670922366,
+					"phaseY": 0.5150466622635267,
+					"damping": 18.26,
+					"frequency": 1.44
+				},
+				{
+					"ampX": -13.38,
+					"ampY": 80.61,
+					"phaseX": 51.69,
+					"phaseY": 47.55,
+					"damping": 140.22,
+					"frequency": 1.48
+				},
+				{
+					"ampX": 38.95,
+					"ampY": 87.22,
+					"phaseX": 52.26,
+					"phaseY": 29.51,
+					"damping": 18.26,
+					"frequency": 1.44
+				}
+			]
+		},
+		{
+			"steps": 431,
+			"pendulums": [
+				{
+					"ampX": -94.55,
+					"ampY": 42.97,
+					"phaseX": 1.4144148258162048,
+					"phaseY": 1.1698941976117991,
+					"damping": 192.36,
+					"frequency": 0.51
+				},
+				{
+					"ampX": 41.59,
+					"ampY": -74.95,
+					"phaseX": 11.74,
+					"phaseY": 13.27,
+					"damping": 122.44,
+					"frequency": 1.27
+				},
+				{
+					"ampX": -94.55,
+					"ampY": 42.97,
+					"phaseX": 81.04,
+					"phaseY": 67.03,
+					"damping": 192.36,
+					"frequency": 0.51
+				}
+			]
+		},
+		{
+			"steps": 710,
+			"pendulums": [
+				{
+					"ampX": 42.05,
+					"ampY": -80.64,
+					"phaseX": 1.5074408749475023,
+					"phaseY": 0.7742280561846846,
+					"damping": 167.06,
+					"frequency": 0.76
+				},
+				{
+					"ampX": -9.09,
+					"ampY": 43.4,
+					"phaseX": 19.48,
+					"phaseY": 44.32,
+					"damping": 36.58,
+					"frequency": 1.49
+				},
+				{
+					"ampX": 42.05,
+					"ampY": -80.64,
+					"phaseX": 86.37,
+					"phaseY": 44.36,
+					"damping": 167.06,
+					"frequency": 0.76
+				}
+			]
+		},
+		{
+			"steps": 1077,
+			"pendulums": [
+				{
+					"ampX": -74.1,
+					"ampY": 49.77,
+					"phaseX": 1.165007275706215,
+					"phaseY": 0.6319837221471467,
+					"damping": 145.77,
+					"frequency": 1.06
+				},
+				{
+					"ampX": -45.5,
+					"ampY": 52.43,
+					"phaseX": 87.79,
+					"phaseY": 19.49,
+					"damping": 102.28,
+					"frequency": 1.08
+				},
+				{
+					"ampX": -74.1,
+					"ampY": 49.77,
+					"phaseX": 66.75,
+					"phaseY": 36.21,
+					"damping": 145.77,
+					"frequency": 1.06
+				}
+			]
+		},
+		{
+			"steps": 1414,
+			"pendulums": [
+				{
+					"ampX": -64.61,
+					"ampY": 83.1,
+					"phaseX": 0.5981243346584568,
+					"phaseY": 0.980351440845215,
+					"damping": 165.13,
+					"frequency": 1.05
+				},
+				{
+					"ampX": 21.1,
+					"ampY": -36.18,
+					"phaseX": 15.47,
+					"phaseY": 14.48,
+					"damping": 170.03,
+					"frequency": 1.42
+				},
+				{
+					"ampX": -64.61,
+					"ampY": 83.1,
+					"phaseX": 34.27,
+					"phaseY": 56.17,
+					"damping": 165.13,
+					"frequency": 1.05
+				}
+			]
+		},
+		{
+			"steps": 611,
+			"pendulums": [
+				{
+					"ampX": 30.97,
+					"ampY": 75.64,
+					"phaseX": 0.153588974175501,
+					"phaseY": 0.8335692507524917,
+					"damping": 85.01,
+					"frequency": 0.62
+				},
+				{
+					"ampX": 28.81,
+					"ampY": -53.78,
+					"phaseX": 23.12,
+					"phaseY": 5.45,
+					"damping": 106.14,
+					"frequency": 0.64
+				},
+				{
+					"ampX": 30.97,
+					"ampY": 75.64,
+					"phaseX": 8.8,
+					"phaseY": 47.76,
+					"damping": 85.01,
+					"frequency": 0.62
+				}
+			]
+		},
+		{
+			"steps": 1015,
+			"pendulums": [
+				{
+					"ampX": 31.12,
+					"ampY": -74.36,
+					"phaseX": 0.3689626038716013,
+					"phaseY": 0.1621410875102732,
+					"damping": 40.12,
+					"frequency": 0.97
+				},
+				{
+					"ampX": 46.67,
+					"ampY": -27.85,
+					"phaseX": 43.74,
+					"phaseY": 29.71,
+					"damping": 156.89,
+					"frequency": 0.94
+				},
+				{
+					"ampX": 31.12,
+					"ampY": -74.36,
+					"phaseX": 21.14,
+					"phaseY": 9.29,
+					"damping": 40.12,
+					"frequency": 0.97
+				}
+			]
+		},
+		{
+			"steps": 511,
+			"pendulums": [
+				{
+					"ampX": 96.59,
+					"ampY": -85.93,
+					"phaseX": 1.1718140597889928,
+					"phaseY": 0.3574434308084387,
+					"damping": 44.87,
+					"frequency": 1.46
+				},
+				{
+					"ampX": 25.13,
+					"ampY": 78.04,
+					"phaseX": 91.49,
+					"phaseY": 88.9,
+					"damping": 170.7,
+					"frequency": 0.75
+				},
+				{
+					"ampX": 96.59,
+					"ampY": -85.93,
+					"phaseX": 67.14,
+					"phaseY": 20.48,
+					"damping": 44.87,
+					"frequency": 1.46
+				}
+			]
+		},
+		{
+			"steps": 658,
+			"pendulums": [
+				{
+					"ampX": 60.43,
+					"ampY": 31.2,
+					"phaseX": 0.8918632477691024,
+					"phaseY": 0.14800392056911915,
+					"damping": 65.55,
+					"frequency": 1.12
+				},
+				{
+					"ampX": 71.07,
+					"ampY": 20.56,
+					"phaseX": 50.48,
+					"phaseY": 12.95,
+					"damping": 133.25,
+					"frequency": 1.17
+				},
+				{
+					"ampX": 60.43,
+					"ampY": 31.2,
+					"phaseX": 51.1,
+					"phaseY": 8.48,
+					"damping": 65.55,
+					"frequency": 1.12
+				}
+			]
+		},
+		{
+			"steps": 521,
+			"pendulums": [
+				{
+					"ampX": 78.83,
+					"ampY": -43.03,
+					"phaseX": 1.343554458185235,
+					"phaseY": 0.6161012259539983,
+					"damping": 8.86,
+					"frequency": 1.3
+				},
+				{
+					"ampX": -78.92,
+					"ampY": -32.44,
+					"phaseX": 85.69,
+					"phaseY": 16.6,
+					"damping": 32.82,
+					"frequency": 0.62
+				},
+				{
+					"ampX": 78.83,
+					"ampY": -43.03,
+					"phaseX": 76.98,
+					"phaseY": 35.3,
+					"damping": 8.86,
+					"frequency": 1.3
+				}
+			]
+		},
+		{
+			"steps": 1112,
+			"pendulums": [
+				{
+					"ampX": 43.12,
+					"ampY": -90.56,
+					"phaseX": 0.3440043955680823,
+					"phaseY": 0.3953170755767156,
+					"damping": 188.4,
+					"frequency": 0.92
+				},
+				{
+					"ampX": -64.61,
+					"ampY": -2.14,
+					"phaseX": 72.24,
+					"phaseY": 25.62,
+					"damping": 27.5,
+					"frequency": 0.62
+				},
+				{
+					"ampX": 43.12,
+					"ampY": -90.56,
+					"phaseX": 19.71,
+					"phaseY": 22.65,
+					"damping": 188.4,
+					"frequency": 0.92
+				}
+			]
+		},
+		{
+			"steps": 684,
+			"pendulums": [
+				{
+					"ampX": -101.16,
+					"ampY": -22.87,
+					"phaseX": 0.2504547476611863,
+					"phaseY": 1.2177162191164437,
+					"damping": 176.03,
+					"frequency": 0.5
+				},
+				{
+					"ampX": 83.42,
+					"ampY": -40.05,
+					"phaseX": 84.2,
+					"phaseY": 62.45,
+					"damping": 71.11,
+					"frequency": 0.8
+				},
+				{
+					"ampX": -101.16,
+					"ampY": -22.87,
+					"phaseX": 14.35,
+					"phaseY": 69.77,
+					"damping": 176.03,
+					"frequency": 0.5
+				}
+			]
+		},
+		{
+			"steps": 607,
+			"pendulums": [
+				{
+					"ampX": 93.04,
+					"ampY": 13.7,
+					"phaseX": 1.2196360812936373,
+					"phaseY": 0.07260569688296412,
+					"damping": 127.3,
+					"frequency": 0.74
+				},
+				{
+					"ampX": -65.48,
+					"ampY": 63.04,
+					"phaseX": 19.8,
+					"phaseY": 38.62,
+					"damping": 152.45,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 93.04,
+					"ampY": 13.7,
+					"phaseX": 69.88,
+					"phaseY": 4.16,
+					"damping": 127.3,
+					"frequency": 0.74
+				}
+			]
+		},
+		{
+			"steps": 534,
+			"pendulums": [
+				{
+					"ampX": 46.63,
+					"ampY": -28.16,
+					"phaseX": 1.363800277508369,
+					"phaseY": 1.1538371684934512,
+					"damping": 139.22,
+					"frequency": 0.67
+				},
+				{
+					"ampX": 104.84,
+					"ampY": -47.49,
+					"phaseX": 68.48,
+					"phaseY": 27.7,
+					"damping": 98.71,
+					"frequency": 1
+				},
+				{
+					"ampX": 46.63,
+					"ampY": -28.16,
+					"phaseX": 78.14,
+					"phaseY": 66.11,
+					"damping": 139.22,
+					"frequency": 0.67
+				}
+			]
+		},
+		{
+			"steps": 1018,
+			"pendulums": [
+				{
+					"ampX": -90.53,
+					"ampY": 33.71,
+					"phaseX": 1.611637031291564,
+					"phaseY": 1.4172073526193956,
+					"damping": 105.56,
+					"frequency": 1.38
+				},
+				{
+					"ampX": -74.48,
+					"ampY": -62.43,
+					"phaseX": 79.31,
+					"phaseY": 77.25,
+					"damping": 93.54,
+					"frequency": 0.95
+				},
+				{
+					"ampX": -90.53,
+					"ampY": 33.71,
+					"phaseX": 92.34,
+					"phaseY": 81.2,
+					"damping": 105.56,
+					"frequency": 1.38
+				}
+			]
+		},
+		{
+			"steps": 931,
+			"pendulums": [
+				{
+					"ampX": -26.48,
+					"ampY": 31.81,
+					"phaseX": 0.5222025121967034,
+					"phaseY": 0.739321471144798,
+					"damping": 191.9,
+					"frequency": 1.37
+				},
+				{
+					"ampX": -38.12,
+					"ampY": 55.93,
+					"phaseX": 76.38,
+					"phaseY": 43.02,
+					"damping": 122.05,
+					"frequency": 0.82
+				},
+				{
+					"ampX": -26.48,
+					"ampY": 31.81,
+					"phaseX": 29.92,
+					"phaseY": 42.36,
+					"damping": 191.9,
+					"frequency": 1.37
+				}
+			]
+		},
+		{
+			"steps": 700,
+			"pendulums": [
+				{
+					"ampX": 38.63,
+					"ampY": 101.78,
+					"phaseX": 1.1213740444063567,
+					"phaseY": 0.5045746867515607,
+					"damping": 20.83,
+					"frequency": 1.48
+				},
+				{
+					"ampX": -95.35,
+					"ampY": -99.02,
+					"phaseX": 82.54,
+					"phaseY": 48.28,
+					"damping": 167.83,
+					"frequency": 0.6
+				},
+				{
+					"ampX": 38.63,
+					"ampY": 101.78,
+					"phaseX": 64.25,
+					"phaseY": 28.91,
+					"damping": 20.83,
+					"frequency": 1.48
+				}
+			]
+		},
+		{
+			"steps": 1020,
+			"pendulums": [
+				{
+					"ampX": -100.18,
+					"ampY": 84.89,
+					"phaseX": 1.4116222990130136,
+					"phaseY": 0.2707005669843205,
+					"damping": 5.9,
+					"frequency": 1.44
+				},
+				{
+					"ampX": 37.8,
+					"ampY": -17.92,
+					"phaseX": 40.42,
+					"phaseY": 81.27,
+					"damping": 63.02,
+					"frequency": 0.53
+				},
+				{
+					"ampX": -100.18,
+					"ampY": 84.89,
+					"phaseX": 80.88,
+					"phaseY": 15.51,
+					"damping": 5.9,
+					"frequency": 1.44
+				}
+			]
+		},
+		{
+			"steps": 588,
+			"pendulums": [
+				{
+					"ampX": -22.49,
+					"ampY": 72.52,
+					"phaseX": 0.6038839211900381,
+					"phaseY": 0.7070328799829029,
+					"damping": 72.51,
+					"frequency": 0.72
+				},
+				{
+					"ampX": 35.57,
+					"ampY": -74.2,
+					"phaseX": 74.43,
+					"phaseY": 18.58,
+					"damping": 148.26,
+					"frequency": 1.08
+				},
+				{
+					"ampX": -22.49,
+					"ampY": 72.52,
+					"phaseX": 34.6,
+					"phaseY": 40.51,
+					"damping": 72.51,
+					"frequency": 0.72
+				}
+			]
+		},
+		{
+			"steps": 722,
+			"pendulums": [
+				{
+					"ampX": -64.28,
+					"ampY": -91.9,
+					"phaseX": 0.039269908169872414,
+					"phaseY": 0.09407324668249435,
+					"damping": 102.65,
+					"frequency": 1.07
+				},
+				{
+					"ampX": -63.9,
+					"ampY": -89.06,
+					"phaseX": 2.98,
+					"phaseY": 52.63,
+					"damping": 132.54,
+					"frequency": 0.92
+				},
+				{
+					"ampX": -64.28,
+					"ampY": -91.9,
+					"phaseX": 2.25,
+					"phaseY": 5.39,
+					"damping": 102.65,
+					"frequency": 1.07
+				}
+			]
+		},
+		{
+			"steps": 528,
+			"pendulums": [
+				{
+					"ampX": 28.32,
+					"ampY": -67.41,
+					"phaseX": 1.666440369804186,
+					"phaseY": 1.0124654990819106,
+					"damping": 112.32,
+					"frequency": 1.26
+				},
+				{
+					"ampX": -42.27,
+					"ampY": -102.52,
+					"phaseX": 51.48,
+					"phaseY": 64.75,
+					"damping": 125.5,
+					"frequency": 0.85
+				},
+				{
+					"ampX": 28.32,
+					"ampY": -67.41,
+					"phaseX": 95.48,
+					"phaseY": 58.01,
+					"damping": 112.32,
+					"frequency": 1.26
+				}
+			]
+		},
+		{
+			"steps": 1520,
+			"pendulums": [
+				{
+					"ampX": -101.46,
+					"ampY": -96.16,
+					"phaseX": 1.1559315635958445,
+					"phaseY": 1.0967649019532368,
+					"damping": 109.55,
+					"frequency": 0.92
+				},
+				{
+					"ampX": -87.77,
+					"ampY": 79.66,
+					"phaseX": 58.18,
+					"phaseY": 6.29,
+					"damping": 178.76,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -101.46,
+					"ampY": -96.16,
+					"phaseX": 66.23,
+					"phaseY": 62.84,
+					"damping": 109.55,
+					"frequency": 0.92
+				}
+			]
+		},
+		{
+			"steps": 660,
+			"pendulums": [
+				{
+					"ampX": 77,
+					"ampY": -49.62,
+					"phaseX": 0.15341444125030154,
+					"phaseY": 0.6204645490839841,
+					"damping": 175.54,
+					"frequency": 1.17
+				},
+				{
+					"ampX": -30.98,
+					"ampY": 51.97,
+					"phaseX": 96.25,
+					"phaseY": 64.51,
+					"damping": 127.28,
+					"frequency": 0.77
+				},
+				{
+					"ampX": 77,
+					"ampY": -49.62,
+					"phaseX": 8.79,
+					"phaseY": 35.55,
+					"damping": 175.54,
+					"frequency": 1.17
+				}
+			]
+		},
+		{
+			"steps": 504,
+			"pendulums": [
+				{
+					"ampX": -42.38,
+					"ampY": -53.52,
+					"phaseX": 1.5372860051566055,
+					"phaseY": 1.0777408131064985,
+					"damping": 139.21,
+					"frequency": 0.54
+				},
+				{
+					"ampX": -64.22,
+					"ampY": 90.95,
+					"phaseX": 5.54,
+					"phaseY": 10.76,
+					"damping": 181.3,
+					"frequency": 0.8
+				},
+				{
+					"ampX": -42.38,
+					"ampY": -53.52,
+					"phaseX": 88.08,
+					"phaseY": 61.75,
+					"damping": 139.21,
+					"frequency": 0.54
+				}
+			]
+		},
+		{
+			"steps": 462,
+			"pendulums": [
+				{
+					"ampX": -101.71,
+					"ampY": -99.02,
+					"phaseX": 0.14713125594312196,
+					"phaseY": 0.7389724052943992,
+					"damping": 192.92,
+					"frequency": 0.69
+				},
+				{
+					"ampX": 98.85,
+					"ampY": 19.68,
+					"phaseX": 12.28,
+					"phaseY": 25.66,
+					"damping": 22.73,
+					"frequency": 1.45
+				},
+				{
+					"ampX": -101.71,
+					"ampY": -99.02,
+					"phaseX": 8.43,
+					"phaseY": 42.34,
+					"damping": 192.92,
+					"frequency": 0.69
+				}
+			]
+		},
+		{
+			"steps": 477,
+			"pendulums": [
+				{
+					"ampX": 12.12,
+					"ampY": -9.55,
+					"phaseX": 0.3710569989739945,
+					"phaseY": 0.9126326658678349,
+					"damping": 102.76,
+					"frequency": 1.41
+				},
+				{
+					"ampX": 45.83,
+					"ampY": 33.24,
+					"phaseX": 34.97,
+					"phaseY": 57.19,
+					"damping": 38.76,
+					"frequency": 1.46
+				},
+				{
+					"ampX": 12.12,
+					"ampY": -9.55,
+					"phaseX": 21.26,
+					"phaseY": 52.29,
+					"damping": 102.76,
+					"frequency": 1.41
+				}
+			]
+		},
+		{
+			"steps": 913,
+			"pendulums": [
+				{
+					"ampX": -39.97,
+					"ampY": 52.56,
+					"phaseX": 1.5446163880149815,
+					"phaseY": 0.7618362184955249,
+					"damping": 131.48,
+					"frequency": 0.92
+				},
+				{
+					"ampX": 20.61,
+					"ampY": -43.6,
+					"phaseX": 85.7,
+					"phaseY": 5.34,
+					"damping": 134.59,
+					"frequency": 1.33
+				},
+				{
+					"ampX": -39.97,
+					"ampY": 52.56,
+					"phaseX": 88.5,
+					"phaseY": 43.65,
+					"damping": 131.48,
+					"frequency": 0.92
+				}
+			]
+		},
+		{
+			"steps": 589,
+			"pendulums": [
+				{
+					"ampX": -81.5,
+					"ampY": -76.82,
+					"phaseX": 1.3388420692048502,
+					"phaseY": 1.302190154912969,
+					"damping": 22.28,
+					"frequency": 1.15
+				},
+				{
+					"ampX": 82.28,
+					"ampY": 2.45,
+					"phaseX": 82.1,
+					"phaseY": 98.6,
+					"damping": 31.34,
+					"frequency": 1.12
+				},
+				{
+					"ampX": -81.5,
+					"ampY": -76.82,
+					"phaseX": 76.71,
+					"phaseY": 74.61,
+					"damping": 22.28,
+					"frequency": 1.15
+				}
+			]
+		},
+		{
+			"steps": 542,
+			"pendulums": [
+				{
+					"ampX": 34.1,
+					"ampY": 12.83,
+					"phaseX": 0.06736970912698112,
+					"phaseY": 1.3189453157321147,
+					"damping": 99.77,
+					"frequency": 1.43
+				},
+				{
+					"ampX": 55.38,
+					"ampY": -78.13,
+					"phaseX": 61.97,
+					"phaseY": 24.34,
+					"damping": 37.96,
+					"frequency": 0.74
+				},
+				{
+					"ampX": 34.1,
+					"ampY": 12.83,
+					"phaseX": 3.86,
+					"phaseY": 75.57,
+					"damping": 99.77,
+					"frequency": 1.43
+				}
+			]
+		},
+		{
+			"steps": 507,
+			"pendulums": [
+				{
+					"ampX": -80.18,
+					"ampY": 34.26,
+					"phaseX": 1.0714576277993189,
+					"phaseY": 0.46024332375090476,
+					"damping": 149.13,
+					"frequency": 1.43
+				},
+				{
+					"ampX": 40.97,
+					"ampY": 29.19,
+					"phaseX": 53.72,
+					"phaseY": 73.61,
+					"damping": 73.68,
+					"frequency": 1.07
+				},
+				{
+					"ampX": -80.18,
+					"ampY": 34.26,
+					"phaseX": 61.39,
+					"phaseY": 26.37,
+					"damping": 149.13,
+					"frequency": 1.43
+				}
+			]
+		},
+		{
+			"steps": 425,
+			"pendulums": [
+				{
+					"ampX": -10.54,
+					"ampY": 103.54,
+					"phaseX": 1.6582373223198126,
+					"phaseY": 1.3285446266180838,
+					"damping": 77.79,
+					"frequency": 0.71
+				},
+				{
+					"ampX": -49.36,
+					"ampY": 21.27,
+					"phaseX": 85.43,
+					"phaseY": 11.23,
+					"damping": 40.83,
+					"frequency": 0.95
+				},
+				{
+					"ampX": -10.54,
+					"ampY": 103.54,
+					"phaseX": 95.01,
+					"phaseY": 76.12,
+					"damping": 77.79,
+					"frequency": 0.71
+				}
+			]
+		},
+		{
+			"steps": 756,
+			"pendulums": [
+				{
+					"ampX": -27.63,
+					"ampY": -56.61,
+					"phaseX": 0.3323106895797203,
+					"phaseY": 1.7393951325375487,
+					"damping": 161.7,
+					"frequency": 1.2
+				},
+				{
+					"ampX": -67.25,
+					"ampY": 3.17,
+					"phaseX": 86.02,
+					"phaseY": 56.89,
+					"damping": 172.49,
+					"frequency": 1.18
+				},
+				{
+					"ampX": -27.63,
+					"ampY": -56.61,
+					"phaseX": 19.04,
+					"phaseY": 99.66,
+					"damping": 161.7,
+					"frequency": 1.2
+				}
+			]
+		},
+		{
+			"steps": 1667,
+			"pendulums": [
+				{
+					"ampX": -80.49,
+					"ampY": 62.9,
+					"phaseX": 0.1530653753999027,
+					"phaseY": 1.3889330187370874,
+					"damping": 179.02,
+					"frequency": 1
+				},
+				{
+					"ampX": 67.84,
+					"ampY": -74.51,
+					"phaseX": 10.76,
+					"phaseY": 57.75,
+					"damping": 179.76,
+					"frequency": 0.86
+				},
+				{
+					"ampX": -80.49,
+					"ampY": 62.9,
+					"phaseX": 8.77,
+					"phaseY": 79.58,
+					"damping": 179.02,
+					"frequency": 1
+				}
+			]
+		},
+		{
+			"steps": 661,
+			"pendulums": [
+				{
+					"ampX": -100.78,
+					"ampY": -50.73,
+					"phaseX": 0.7047639519553103,
+					"phaseY": 1.5894713497912358,
+					"damping": 181.95,
+					"frequency": 0.89
+				},
+				{
+					"ampX": 89.9,
+					"ampY": 97.12,
+					"phaseX": 59.11,
+					"phaseY": 59.65,
+					"damping": 164.01,
+					"frequency": 0.92
+				},
+				{
+					"ampX": -100.78,
+					"ampY": -50.73,
+					"phaseX": 40.38,
+					"phaseY": 91.07,
+					"damping": 181.95,
+					"frequency": 0.89
+				}
+			]
+		},
+		{
+			"steps": 582,
+			"pendulums": [
+				{
+					"ampX": -54.21,
+					"ampY": 90.94,
+					"phaseX": 0.04869468613064179,
+					"phaseY": 0.7517133088339577,
+					"damping": 32.45,
+					"frequency": 1.27
+				},
+				{
+					"ampX": 77.28,
+					"ampY": 4.79,
+					"phaseX": 15,
+					"phaseY": 86.3,
+					"damping": 77.6,
+					"frequency": 0.96
+				},
+				{
+					"ampX": -54.21,
+					"ampY": 90.94,
+					"phaseX": 2.79,
+					"phaseY": 43.07,
+					"damping": 32.45,
+					"frequency": 1.27
+				}
+			]
+		},
+		{
+			"steps": 517,
+			"pendulums": [
+				{
+					"ampX": -70.36,
+					"ampY": -94.01,
+					"phaseX": 1.5545647647513492,
+					"phaseY": 1.232376984833196,
+					"damping": 186.85,
+					"frequency": 0.99
+				},
+				{
+					"ampX": 49.27,
+					"ampY": 53.02,
+					"phaseX": 95.52,
+					"phaseY": 56.23,
+					"damping": 122.46,
+					"frequency": 1.28
+				},
+				{
+					"ampX": -70.36,
+					"ampY": -94.01,
+					"phaseX": 89.07,
+					"phaseY": 70.61,
+					"damping": 186.85,
+					"frequency": 0.99
+				}
+			]
+		},
+		{
+			"steps": 1600,
+			"pendulums": [
+				{
+					"ampX": 92.21,
+					"ampY": 51.12,
+					"phaseX": 1.1878710889073407,
+					"phaseY": 1.2510520078295355,
+					"damping": 179.07,
+					"frequency": 0.71
+				},
+				{
+					"ampX": -61.74,
+					"ampY": -7.57,
+					"phaseX": 33.55,
+					"phaseY": 70.38,
+					"damping": 195.89,
+					"frequency": 1.36
+				},
+				{
+					"ampX": 92.21,
+					"ampY": 51.12,
+					"phaseX": 68.06,
+					"phaseY": 71.68,
+					"damping": 179.07,
+					"frequency": 0.71
+				}
+			]
+		},
+		{
+			"steps": 498,
+			"pendulums": [
+				{
+					"ampX": -89.49,
+					"ampY": 43.98,
+					"phaseX": 0.7178539213452677,
+					"phaseY": 1.4683454997028293,
+					"damping": 91.11,
+					"frequency": 0.59
+				},
+				{
+					"ampX": -95.33,
+					"ampY": -47.62,
+					"phaseX": 99.3,
+					"phaseY": 66.94,
+					"damping": 68.69,
+					"frequency": 1.16
+				},
+				{
+					"ampX": -89.49,
+					"ampY": 43.98,
+					"phaseX": 41.13,
+					"phaseY": 84.13,
+					"damping": 91.11,
+					"frequency": 0.59
+				}
+			]
+		},
+		{
+			"steps": 548,
+			"pendulums": [
+				{
+					"ampX": 79.45,
+					"ampY": 93.26,
+					"phaseX": 0.3134611336581816,
+					"phaseY": 0.6937683776677459,
+					"damping": 134.26,
+					"frequency": 1.07
+				},
+				{
+					"ampX": 38.26,
+					"ampY": 103.41,
+					"phaseX": 15.85,
+					"phaseY": 14.38,
+					"damping": 198.87,
+					"frequency": 1.38
+				},
+				{
+					"ampX": 79.45,
+					"ampY": 93.26,
+					"phaseX": 17.96,
+					"phaseY": 39.75,
+					"damping": 134.26,
+					"frequency": 1.07
+				}
+			]
+		},
+		{
+			"steps": 785,
+			"pendulums": [
+				{
+					"ampX": -64.6,
+					"ampY": -15.21,
+					"phaseX": 1.6549211967410233,
+					"phaseY": 0.6948155752189427,
+					"damping": 124.47,
+					"frequency": 0.63
+				},
+				{
+					"ampX": 27.26,
+					"ampY": 13.64,
+					"phaseX": 63.39,
+					"phaseY": 56.17,
+					"damping": 121.52,
+					"frequency": 0.78
+				},
+				{
+					"ampX": -64.6,
+					"ampY": -15.21,
+					"phaseX": 94.82,
+					"phaseY": 39.81,
+					"damping": 124.47,
+					"frequency": 0.63
+				}
+			]
+		},
+		{
+			"steps": 590,
+			"pendulums": [
+				{
+					"ampX": -45.36,
+					"ampY": 71.07,
+					"phaseX": 0.6021385919380438,
+					"phaseY": 0.6496115475922895,
+					"damping": 101.43,
+					"frequency": 0.85
+				},
+				{
+					"ampX": 30.81,
+					"ampY": 23.05,
+					"phaseX": 6.46,
+					"phaseY": 64.57,
+					"damping": 118.25,
+					"frequency": 1.14
+				},
+				{
+					"ampX": -45.36,
+					"ampY": 71.07,
+					"phaseX": 34.5,
+					"phaseY": 37.22,
+					"damping": 101.43,
+					"frequency": 0.85
+				}
+			]
+		},
+		{
+			"steps": 510,
+			"pendulums": [
+				{
+					"ampX": -71.96,
+					"ampY": 88.82,
+					"phaseX": 1.6214108751027323,
+					"phaseY": 1.2107349021084663,
+					"damping": 190.63,
+					"frequency": 0.83
+				},
+				{
+					"ampX": 87.03,
+					"ampY": -94.59,
+					"phaseX": 43.16,
+					"phaseY": 82.36,
+					"damping": 13.96,
+					"frequency": 1.23
+				},
+				{
+					"ampX": -71.96,
+					"ampY": 88.82,
+					"phaseX": 92.9,
+					"phaseY": 69.37,
+					"damping": 190.63,
+					"frequency": 0.83
+				}
+			]
+		},
+		{
+			"steps": 595,
+			"pendulums": [
+				{
+					"ampX": 87.38,
+					"ampY": 61.04,
+					"phaseX": 0.08691739674931762,
+					"phaseY": 0.743335728424385,
+					"damping": 16.38,
+					"frequency": 1.43
+				},
+				{
+					"ampX": -93.96,
+					"ampY": -80.34,
+					"phaseX": 77.56,
+					"phaseY": 55.32,
+					"damping": 98.88,
+					"frequency": 0.57
+				},
+				{
+					"ampX": 87.38,
+					"ampY": 61.04,
+					"phaseX": 4.98,
+					"phaseY": 42.59,
+					"damping": 16.38,
+					"frequency": 1.43
+				}
+			]
+		},
+		{
+			"steps": 499,
+			"pendulums": [
+				{
+					"ampX": -90.28,
+					"ampY": -102.87,
+					"phaseX": 0.7227408432508517,
+					"phaseY": 0.1340412865531645,
+					"damping": 173.66,
+					"frequency": 0.55
+				},
+				{
+					"ampX": 90.1,
+					"ampY": 75.11,
+					"phaseX": 47.7,
+					"phaseY": 51.81,
+					"damping": 80.41,
+					"frequency": 1.29
+				},
+				{
+					"ampX": -90.28,
+					"ampY": -102.87,
+					"phaseX": 41.41,
+					"phaseY": 7.68,
+					"damping": 173.66,
+					"frequency": 0.55
+				}
+			]
+		},
+		{
+			"steps": 500,
+			"pendulums": [
+				{
+					"ampX": 93.41,
+					"ampY": 46.76,
+					"phaseX": 1.3836970309811045,
+					"phaseY": 0.9066985464110543,
+					"damping": 147.55,
+					"frequency": 0.62
+				},
+				{
+					"ampX": -93.97,
+					"ampY": -13.99,
+					"phaseX": 36.49,
+					"phaseY": 30.02,
+					"damping": 182.24,
+					"frequency": 1.25
+				},
+				{
+					"ampX": 93.41,
+					"ampY": 46.76,
+					"phaseX": 79.28,
+					"phaseY": 51.95,
+					"damping": 147.55,
+					"frequency": 0.62
+				}
+			]
+		},
+		{
+			"steps": 672,
+			"pendulums": [
+				{
+					"ampX": 89.8,
+					"ampY": 54.84,
+					"phaseX": 0.7367034772668065,
+					"phaseY": 1.7442820544431328,
+					"damping": 180.96,
+					"frequency": 0.73
+				},
+				{
+					"ampX": 43.91,
+					"ampY": 58.67,
+					"phaseX": 87.47,
+					"phaseY": 71.53,
+					"damping": 53.04,
+					"frequency": 1.44
+				},
+				{
+					"ampX": 89.8,
+					"ampY": 54.84,
+					"phaseX": 42.21,
+					"phaseY": 99.94,
+					"damping": 180.96,
+					"frequency": 0.73
+				}
+			]
+		},
+		{
+			"steps": 623,
+			"pendulums": [
+				{
+					"ampX": 64.79,
+					"ampY": 21.47,
+					"phaseX": 1.5238469699162491,
+					"phaseY": 0.5387831400906495,
+					"damping": 113.58,
+					"frequency": 0.98
+				},
+				{
+					"ampX": -77.84,
+					"ampY": 2.05,
+					"phaseX": 82.08,
+					"phaseY": 6.22,
+					"damping": 176.6,
+					"frequency": 0.51
+				},
+				{
+					"ampX": 64.79,
+					"ampY": 21.47,
+					"phaseX": 87.31,
+					"phaseY": 30.87,
+					"damping": 113.58,
+					"frequency": 0.98
+				}
+			]
+		},
+		{
+			"steps": 989,
+			"pendulums": [
+				{
+					"ampX": 62.6,
+					"ampY": -55.34,
+					"phaseX": 0.35377823937925057,
+					"phaseY": 1.3512339068940098,
+					"damping": 176.3,
+					"frequency": 0.57
+				},
+				{
+					"ampX": -24.03,
+					"ampY": -68.82,
+					"phaseX": 27.7,
+					"phaseY": 10.76,
+					"damping": 117.99,
+					"frequency": 0.77
+				},
+				{
+					"ampX": 62.6,
+					"ampY": -55.34,
+					"phaseX": 20.27,
+					"phaseY": 77.42,
+					"damping": 176.3,
+					"frequency": 0.57
+				}
+			]
+		},
+		{
+			"steps": 832,
+			"pendulums": [
+				{
+					"ampX": -95.8,
+					"ampY": 36.96,
+					"phaseX": 0.42708206796301246,
+					"phaseY": 1.6959364341628902,
+					"damping": 90.13,
+					"frequency": 0.59
+				},
+				{
+					"ampX": 81.06,
+					"ampY": 27.5,
+					"phaseX": 56.31,
+					"phaseY": 11.24,
+					"damping": 63.96,
+					"frequency": 1.28
+				},
+				{
+					"ampX": -95.8,
+					"ampY": 36.96,
+					"phaseX": 24.47,
+					"phaseY": 97.17,
+					"damping": 90.13,
+					"frequency": 0.59
+				}
+			]
+		},
+		{
+			"steps": 1905,
+			"pendulums": [
+				{
+					"ampX": -76.44,
+					"ampY": -84.99,
+					"phaseX": 0.6255260039147678,
+					"phaseY": 1.5495033099205657,
+					"damping": 40.83,
+					"frequency": 0.81
+				},
+				{
+					"ampX": 66.29,
+					"ampY": -50.85,
+					"phaseX": 31.97,
+					"phaseY": 77.1,
+					"damping": 100.19,
+					"frequency": 0.64
+				},
+				{
+					"ampX": -76.44,
+					"ampY": -84.99,
+					"phaseX": 35.84,
+					"phaseY": 88.78,
+					"damping": 40.83,
+					"frequency": 0.81
+				}
+			]
+		},
+		{
+			"steps": 652,
+			"pendulums": [
+				{
+					"ampX": -68.27,
+					"ampY": 36.38,
+					"phaseX": 0.92031211457661,
+					"phaseY": 1.1918853461869279,
+					"damping": 162.98,
+					"frequency": 1.1
+				},
+				{
+					"ampX": 100.39,
+					"ampY": -84.81,
+					"phaseX": 78.08,
+					"phaseY": 9.03,
+					"damping": 195.34,
+					"frequency": 0.99
+				},
+				{
+					"ampX": -68.27,
+					"ampY": 36.38,
+					"phaseX": 52.73,
+					"phaseY": 68.29,
+					"damping": 162.98,
+					"frequency": 1.1
+				}
+			]
+		},
+		{
+			"steps": 1883,
+			"pendulums": [
+				{
+					"ampX": 97.1,
+					"ampY": 78.91,
+					"phaseX": 0.3021164935202184,
+					"phaseY": 1.655619328441821,
+					"damping": 66.01,
+					"frequency": 0.85
+				},
+				{
+					"ampX": 67.38,
+					"ampY": -87.55,
+					"phaseX": 5.22,
+					"phaseY": 29.51,
+					"damping": 166.33,
+					"frequency": 0.7
+				},
+				{
+					"ampX": 97.1,
+					"ampY": 78.91,
+					"phaseX": 17.31,
+					"phaseY": 94.86,
+					"damping": 66.01,
+					"frequency": 0.85
+				}
+			]
+		},
+		{
+			"steps": 494,
+			"pendulums": [
+				{
+					"ampX": 64.55,
+					"ampY": 81.33,
+					"phaseX": 0.10175269539126941,
+					"phaseY": 1.2346459128607885,
+					"damping": 143.05,
+					"frequency": 0.8
+				},
+				{
+					"ampX": -44.18,
+					"ampY": 100.66,
+					"phaseX": 43.01,
+					"phaseY": 56.2,
+					"damping": 135.38,
+					"frequency": 1.4
+				},
+				{
+					"ampX": 64.55,
+					"ampY": 81.33,
+					"phaseX": 5.83,
+					"phaseY": 70.74,
+					"damping": 143.05,
+					"frequency": 0.8
+				}
+			]
+		},
+		{
+			"steps": 579,
+			"pendulums": [
+				{
+					"ampX": -36.03,
+					"ampY": -80.59,
+					"phaseX": 1.140398133253095,
+					"phaseY": 0.029845130209103034,
+					"damping": 192.53,
+					"frequency": 0.58
+				},
+				{
+					"ampX": 29.49,
+					"ampY": -97.24,
+					"phaseX": 36.58,
+					"phaseY": 94.42,
+					"damping": 144.49,
+					"frequency": 0.87
+				},
+				{
+					"ampX": -36.03,
+					"ampY": -80.59,
+					"phaseX": 65.34,
+					"phaseY": 1.71,
+					"damping": 192.53,
+					"frequency": 0.58
+				}
+			]
+		},
+		{
+			"steps": 613,
+			"pendulums": [
+				{
+					"ampX": 101.81,
+					"ampY": 40.84,
+					"phaseX": 1.2877039221214164,
+					"phaseY": 1.3067280109681545,
+					"damping": 120.62,
+					"frequency": 1.33
+				},
+				{
+					"ampX": -30.71,
+					"ampY": 70.29,
+					"phaseX": 53.92,
+					"phaseY": 46.49,
+					"damping": 140.55,
+					"frequency": 1.39
+				},
+				{
+					"ampX": 101.81,
+					"ampY": 40.84,
+					"phaseX": 73.78,
+					"phaseY": 74.87,
+					"damping": 120.62,
+					"frequency": 1.33
+				}
+			]
+		},
+		{
+			"steps": 896,
+			"pendulums": [
+				{
+					"ampX": 94.71,
+					"ampY": -50.69,
+					"phaseX": 0.14172073526193954,
+					"phaseY": 0.054977871437821374,
+					"damping": 49.08,
+					"frequency": 1.09
+				},
+				{
+					"ampX": -65.19,
+					"ampY": 19.06,
+					"phaseX": 57.55,
+					"phaseY": 34.15,
+					"damping": 99.07,
+					"frequency": 0.95
+				},
+				{
+					"ampX": 94.71,
+					"ampY": -50.69,
+					"phaseX": 8.12,
+					"phaseY": 3.15,
+					"damping": 49.08,
+					"frequency": 1.09
+				}
+			]
+		},
+		{
+			"steps": 1070,
+			"pendulums": [
+				{
+					"ampX": -93.42,
+					"ampY": 89.25,
+					"phaseX": 1.5870278888384437,
+					"phaseY": 0.9676105373056563,
+					"damping": 88.19,
+					"frequency": 1.13
+				},
+				{
+					"ampX": -91.13,
+					"ampY": 70.39,
+					"phaseX": 99.09,
+					"phaseY": 42.14,
+					"damping": 115.66,
+					"frequency": 1.14
+				},
+				{
+					"ampX": -93.42,
+					"ampY": 89.25,
+					"phaseX": 90.93,
+					"phaseY": 55.44,
+					"damping": 88.19,
+					"frequency": 1.13
+				}
+			]
+		},
+		{
+			"steps": 422,
+			"pendulums": [
+				{
+					"ampX": -59.14,
+					"ampY": 48.2,
+					"phaseX": 1.0229374745938766,
+					"phaseY": 0.18797196043978928,
+					"damping": 78.76,
+					"frequency": 1.33
+				},
+				{
+					"ampX": -63.87,
+					"ampY": -77.23,
+					"phaseX": 68.43,
+					"phaseY": 74.9,
+					"damping": 44.11,
+					"frequency": 0.88
+				},
+				{
+					"ampX": -59.14,
+					"ampY": 48.2,
+					"phaseX": 58.61,
+					"phaseY": 10.77,
+					"damping": 78.76,
+					"frequency": 1.33
+				}
+			]
+		},
+		{
+			"steps": 974,
+			"pendulums": [
+				{
+					"ampX": -85.75,
+					"ampY": 43.64,
+					"phaseX": 0.37734018428117405,
+					"phaseY": 1.173908454891386,
+					"damping": 131.62,
+					"frequency": 0.6
+				},
+				{
+					"ampX": 102.99,
+					"ampY": 93.6,
+					"phaseX": 47.67,
+					"phaseY": 1.3,
+					"damping": 38.91,
+					"frequency": 0.85
+				},
+				{
+					"ampX": -85.75,
+					"ampY": 43.64,
+					"phaseX": 21.62,
+					"phaseY": 67.26,
+					"damping": 131.62,
+					"frequency": 0.6
+				}
+			]
+		},
+		{
+			"steps": 518,
+			"pendulums": [
+				{
+					"ampX": 2.51,
+					"ampY": 78.22,
+					"phaseX": 0.8398524360596713,
+					"phaseY": 0.6524040743954804,
+					"damping": 191.65,
+					"frequency": 0.73
+				},
+				{
+					"ampX": -41.33,
+					"ampY": 52.59,
+					"phaseX": 29.54,
+					"phaseY": 3.38,
+					"damping": 103.27,
+					"frequency": 1.28
+				},
+				{
+					"ampX": 2.51,
+					"ampY": 78.22,
+					"phaseX": 48.12,
+					"phaseY": 37.38,
+					"damping": 191.65,
+					"frequency": 0.73
+				}
+			]
+		},
+		{
+			"steps": 1053,
+			"pendulums": [
+				{
+					"ampX": -53.62,
+					"ampY": 64.12,
+					"phaseX": 1.2137019618368567,
+					"phaseY": 0.4897393881096088,
+					"damping": 26.73,
+					"frequency": 0.59
+				},
+				{
+					"ampX": 34.87,
+					"ampY": -54.38,
+					"phaseX": 5.65,
+					"phaseY": 45.1,
+					"damping": 99.93,
+					"frequency": 1.13
+				},
+				{
+					"ampX": -53.62,
+					"ampY": 64.12,
+					"phaseX": 69.54,
+					"phaseY": 28.06,
+					"damping": 26.73,
+					"frequency": 0.59
+				}
+			]
+		},
+		{
+			"steps": 530,
+			"pendulums": [
+				{
+					"ampX": -19.33,
+					"ampY": -79.79,
+					"phaseX": 1.2426744274199626,
+					"phaseY": 1.0405653000390191,
+					"damping": 193.4,
+					"frequency": 0.95
+				},
+				{
+					"ampX": -17.79,
+					"ampY": 32.27,
+					"phaseX": 6.85,
+					"phaseY": 85.73,
+					"damping": 109.09,
+					"frequency": 1.26
+				},
+				{
+					"ampX": -19.33,
+					"ampY": -79.79,
+					"phaseX": 71.2,
+					"phaseY": 59.62,
+					"damping": 193.4,
+					"frequency": 0.95
+				}
+			]
+		},
+		{
+			"steps": 1955,
+			"pendulums": [
+				{
+					"ampX": -82.78,
+					"ampY": 19.74,
+					"phaseX": 1.6351989761934873,
+					"phaseY": 0.805469449795383,
+					"damping": 69.82,
+					"frequency": 0.58
+				},
+				{
+					"ampX": -41.52,
+					"ampY": -56.75,
+					"phaseX": 18.88,
+					"phaseY": 84.64,
+					"damping": 31.15,
+					"frequency": 0.73
+				},
+				{
+					"ampX": -82.78,
+					"ampY": 19.74,
+					"phaseX": 93.69,
+					"phaseY": 46.15,
+					"damping": 69.82,
+					"frequency": 0.58
+				}
+			]
+		},
+		{
+			"steps": 678,
+			"pendulums": [
+				{
+					"ampX": 100.62,
+					"ampY": -82.31,
+					"phaseX": 1.4011503235010478,
+					"phaseY": 0.5160938598147232,
+					"damping": 177.79,
+					"frequency": 0.98
+				},
+				{
+					"ampX": -57.68,
+					"ampY": -91.18,
+					"phaseX": 28.57,
+					"phaseY": 15.81,
+					"damping": 106.12,
+					"frequency": 0.61
+				},
+				{
+					"ampX": 100.62,
+					"ampY": -82.31,
+					"phaseX": 80.28,
+					"phaseY": 29.57,
+					"damping": 177.79,
+					"frequency": 0.98
+				}
+			]
+		},
+		{
+			"steps": 766,
+			"pendulums": [
+				{
+					"ampX": -59.48,
+					"ampY": 76.25,
+					"phaseX": 1.3925982101662757,
+					"phaseY": 0.6342526501747394,
+					"damping": 7.2,
+					"frequency": 0.8
+				},
+				{
+					"ampX": 27.7,
+					"ampY": -44.88,
+					"phaseX": 95.7,
+					"phaseY": 56.91,
+					"damping": 148.04,
+					"frequency": 0.79
+				},
+				{
+					"ampX": -59.48,
+					"ampY": 76.25,
+					"phaseX": 79.79,
+					"phaseY": 36.34,
+					"damping": 7.2,
+					"frequency": 0.8
+				}
+			]
+		},
+		{
+			"steps": 500,
+			"pendulums": [
+				{
+					"ampX": -56.44,
+					"ampY": 104.33,
+					"phaseX": 0.5319763560078716,
+					"phaseY": 0.21764255772369293,
+					"damping": 168.58,
+					"frequency": 1.22
+				},
+				{
+					"ampX": -43.67,
+					"ampY": 86.14,
+					"phaseX": 44.69,
+					"phaseY": 52.42,
+					"damping": 119.46,
+					"frequency": 0.81
+				},
+				{
+					"ampX": -56.44,
+					"ampY": 104.33,
+					"phaseX": 30.48,
+					"phaseY": 12.47,
+					"damping": 168.58,
+					"frequency": 1.22
+				}
+			]
+		},
+		{
+			"steps": 453,
+			"pendulums": [
+				{
+					"ampX": -42.81,
+					"ampY": 60.94,
+					"phaseX": 0.7145377957664785,
+					"phaseY": 1.6255996653075186,
+					"damping": 136.63,
+					"frequency": 0.92
+				},
+				{
+					"ampX": -63.36,
+					"ampY": 61.42,
+					"phaseX": 79.92,
+					"phaseY": 36.6,
+					"damping": 174.68,
+					"frequency": 1.37
+				},
+				{
+					"ampX": -42.81,
+					"ampY": 60.94,
+					"phaseX": 40.94,
+					"phaseY": 93.14,
+					"damping": 136.63,
+					"frequency": 0.92
+				}
+			]
+		},
+		{
+			"steps": 426,
+			"pendulums": [
+				{
+					"ampX": 98.05,
+					"ampY": -97.68,
+					"phaseX": 1.4542083327616753,
+					"phaseY": 0.04415683007545653,
+					"damping": 90.65,
+					"frequency": 0.76
+				},
+				{
+					"ampX": 69.85,
+					"ampY": 74.07,
+					"phaseX": 24.67,
+					"phaseY": 5.11,
+					"damping": 23.03,
+					"frequency": 1.14
+				},
+				{
+					"ampX": 98.05,
+					"ampY": -97.68,
+					"phaseX": 83.32,
+					"phaseY": 2.53,
+					"damping": 90.65,
+					"frequency": 0.76
+				}
+			]
+		}
+	]
+}

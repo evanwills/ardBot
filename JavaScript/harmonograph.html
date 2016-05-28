@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Harmonograph</title>
+		<meta name="description" content="A JavaScript Harmonograph simulation" />
+		<!-- <link rel="shortcut icon" href="../../favicon.ico"> -->
+		<link rel="stylesheet" href="harmonograph.css">
+		<script type="text/javascript" src="harmonograph.js"></script>
+	</head>
+
+<body onload="init()">
+<div id="frame">
+
+	<canvas id="graph" width="980" height="780"> </canvas>
+
+	<div id="buttons">
+		<button id="startButton" onclick="startStop();">stop</button>
+		<button onclick="reset();">reset</button>
+		<button onclick="init();">inititalise</button>
+		<button onclick="showSettings();">settings</button>
+		<button onclick="showScene();">scene</button>
+		<button onclick="saveConfig();">save</button>
+		<label for="modal-control" class="btn">export</label>
+		<button onclick="speed();">speed</button><span id="spf">&nbsp; 128x</span>
+	</div>
+
+	<div id="settings" style="visibility:hidden;">
+		<form>
+			<table>
+				<tr class="head">
+					<td> </td>
+					<td>Pend A</td><td>Pend B</td><td>Pend C</td>
+				</tr>
+				<tr>
+					<td class="label">&nbsp;Amplitude x</td>
+					<td><input type="number" min="-120" max="120" id="a1x" value="100" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-120" max="120" id="a2x" value="100" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-120" max="120" id="a3x" value="100" onchange="inputChange()"/> </td>
+					<td>&nbsp;px</td>
+				</tr>
+				<tr>
+					<td class="label">Amplitude y</td>
+					<td><input type="number" min="-120" max="120" id="a1y" value="100" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-120" max="120" id="a2y" value="100" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-120" max="120" id="a3y" value="-100" onchange="inputChange()"/> </td>
+					<td>&nbsp;px</td>
+				</tr>
+				<tr>
+					<td class="label">Phase x</td>
+					<td><input type="number" min="-120" max="120" id="p1x" value="0" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-120" max="120" id="p2x" value="90" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-120" max="120" id="p3x" value="0" onchange="inputChange()"/> </td>
+					<td>&nbsp;&deg;</td>
+				</tr>
+				<tr>
+					<td class="label">Phase y</td>
+					<td><input type="number" min="-120" max="120" id="p1y" value="90" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-120" max="120" id="p2y" value="0" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-120" max="120" id="p3y" value="0" onchange="inputChange()"/> </td>
+					<td>&nbsp;&deg;</td>
+				</tr>
+				<tr>
+					<td class="label">Damping</td>
+					<td><input type="number" min="0" max="200" id="td1" value="180" onchange="inputChange()"/> </td>
+					<td><input type="number" min="0" max="200" id="td2" value="180" onchange="inputChange()"/> </td>
+					<td><input type="number" min="0" max="200" id="td3" value="80" onchange="inputChange()"/> </td>
+					<td>&nbsp;s</td>
+				</tr>
+				<tr>
+					<td class="label">Frequency</td>
+					<td><input type="number" min="-1" max="1" step="0.01" id="f1" value="1" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-1" max="1" step="0.01" id="f2" value="0.98" onchange="inputChange()"/> </td>
+					<td><input type="number" min="-1" max="1" step="0.01" id="f3" value="1" onchange="inputChange()"/> </td>
+					<td>&nbsp;Hz&nbsp;</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<div id="topview">
+		<canvas id="scene" width="1000" height="1000" style="visibility:hidden;"></canvas>
+	</div>
+
+    <div id="text">
+		<p>This interactive harmonograph simulation was inspired by a <a href="http://www.karlsims.com/harmonograph/" target="_blank">Three-Pendulum Rotary Harmonograph</a>, except that here all three pendulums are rotary. Each pendulum can be made to swing in only one direction by setting one of its amplitudes to zero. </p>
+		<p>The 'scene' shows a top view of the harmonograph. Use this to visualise how the pendulums are affected when playing around with the 'settings'.</p>
+		<p>&nbsp;</p>
+		<p style="text-align: right;"><a href="http://andygiger.com/">andygiger.com</a></p>
+    </div>
+
+	<div id="footer">
+        <p class="copy">Copyright &copy;2015 Andrew D Giger</p>
+	</div>
+	<div class="modal">
+		<input type="checkbox" class="modal-control" id="modal-control" onclick="showExport();" onchange="showExport();" />
+		<label for="modal-control" class="modal-label">Current config</label>
+		<div class="modal-content">
+			<textarea id="exportPre">,
+		{
+			"steps": {{steps}},
+			"pendulums": [
+				{
+					"ampX": {{a1x}},
+					"ampY": {{a1y}},
+					"phaseX": {{p1x}},
+					"phaseY": {{p1y}},
+					"damping": {{td1}},
+					"frequency": {{f1}}
+				},
+				{
+					"ampX": {{a2x}},
+					"ampY": {{a2y}},
+					"phaseX": {{p2x}},
+					"phaseY": {{p2y}},
+					"damping": {{td2}},
+					"frequency": {{f2}}
+				},
+				{
+					"ampX": {{a3x}},
+					"ampY": {{a3y}},
+					"phaseX": {{p3x}},
+					"phaseY": {{p3y}},
+					"damping": {{td3}},
+					"frequency": {{f3}}
+				}
+			]
+		}</textarea>
+		</div>
+	</div>
+</div> <!-- frame -->
+
+</body>
+</html>
+
+
