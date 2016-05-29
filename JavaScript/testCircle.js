@@ -2,22 +2,9 @@
 function rotate(angle, x, y) {
 	'use strict';
 	var radius = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)),
-	//	currentAngle = tan(y/x);
-		currentAngle = Math.atan(y / x),
-		cosA = 0,
-		sinA = 0;
-	console.log('currentAngle = ' + currentAngle);
-	console.log('angle = ' + angle);
+		newAngle = Math.atan(y / x) + angle;
 
-	currentAngle += angle;
-
-	cosA = Math.cos(currentAngle);
-	sinA = Math.sin(currentAngle);
-
-	x = cosA * radius;
-	y = sinA * radius;
-
-	return [x, y];
+	return [Math.cos(newAngle) * radius, Math.sin(newAngle) * radius];
 }
 
 function doIt() {
