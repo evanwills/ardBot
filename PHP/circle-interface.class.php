@@ -18,9 +18,9 @@ interface circleInterface
 	public function initXY( $x , $y );
 
 	/**
-	 * @method rotate() move the radiusPoint to a new location
+	 * @method move() move the radiusPoint to a new location
 	 */
-	public function rotate();
+	public function move();
 
 	/**
 	 * @method rotateXY() move the radiusPoint to a new location

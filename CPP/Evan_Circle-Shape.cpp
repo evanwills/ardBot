@@ -79,7 +79,7 @@ class circle : circleShape
 			_tmpX = (radius * arcsin(newAngle) ) + _originY;
 		}
 
-		void rotate() {
+		void move() {
 			_angleStep->updateStep();
 			_radius->updateStep();
 			rotateXY( _radiusPointX , _radiusPointY );
@@ -112,7 +112,7 @@ class ellipse : circleShape
 			_radiusoffsetY = radiusoffsetY;
 		}
 
-		void rotate( ) {
+		void move( ) {
 		}
 
 		void initXY( double originX , double originY ) {

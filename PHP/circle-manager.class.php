@@ -169,9 +169,9 @@ class singleCircle extends circleManager
 	}
 
 	/**
-	 * @method	rotate() rotates its own radius points
+	 * @method	move() rotates its own radius points
 	 */
-	public function rotate()
+	public function move()
 	{
 		$this->_circle->setOriginXY( $this->_originX , $this->_originY );
 		$this->_circle->rotateXY( $this->_radiusPointX , $this->_radiusPointY );
@@ -237,12 +237,12 @@ class multiCircle extends singleCircle
 	}
 
 	/**
-	 * @method	rotate() rotates its own radius points as
+	 * @method	move() rotates its own radius points as
 	 *			well as those of all its children. It also sets
 	 *			the _originX & _originY of its direct child
 	 *			manager
 	 */
-	public function rotate() {
+	public function move() {
 		$tmpDepth = $this->_depth;
 		$radiusPointX = 0;
 		$radiusPointY = 0;

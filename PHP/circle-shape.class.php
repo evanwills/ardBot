@@ -207,7 +207,7 @@ class circle extends abstractCircleShape
 */
 	}
 
-	public function rotate()
+	public function move()
 	{
 		$this->_angleStep->updateStep();
 		$this->_radius->updateStep();
@@ -267,6 +267,12 @@ class circle extends abstractCircleShape
 		return rad2deg( ( $x * sin($angle) ) - ( $y * cos($angle) ) );
 	}
 }
+
+
+//  END:  circleType
+// ==================================================================
+// START: ellipse
+
 
 class ellipse extends abstractCircleShape
 {

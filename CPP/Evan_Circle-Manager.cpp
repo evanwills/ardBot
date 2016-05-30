@@ -139,9 +139,9 @@ class singleCircle : circleManager
 		}
 
 		/**
-		 * @method	rotate() rotates its own radius points
+		 * @method	move() rotates its own radius points
 		 */
-		void rotate() {
+		void move() {
 			_circle->setOriginXY( _originX , _originY );
 			_circle->rotateXY( _radiusPointX , _radiusPointY );
 			_radiusPointX = _circle->getX();
@@ -185,12 +185,12 @@ class multiCircle : singleCircle
 		}
 
 		/**
-		 * @method	rotate() rotates its own radius points as
+		 * @method	move() rotates its own radius points as
 		 *			well as those of all its children. It also sets
 		 *			the _originX & _originY of its direct child
 		 *			manager
 		 */
-		void rotate() {
+		void move() {
 			unsigned int tmpDepth = _depth;
 			double radiusPointX = 0;
 			double radiusPointY = 0;
