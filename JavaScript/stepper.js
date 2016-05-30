@@ -1,55 +1,57 @@
-// Stepper fixed needs some rethinking I'm pretty sure the cumulative stuff is unnecessary
+// IncrementManager fixed needs some rethinking I'm pretty sure the cumulative stuff is unnecessary
 
 
-var Stepper = function () {
+var IncrementManager = function () {
 	'use strict';
 	this.step = 0;
 	this.min = 0;
 	this.max = 0;
 	this.lastStep = 0;
 	this.increment = 0;
+	this.cumulative = 0;
 };
 
 
-Stepper.prototype.updateStep = function () {
+IncrementManager.prototype.updateStep = function () {
 	'use strict';
+	this.cumulative += this.step;
 };
 
-Stepper.prototype.getStep = function () {
+IncrementManager.prototype.getStep = function () {
 	'use strict';
 	return this.step;
 };
 
-Stepper.prototype.getIncrement = function () {
+IncrementManager.prototype.getIncrement = function () {
 	'use strict';
 	return this.increment;
 };
 
-Stepper.prototype.getLastStep = function () {
+IncrementManager.prototype.getLastStep = function () {
 	'use strict';
 	return this.lastStep;
 };
 
-Stepper.prototype.getMin = function () {
+IncrementManager.prototype.getMin = function () {
 	'use strict';
 	return this.min;
 };
 
-Stepper.prototype.getMax = function () {
+IncrementManager.prototype.getMax = function () {
 	'use strict';
 	return this.max;
 };
 
-Stepper.prototype.withinMinMax = function (min, max) {
+IncrementManager.prototype.withinMinMax = function (min, max) {
 	'use strict';
 	var tmp;
 
-	if (typeof min !== 'Number') {
-		throw {'msg': 'StepperFixed expects first parameter "min" to be a number. ' + typeof min + ' given!'};
+	if (typeof min !== 'number') {
+		throw {'msg': 'IncrementFixed expects first parameter "min" to be a number. ' + typeof min + ' given!'};
 	}
 
-	if (typeof max !== 'Number') {
-		throw {'msg': 'StepperFixed expects second parameter "max" to be a number. ' + typeof max + ' given!'};
+	if (typeof max !== 'number') {
+		throw {'msg': 'IncrementFixed expects second parameter "max" to be a number. ' + typeof max + ' given!'};
 	}
 
 	if (min > max) {
@@ -69,26 +71,26 @@ Stepper.prototype.withinMinMax = function (min, max) {
 
 
 
-//  END:  Stepper (interface)
+//  END:  IncrementManager (interface)
 // ==================================================================
-// START: StepperFixed
+// START: IncrementFixed
 
 
 
 
 
 
-var StepperFixed = function (step) {
+var IncrementFixed = function (step) {
 	'use strict';
 	if (typeof step !== 'Number') {
-		throw {'msg': 'StepperFixed expects first parameter "step" to be a number. ' + typeof step + ' given!'};
+		throw {'msg': 'IncrementFixed expects first parameter "step" to be a number. ' + typeof step + ' given!'};
 	}
 	this.step = step;
 	this.lastStep = step;
 	this.min = step;
 	this.max = step;
 };
-StepperFixed.prototype = Object.create(Stepper);
+IncrementFixed.prototype = Object.create(IncrementManager);
 
 
 
@@ -96,9 +98,9 @@ StepperFixed.prototype = Object.create(Stepper);
 
 
 
-//  END:  StepperFixed
+//  END:  IncrementFixed
 // ==================================================================
-// START: StepperFixed
+// START: IncrementFixed
 
 
 
@@ -109,23 +111,23 @@ StepperFixed.prototype = Object.create(Stepper);
  * @param {number} step        the value that will be returned
  * @param {number} decayFactor [[Description]]
  */
-var StepperDecay = function (step, decayFactor) {
+var IncrementDecay = function (step, decayFactor) {
 	'use strict';
 	if (typeof step !== 'Number') {
-		throw {'msg': 'StepperDecay expects first parameter "step" to be a number. ' + typeof step + ' given!'};
+		throw {'msg': 'IncrementDecay expects first parameter "step" to be a number. ' + typeof step + ' given!'};
 	}
 	if (typeof decayFactor !== 'Number') {
-		throw {'msg': 'StepperDecay expects second parameter "decayFactor" to be a number. ' + typeof decayFactor + ' given!'};
+		throw {'msg': 'IncrementDecay expects second parameter "decayFactor" to be a number. ' + typeof decayFactor + ' given!'};
 	}
 	this.step = step;
 	this.min = 0;
 	this.max = step;
 	this.decayFactor = decayFactor;
 };
-StepperFixed.prototype = Object.create(Stepper);
+IncrementDecay.prototype = Object.create(IncrementManager);
 
 
-Stepper.prototype.updateStep = function () {
+IncrementDecay.prototype.updateStep = function () {
 	'use strict';
 	this.lastStep = this.step;
 	this.step *= this.decayFactor;
@@ -137,16 +139,16 @@ Stepper.prototype.updateStep = function () {
 
 
 
-//  END:  StepperFixed
+//  END:  IncrementFixed
 // ==================================================================
-// START: StepperOscillate
+// START: IncrementOscillate
 
 
 
 
 
 
-var StepperOscillate = function (step, increment, min, max) {
+var IncrementOscillate = function (step, increment, min, max) {
 	'use strict';
 
 	var tmp = 'doMinMax';
@@ -154,16 +156,16 @@ var StepperOscillate = function (step, increment, min, max) {
 	this.doMinMax = this.doMinMaxLinier;
 
 	if (typeof step !== 'Number') {
-		throw {'msg': 'StepperDecay expects first parameter "step" to be a number. ' + typeof step + ' given!'};
+		throw {'msg': 'IncrementDecay expects first parameter "step" to be a number. ' + typeof step + ' given!'};
 	}
 	if (typeof increment !== 'Number') {
-		throw {'msg': 'StepperDecay expects second parameter "increment" to be a number. ' + typeof increment + ' given!'};
+		throw {'msg': 'IncrementDecay expects second parameter "increment" to be a number. ' + typeof increment + ' given!'};
 	}
 	if (typeof min !== 'Number') {
-		throw {'msg': 'StepperDecay expects third parameter "min" to be a number. ' + typeof min + ' given!'};
+		throw {'msg': 'IncrementDecay expects third parameter "min" to be a number. ' + typeof min + ' given!'};
 	}
 	if (typeof max !== 'Number') {
-		throw {'msg': 'StepperDecay expects fourth parameter "max" to be a number. ' + typeof max + ' given!'};
+		throw {'msg': 'IncrementDecay expects fourth parameter "max" to be a number. ' + typeof max + ' given!'};
 	}
 
 	if (min > max) {
@@ -177,10 +179,10 @@ var StepperOscillate = function (step, increment, min, max) {
 	this.increment = increment;
 	this.getStep();
 };
-StepperOscillate.prototype = Object.create(Stepper);
+IncrementOscillate.prototype = Object.create(IncrementManager);
 
 
-StepperOscillate.prototype.doMinMaxLinier = function () {
+IncrementOscillate.prototype.doMinMaxLinier = function () {
 	'use strict';
 	if (this.step > this.max) {
 		// bounce _step off max
@@ -193,7 +195,7 @@ StepperOscillate.prototype.doMinMaxLinier = function () {
 	}
 };
 
-StepperOscillate.prototype.doMinMaxReset = function () {
+IncrementOscillate.prototype.doMinMaxReset = function () {
 	'use strict';
 	this.step += this.increment;
 	if (this.step > this.max) {
@@ -202,20 +204,20 @@ StepperOscillate.prototype.doMinMaxReset = function () {
 	}
 };
 
-StepperOscillate.prototype.doMinMaxCurve = function () {
+IncrementOscillate.prototype.doMinMaxCurve = function () {
 	'use strict';
 	// calculate the X coordinate on a curve at a given angle
 };
 
-StepperOscillate.prototype.doMinMax = StepperOscillate.doMinMaxLinier;
+IncrementOscillate.prototype.doMinMax = IncrementOscillate.doMinMaxLinier;
 
 
-StepperOscillate.prototype.getStep = function () {
+IncrementOscillate.prototype.getStep = function () {
 	'use strict';
 	return this.increment;
 };
 
-StepperOscillate.prototype.updateStep = function () {
+IncrementOscillate.prototype.updateStep = function () {
 	'use strict';
 	this.lastStep = this.step;
 	this.step += this.increment;
@@ -223,10 +225,10 @@ StepperOscillate.prototype.updateStep = function () {
 };
 
 
-StepperOscillate.prototype.setIncrementMode = function (mode) {
+IncrementOscillate.prototype.setIncrementMode = function (mode) {
 	'use strict';
 	if (mode === undefined || typeof mode !== 'String') {
-		throw {'message': 'StepperOscillate.setMode() expects only parameter to be a string. ' + typeof mode + ' given.'};
+		throw {'message': 'IncrementOscillate.setMode() expects only parameter to be a string. ' + typeof mode + ' given.'};
 	} else if (mode === 'linier') {
 		this.doMinMax = this.doMinMaxLinier;
 	} else if (mode === 'reset') {
@@ -234,14 +236,14 @@ StepperOscillate.prototype.setIncrementMode = function (mode) {
 	} else if (mode === 'curve') {
 		this.doMinMax = this.doMinMaxCurve;
 	} else {
-		throw {'message': 'StepperOscillate.setMode() expects only parameter to be a string matching: "linier", "reset" or "curve". "' + mode + '" given.'};
+		throw {'message': 'IncrementOscillate.setMode() expects only parameter to be a string matching: "linier", "reset" or "curve". "' + mode + '" given.'};
 	}
 };
 
-StepperOscillate.prototype.setDoCumulative = function (mode) {
+IncrementOscillate.prototype.setDoCumulative = function (mode) {
 	'use strict';
 	if (mode === undefined || typeof mode !== 'Boolean') {
-		throw {'message': 'StepperOscillate.setMode() expects only parameter to be boolean. ' + typeof mode + ' given.'};
+		throw {'message': 'IncrementOscillate.setMode() expects only parameter to be boolean. ' + typeof mode + ' given.'};
 	} else if (mode === true) {
 		this.getStep = function () {
 			return this.step;
@@ -257,9 +259,9 @@ StepperOscillate.prototype.setDoCumulative = function (mode) {
 
 
 
-//  END:  StepperOscillate
+//  END:  IncrementOscillate
 // ==================================================================
-// START: StepperCircular
+// START: IncrementCircular
 
 
 
@@ -267,10 +269,10 @@ StepperOscillate.prototype.setDoCumulative = function (mode) {
 
 
 /*
-var StepperCircular = function () {
+var IncrementCircular = function () {
 	'use strict';
 };
-StepperCircular.prototype = Object.create(Stepper);
+IncrementCircular.prototype = Object.create(IncrementManager);
 */
 
 
@@ -278,9 +280,9 @@ StepperCircular.prototype = Object.create(Stepper);
 
 
 
-//  END:  StepperCircular
+//  END:  IncrementCircular
 // ==================================================================
-// START: StepperEliptic
+// START: IncrementEliptic
 
 
 
@@ -288,10 +290,10 @@ StepperCircular.prototype = Object.create(Stepper);
 
 
 /*
-var StepperEliptic = function () {
+var IncrementEliptic = function () {
 	'use strict';
 };
-StepperCircular.prototype = Object.create(Stepper);
+IncrementEliptic.prototype = Object.create(IncrementManager);
 */
 
 
@@ -299,5 +301,5 @@ StepperCircular.prototype = Object.create(Stepper);
 
 
 
-//  END:  StepperEliptic
+//  END:  IncrementEliptic
 // ==================================================================
