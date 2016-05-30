@@ -63,46 +63,6 @@ if(!function_exists('debug'))
 // END: debug include
 // ==================================================================
 
-/*
-
-require_once('stepper.class.php');
-require_once('circle-interface.class.php');
-require_once('circle-shape.class.php');
-// require_once('circle-manager.class.php');
-// require_once('boom.class.php');
-// require_once('whirliDoodle-model.class.php');
-// require_once('output.class.php');
-
-
-debug('$initialAngle = 50' , 'stepper $angleStep = 2' , '$radius = 39');
-$testCircle = new circle( 50 , new stepperFixed(2) , new stepperFixed(39) );
-
-
-$testCircle->initXY(0,0);
-for( $a = 0 ; $a < 10 ; $a += 1 )
-{
-	$testCircle->rotate();
-	debug('$a = '.$a , '$testCircle->getX() = '.$testCircle->getX() , '$testCircle->getY() = '.$testCircle->getY()  );
-}
-
-*/
-/*
-function rotate( $angle, $x, $y)
-{
-	$angle = rad2deg($angle);
-//	$angle = deg2rad($angle);
-	$cosA = cos($angle);
-	$sinA = sin($angle);
-
-	$x = ( ($x * $cosA) - ($y * $sinA) );
-	$y = ( ($x * $sinA) + ($y * $cosA) );
-//	$x = deg2rad( ($x * $cosA) - ($y * $sinA) );
-//	$y = deg2rad( ($x * $sinA) + ($y * $cosA) );
-//	$x = rad2deg( ($x * $cosA) - ($y * $sinA) );
-//	$y = rad2deg( ($x * $sinA) + ($y * $cosA) );
-	return array($x,$y);
-}
-*/
 
 function rotate( $angle, $x, $y)
 {
