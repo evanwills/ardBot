@@ -7,10 +7,10 @@ It is inspired by [Drawing Machine II](https://www.youtube.com/watch?v=BG9e06IWA
 This project will contain both the driver code for the physical machine and the code for a virtual machine to make testing various configurations much faster.
 
 
-##Parameters:
+## Parameters:
 *	drawing space [x, y]
 *	drawing table rotation speed (negative = counter-clockwise)
-*	drawing arms configuration (two arms):
+*	boom configuration (two arms):
 	*	straight (symetrical/asymetrical)
 	*	scissor:
 		*	symetrical arms:
@@ -30,6 +30,59 @@ This project will contain both the driver code for the physical machine and the 
 	*	second wheel:
 		*	wheel radius
 		*	rotation speed (negative = counter-clockwise)
+
+# Objects
+
+There are Five basic object used to build the whirliDoodle:
+1.	incrementManager
+2.	circleShape (and - when I get the maths right an ellipse)
+3.	circleManager that handles stacked circles and getting the top most radius point out
+4.	boom which handles applying the movement of the circles to the pen
+5.	whirliDoodleModel which brings everything together and makes it work.
+
+incrementManager are used in all other objects as a way of getting dynamic change for various values without having to worry the client object about what's going on. They are also the only object that will be used in both the emulator and the physical whirliDoodle robot/machine.
+
+## incrementManager
+The incrementManager handles stuff like changing the rate of rotation or expanding/contracting the radius. They have multiple modes of operation including:
+
+There are three implementations of incrementManager:
+1.	__fixed__: always gives out the same output value.
+2.	__decaying__: where the output value is multiplied by a decimal (normally between 0 & 1 but could be outside this range)
+3.	__oscillate__: the output value oscelates between a minimum and maximum value.
+
+### incrementManagerOscillate
+Oscillate has two additional modes that can be set at runtime:
+*	cumulative i.e. the increment is accumulated and the accumulated value is returned
+*	oscillate/reset
+	*	Oscillate: either the step or the cumulative value gets bigger and smaller within a min/max range
+	*	Reset: when step or cumulative value reach the max, their value is reset to the min value
+
+
+## circleInterface
+Provides a common interface for different kinds of objects that basically rotate a point on a circle/elippse
+
+## circleShape
+_uses circleInterface_
+
+circleShape handles bascially looks after the fundimental trigonometry used by the emulator for rotating XY coordinates around a centre. It has two implementations:
+*	__circle__ which (unsurprisingly) does calculations based on a circle shape
+*	__ellipse__ (currently no idea how to manage this mathematically/programatically) the same as circle but based on ellipse shapes.
+
+## circleManager
+_uses circleInterface_
+
+circleManager handles making multiple circles work as a single object. circleShape objects are added to it in a stack then the radius point is rotated for every point circle in the stack. Because circleShape and circleManager both share circleInterface, they are interchangable. circleManager allows the emulator to increase complexity without burdening the rest of the code with that complexity.
+
+## boom
+Boom objects use the output from circleManager/circleShape objects to calculate the position of a "Pen" on the "drawing table". There are four implementations of boomInterface:
+
+1.	__V__ or __straight__ boom where there are two booms one end of each boom is connected to a circleManager object and the other is connected to it's other boom
+2.	__X__ or __scissor__ boom which has a scissor or x configuration with and additional pair of booms connected at one end to each other and at the other to the primary scissor booms.
+3.	__T__ boom which has a short boom that connects both circleManagers to gether with a long boom extending at right angles from a point along the first boom to the "Pen"
+4.	__Y__ boom which has one long boom that connects from a circleManager object to the "Pen" and a short boom that connects the other circleManager to a point somewhere along the length of the long boom
+
+## whirliDoodleModel
+The whirliDoodleModel is bascially an assebmly of two circleManager objects, a boom object (and optionally) a drawing table object (usually a circleShape object). It's output is the X/Y coordinates of the "Pen" on the drawing table.
 
 
 ## Videos that inspired whirliDoodle
