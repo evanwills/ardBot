@@ -1,21 +1,62 @@
+function deg2rad(degrees) {
+	return (( degrees * Math.PI ) / 180);
+}
+
+
+function hardRotate(angle, x, y) {
+	'use strict';
+	var radius = 0,
+		currentAngle = 0,
+		cosA = 0,
+		sinA = 0;
+	
+	angle = angle * 1;
+	
+	if (angle !== 0) {
+		radius = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+		if (x === 0 && y === 0) {
+			return [x, y];
+		} else if (x === 0) {
+			currentAngle = Math.atan(y);
+		} else if (y === 0) {
+			currentAngle = Math.atan(x);
+		} else {
+			currentAngle = Math.atan(y/x);
+		}
+		currentAngle += deg2rad(angle);
+		console.log('currentAngle = ' + currentAngle);
+
+		x = Math.cos(currentAngle) * radius;
+		y = Math.sin(currentAngle) * radius;
+	}
+	
+	return [x, y];
+}
+
 
 function rotate(angle, x, y) {
 	'use strict';
-	var radius = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)),
-	//	currentAngle = tan(y/x);
-		currentAngle = Math.atan(y / x),
-		cosA = 0,
+	var cosA = 0,
 		sinA = 0;
-	console.log('currentAngle = ' + currentAngle);
+	
+	angle = angle * 1;
+	
+	console.log('angle = ' + angle);
+	console.log('Math.Pi = ', Math.PI );
+	console.log('angle * Math.PI = ', angle * Math.PI );
+	console.log('angle * Math.PI / 180 = ', angle * Math.PI / 180 );
+	angle = deg2rad(angle);
+	
 	console.log('angle = ' + angle);
 
-	currentAngle += angle;
+	cosA = Math.cos(angle);
+	sinA = Math.sin(angle);
 
-	cosA = Math.cos(currentAngle);
-	sinA = Math.sin(currentAngle);
+//	cosA = Math.floor(Math.cos(angle) * 100000) / 100000;
+//	sinA = Math.floor(Math.sin(angle) * 100000) / 100000;
 
-	x = cosA * radius;
-	y = sinA * radius;
+	x = (x * cosA) - (y * sinA);
+	y = (x * sinA) + (y * cosA)	;
 
 	return [x, y];
 }
@@ -32,8 +73,8 @@ function doIt() {
 
 
 	b = 0;
-	for (a = 0; a < 714; a += angleStep) {
-		xy = rotate(angleStep, xy[0], xy[1]);
+	for (a = 0; a < 5660; a += angleStep) {
+		xy = hardRotate(angleStep, xy[0], xy[1]);
 		console.log("\nx: " + xy[0] + "\ny: " + xy[1] + "\n");
 		polly.setAttribute('points', polly.getAttribute('points') + ' ' + (xy[0] + 500) + ',' + (xy[1] + 500));
 		b += 1;

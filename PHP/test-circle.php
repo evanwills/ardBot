@@ -64,55 +64,81 @@ if(!function_exists('debug'))
 // ==================================================================
 
 
-function rotate( $angle, $x, $y)
+function hardRotate( $angle, $x, $y)
 {
-	$radius = sqrt( pow($x, 2) + pow($y, 2) );
-	// currentAngle = tan(y/x);
-	$currentAngle = tan($y/$x);
-	$currentAngle += $angle;
+	settype($angle,'float');
+	settype($x,'float');
+	settype($y,'float');
+//	debug($angle,$x,$y);
+	if( $angle !== 0 )
+	{
+		$radius = sqrt( pow($x, 2) + pow($y, 2) );
+		if( $y === 0.0 )
+		{
+			$currentAngle = atan($x);
+		}
+		elseif( $x === 0.0 )
+		{
+			$currentAngle = atan($y);
+		}
+		else
+		{
+			$currentAngle = atan($y/$x);
+		}
+		$currentAngle += deg2rad($angle);
 
-//	$currentAngle = rad2deg($angle);
-	$currentAngle = deg2rad($angle);
+		$x = cos($currentAngle) * $radius;
+		$y = sin($currentAngle) * $radius;
+	}
 
-//	$cosA = cos($currentAngle);
-//	$sinA = sin($currentAngle);
-	$cosA = acos($currentAngle);
-	$sinA = asin($currentAngle);
-
-//	$cosA = deg2rad($cosA);
-//	$sinA = deg2rad($sinA);
-	$cosA = rad2deg($cosA);
-	$sinA = rad2deg($sinA);
-
-	$x = $cosA * $radius;
-	$y = $sinA * $radius;
-
-
-//	$x = ( ($x * $cosA) - ($y * $sinA) );
-//	$y = ( ($x * $sinA) + ($y * $cosA) );
-//	$x = deg2rad( ($x * $cosA) - ($y * $sinA) );
-//	$y = deg2rad( ($x * $sinA) + ($y * $cosA) );
-//	$x = rad2deg( ($x * $cosA) - ($y * $sinA) );
-//	$y = rad2deg( ($x * $sinA) + ($y * $cosA) );
 	return array($x,$y);
 }
 
 
-$radius	= 30;
-$initialAngle = 45;
+function rotate( $angle, $x, $y)
+{
+	$currentAngle = deg2rad($angle);
+
+	$cosA = cos($currentAngle);
+	$sinA = sin($currentAngle);
+
+	$x = ( ($x * $cosA) - ($y * $sinA) );
+	$y = ( ($x * $sinA) + ($y * $cosA) );
+	return array($x,$y);
+}
+
+$spaceX = 800;
+$spaceY = $spaceX;
+$radius	= 400;
+$initialAngle = 0;
 $angleStep = 3;
 
 $xy = rotate($initialAngle,0,$radius);
 $b = 0;
-for( $a = 0 ; $a < 360 ; $a += $angleStep )
+$sep = '';
+$output = '';
+
+for( $a = 0 ; $a < 720 ; $a += $angleStep )
 {
-	$xy = rotate( $angleStep , $xy[0], $xy[1] );
-	echo "\nx: {$xy[0]}\ny: {$xy[1]}\n";
-	$b += 1;
-	if( $b > 10 )
-	{
-		sleep(5);
-		echo "\n\n ======================================= \n\n";
-		$b = 0;
-	}
+	$xy = hardRotate( $angleStep , $xy[0], $xy[1] );
+	$output .= $sep.(($spaceX / 2) + $xy[0]).','.(($spaceY / 2) + $xy[1]);
+	$sep = ' ';
 }
+
+
+echo '<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Testing trigonometry</title>
+	</head>
+	<body>
+
+<!-- <?xml version="1.0"?> -->
+		<svg width="'.$spaceX.'" height="'.$spaceY.'" viewPort="0 0 '.$spaceX.' '.$spaceY.'" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<polyline fill="none" stroke="black" points="'.$output.'" id="polly" />
+		</svg>
+
+		<script type="application/ecmascript" src="testCircle.js"></script>
+	</body>
+</html>';
