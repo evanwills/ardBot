@@ -14,16 +14,35 @@ CircleShape.prototype.setRadiusPointXY = function (x, y) {
 	'use strict';
 };
 
+
+/**
+ * Gives the most recently calculated X coordinate.
+ * @returns {number} the Y coordinate for the most recently calculated move
+ */
 CircleShape.prototype.getRadiusPointX = function () {
 	'use strict';
 	return this.tmpX;
 };
 
+/**
+ * Gives the most recently calculated Y coordinate.
+ * @returns {number} the Y coordinate for the most recently calculated move
+ */
 CircleShape.prototype.getRadiusPointY = function () {
 	'use strict';
-	return this.tmpX;
+	return this.tmpY;
 };
 
+
+/**
+ * Convert degrees into radians
+ * @param   {number} degrees angle in degrees
+ * @returns {number} angle in radians
+ */
+CircleShape.prototype.deg2rad = function (degrees) {
+	'use strict';
+	return ((degrees * Math.PI) / 180);
+};
 
 
 
@@ -54,10 +73,10 @@ var Circle = function (initialAngle, angleStep, radius) {
 		throw {'msg': 'Circle() expects third parameter "radius" to be an IncrementManager object.' + typeof radius + ' given.'};
 	}
 	if (radius.getMin() <= 0) {
-		throw {'msg', 'Circle() expects third parameter "radius" have a minimum greater than zero.' + radius.getMin() + ' given.'};
+		throw {'msg': 'Circle() expects third parameter "radius" have a minimum greater than zero.' + radius.getMin() + ' given.'};
 	}
 	this.angleStep = angleStep;
-	this.initialAngle = initalAngle;
+	this.initialAngle = this.deg2rad(initialAngle);
 	this.radius = radius;
 };
 
@@ -65,12 +84,52 @@ Circle.prototype = Object.create(CircleShape);
 
 Circle.prototype.rotateXY = function (x, y) {
 	'use strict';
-	var relativeX = x - this.orginX,
-		relativeY = y - this.orginY;
+	var angle = this.deg2rad(this.angleStep.getStep()),
+		currentAngle = 0,
+		radius = 0;
 
-	this.tmpAngle = this.angleStep.getStep();
-	this.tmpX = (relativeX * Math.cos(this.tmpAngle)) - (relativeY * Math.sin(this.tmpAngle));
-	this.tmpY = (relativeX * Math.sin(this.tmpAngle)) + (relativeY * Math.cos(this.tmpAngle));
+	// make X & Y relative to this circle's origin
+	x += this.orginX;
+	y += this.orginY;
+
+	// --------------------------------------------------------------
+	//	rotate XY around a circle without needing radius
+	//	(https://en.wikipedia.org/wiki/Rotation_matrix#In_two_dimensions)
+
+//	x = (x * Math.cos(this.tmpAngle)) - (y * Math.sin(this.tmpAngle));
+//	y = (x * Math.sin(this.tmpAngle)) + (y * Math.cos(this.tmpAngle));
+	// --------------------------------------------------------------
+
+
+	// --------------------------------------------------------------
+	// rotate XY using basic trigonometry
+	if (angle !== 0) {
+		radius = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+		if (x === 0 && y === 0) {
+			return [x, y];
+		} else if (x === 0) {
+			currentAngle = Math.atan(y);
+		} else if (y === 0) {
+			currentAngle = Math.atan(x);
+		} else {
+			currentAngle = Math.atan(y / x);
+		}
+		currentAngle += angle;
+
+		x = Math.cos(currentAngle) * radius;
+		y = Math.sin(currentAngle) * radius;
+	}
+	// --------------------------------------------------------------
+
+	// convert relative X & Y back to absolute X & Y
+	x -= this.originX;
+	y -= this.originY;
+
+	this.tmpX = x;
+	this.tmpY = y;
+	this.tmpAngle = angle;
+
+	return [x, y];
 };
 
 Circle.prototype.move = function () {
