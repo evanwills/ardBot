@@ -39,13 +39,22 @@ CircleShape.prototype.getRadiusPointY = function () {
 
 
 
-var Circle = function (initalAngle, angleStep, radius) {
+var Circle = function (initialAngle, angleStep, radius) {
 	'use strict';
-	if (typeof angleStep !== 'Stepper') {
-		throw {'msg': 'Circle() expects second parameter "angleStep" to be a Stepper object.' + typeof angleStep + ' given.'};
+	if (typeof initialAngle !== 'number') {
+		throw {'msg': 'Circle() expects first parameter "initialAngle" to be a number.' + typeof angleStep + ' given.'};
 	}
-	if (typeof radius !== 'Stepper') {
-		throw {'msg': 'Circle() expects third parameter "radius" to be a Stepper object.' + typeof radius + ' given.'};
+	if (initialAngle <= -360 || initialAngle >= 360) {
+		throw {'msg': 'Circle() expects first parameter "initialAngle" to be a number greater than -360 and less than 360.' + angleStep + ' given.'};
+	}
+	if (typeof angleStep !== 'IncrementManager') {
+		throw {'msg': 'Circle() expects second parameter "angleStep" to be an IncrementManager object.' + typeof angleStep + ' given.'};
+	}
+	if (typeof radius !== 'IncrementManager') {
+		throw {'msg': 'Circle() expects third parameter "radius" to be an IncrementManager object.' + typeof radius + ' given.'};
+	}
+	if (radius.getMin() <= 0) {
+		throw {'msg', 'Circle() expects third parameter "radius" have a minimum greater than zero.' + radius.getMin() + ' given.'};
 	}
 	this.angleStep = angleStep;
 	this.initialAngle = initalAngle;
