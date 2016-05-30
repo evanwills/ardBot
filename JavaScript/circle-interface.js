@@ -25,9 +25,9 @@ var CircleInterface = function () {
 CircleInterface.prototype.initXY = function (x, y) { 'use strict'; };
 
 /**
- * @function rotate() move the radiusPoint to a new location
+ * @function move() move the radiusPoint to a new location
  */
-CircleInterface.prototype.rotate = function () { 'use strict'; };
+CircleInterface.prototype.move = function () { 'use strict'; };
 
 /**
  * @function rotateXY() move the radiusPoint to a new location

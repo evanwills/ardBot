@@ -165,10 +165,10 @@ SingleCircle.prototype.initXY = function (x, y) {
 	this.radiusPointY = this.circle.getY();
 };
 
-		/**
-		 * @method	rotate() rotates its own radius points
-		 */
-SingleCircle.prototype.rotate = function () {
+/**
+ * @method	move() rotates its own radius points
+ */
+SingleCircle.prototype.move = function () {
 	'use strict';
 	this.circle.setOriginXY(this.originX, this.originY);
 	this.circle.rotateXY(this.radiusPointX, this.radiusPointY);
@@ -231,12 +231,12 @@ MultiCircle.prototype.setChildCircle = function (childCircle) {
 };
 
 /**
- * @method	rotate() rotates its own radius points as
+ * @method	move() rotates its own radius points as
  *			well as those of all its children. It also sets
  *			the this.originX & this.originY of its direct child
  *			manager
  */
-MultiCircle.prototype.rotate = function () {
+MultiCircle.prototype.move = function () {
 	'use strict';
 	var tmpDepth = this.depth,
 		radiusPointX = 0,

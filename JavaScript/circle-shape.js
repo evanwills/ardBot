@@ -73,7 +73,7 @@ Circle.prototype.rotateXY = function (x, y) {
 	this.tmpY = (relativeX * Math.sin(this.tmpAngle)) + (relativeY * Math.cos(this.tmpAngle));
 };
 
-Circle.prototype.rotate = function () {
+Circle.prototype.move = function () {
 	'use strict';
 	this.angleStep.updateStep();
 	this.radius.updateStep();
