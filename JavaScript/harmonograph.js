@@ -34,6 +34,146 @@ var conf = {
 var configs = [];
 var	steps = 0;
 var configSaved = false;
+var configLinier;
+
+function LinierConfig() {
+	var a = -105, // a1x
+		b = -105, // a2x
+		c = -105, // a3x
+		d = 105, // a1y
+		e = 105, // a2y
+		f = 105, // a3y
+		g = -100, // p1x
+		h = -100, // p2x
+		i = -100, // p3x
+		j = 100, // p1y
+		k = 100, // p2y
+		l = 100, // p3y
+		m = 0.5, // dt1
+		n = 0.5, // dt2
+		o = 0.5, // dt3
+		p = 0, // f1
+		q = 0, // f2
+		r = 0, // f3
+		ampMin = -105,
+		ampMax = 105,
+		ampInc = 2,
+		phaMin = -100,
+		phaMax = 100,
+		phaInc = 1,
+		dampMin = 0,
+		dampMax = 200,
+		dampInc = 2,
+		FreqMin = 0,
+		FreqMax = 2,
+		FreqInc = 0.2;
+
+
+	function doInc() {
+		r += FreqInc;
+		if (r > FreqMax) {
+			r = FreqMin;
+			q += FreqInc;
+			if (q > FreqMax) {
+				q = FreqMin;
+				p += FreqInc;
+				if (p > FreqMax) {
+					p = FreqMin;
+					o += dampInc;
+					if (o > dampInc) {
+						o = dampMin;
+						n += dampInc;
+						if (n > dampInc) {
+							n = dampMin;
+							m += dampInc;
+							if (m > dampInc) {
+								m = dampMin;
+								l += phaInc;
+								if (l > phaMax) {
+									l = phaMin;
+									k += phaInc;
+									if (k > phaMax) {
+										k = phaMin;
+										j += phaInc;
+										if (j > phaMax) {
+											j = phaMin;
+											i -= phaInc;
+											if (i < phaMin) {
+												i = phaMax;
+												h -= phaInc;
+												if (h < phaMin) {
+													h = phaMax;
+													g -= phaInc;
+													if (g < phaMin) {
+														g = phaMax;
+														f += ampInc;
+														if (f < ampMin) {
+															f = ampMax;
+															e -= ampInc;
+															if (e < ampMin) {
+																e = ampMax;
+																d -= ampInc;
+																if (d < ampMin) {
+																	d = ampMax;
+																	c -= ampInc;
+																	if (c > ampMax) {
+																		c = ampMin;
+																		b += ampInc;
+																		if (b > ampMax) {
+																			b = ampMin;
+																			a += ampInc;
+																			if (a > ampMax) {
+																				a = ampMin;
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	this.getConfig = function () {
+		doInc();
+		return {
+			"a1x": a,
+			"a2x": b,
+			"a3x": c,
+			"a1y": d,
+			"a2y": e,
+			"a3y": f,
+			"p1x": g,
+			"p2x": h,
+			"p3x": i,
+			"p1y": j,
+			"p2y": k,
+			"p3y": l,
+			"td1": m,
+			"td2": n,
+			"td3": o,
+			"f1": p,
+			"f2": q,
+			"f3": r
+		}
+	}
+}
+
+//configLinier = new LinierConfig();
+
+
 
 function init() {
 
@@ -53,7 +193,7 @@ function init() {
 	for (a = 0; a < minMax.length; a += 1) {
 		for (b = 1; b < 4; b += 1) {
 			key = minMax[a][0] + b + minMax[a][1];
-			tmp = setInput(key, minMax[a][2], minMax[a][3]);
+			tmp = setInputRandom(key, minMax[a][2], minMax[a][3]);
 			conf[key] = tmp;
 		}
 	}
@@ -61,7 +201,35 @@ function init() {
 	reset();
 	configSaved = false;
 }
+/*
+function init() {
 
+	var a = 0,
+		b = 0,
+		key = '',
+		minMax = [
+			['a', 'x'],
+			['a', 'y'],
+			['p', 'x'],
+			['p', 'y'],
+			['td', ''],
+			['f', '']
+		],
+		tmpConf = configLinier.getConfig(),
+		tmp = 0;
+
+	for (a = 0; a < minMax.length; a += 1) {
+		for (b = 1; b < 4; b += 1) {
+			key = minMax[a][0] + b + minMax[a][1];
+			tmp = setInput(key, tmpConf[key]);
+			conf[key] = tmp;
+		}
+	}
+
+	reset();
+	configSaved = false;
+}
+*/
 function reset() {
 
 	graph = document.getElementById('graph');
@@ -217,16 +385,16 @@ function read(id) {
 	return f;
 }
 
-function setInput(id, min, max) {
+function setInputRandom(id, min, max) {
 	var input = document.getElementById(id),
 		rand = 0;
 
 	//console.log('typeof min = ', typeof min);
 	if (typeof min !== 'number') {
-		throw {'message': 'setInput() expects second parameter "min" to be a number. ' + typeof min + ' given.'};
+		throw {'message': 'setInputRandom() expects second parameter "min" to be a number. ' + typeof min + ' given.'};
 	}
 	if (typeof max !== 'number') {
-		throw {'message': 'setInput() expects second parameter "max" to be a number. ' + typeof max + ' given.'};
+		throw {'message': 'setInputRandom() expects second parameter "max" to be a number. ' + typeof max + ' given.'};
 	}
 
 	// look at using web crypto as source of randomness.
@@ -238,6 +406,19 @@ function setInput(id, min, max) {
 	rand /= 100;
 	input.setAttribute('value', rand);
 	return rand;
+}
+
+function setInput(id, val) {
+	var input = document.getElementById(id),
+		rand = 0;
+
+	//console.log('typeof min = ', typeof min);
+	if (typeof val !== 'number') {
+		throw {'message': 'setInput() expects second parameter "val" to be a number. ' + typeof val + ' given.'};
+	}
+
+	input.setAttribute('value', val);
+	return val;
 }
 
 function inputChange() {
