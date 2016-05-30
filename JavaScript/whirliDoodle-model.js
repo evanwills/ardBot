@@ -29,27 +29,18 @@ var whirliDoodleModel = function (width, height, booms, firstCircle, secondCircl
 	this.tableRotator = tableRotator;
 };
 
-		void rotate() {
-			double _firstX = 0;
-			double _firstY = 0;
-			double _secondX = 0;
-			double _secondY = 0;
 
-			_firstCircle.rotate();
-			_secondCircle.rotate();
-			_booms.setEndPoint( _firstCircle.getX() , _firstCircle.getY() , _secondCircle.getX() , _secondCircle.getY() );
-			_tableRotator.rotate( _booms.getX() , _booms.getY() );
+whirliDoodleModel.prototype.move = function() {
+	this.firstCircle.rotate();
+	this.secondCircle.rotate();
+	this.booms.getEndPoint(this.firstCircle.getX(), this.firstCircle.getY(), this.secondCircle.getX(), this.secondCircle.getY());
+	this.tableRotator.rotateXY(this.booms.getX(), this.booms.getY());
+}
 
-			_x = _tableRotator.getX();
-			_y = _tableRotator.getY();
-		}
+whirliDoodleModel.prototype.getX = function() {
+	return this.tableRotator.getX();
+}
 
-		double getX() {
-			return _x;
-		}
-
-		double getY() {
-			return _y;
-		}
-
+whirliDoodleModel.prototype.getY = function() {
+	return this.tableRotator.getY();
 }
