@@ -1,12 +1,14 @@
 
 // Generic interface for both circleShape and circleManager objects
-var CircleInterface = function () {
+function CircleInterface() {
 	'use strict';
 	this.originX = 0;
 	this.originY = 0;
 	this.radiusPointX = 0;
 	this.radiusPointY = 0;
 };
+CircleInterface.prototype = new Object();
+CircleInterface.prototype.constructor = CircleInterface;
 
 /**
  * @function	initXY() puts the _radiusPointX &

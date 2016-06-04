@@ -1,4 +1,4 @@
-var CircleShape = function () {
+function CircleShape() {
 	'use strict';
 	this.angleStep = 0;
 	this.currentAngle = 0;
@@ -6,9 +6,11 @@ var CircleShape = function () {
 	this.tmpAngle = 0;
 	this.tmpX = 0;
 	this.tmpY = 0;
-};
+}
 
-CircleShape.prototype = Object.create(CircleInterface);
+//CircleShape.prototype = Object.create(new CircleInterface);
+CircleShape.prototype = new CircleInterface();
+CircleShape.prototype.constructor = CircleShape;
 
 CircleShape.prototype.setRadiusPointXY = function (x, y) {
 	'use strict';
@@ -58,29 +60,34 @@ CircleShape.prototype.deg2rad = function (degrees) {
 
 
 
-var Circle = function (initialAngle, angleStep, radius) {
+function Circle(initialAngle, angleStep, radius) {
 	'use strict';
 	if (typeof initialAngle !== 'number') {
-		throw {'msg': 'Circle() expects first parameter "initialAngle" to be a number.' + typeof angleStep + ' given.'};
+		throw {'message': 'Circle() expects first parameter "initialAngle" to be a number.' + typeof angleStep + ' given.'};
 	}
 	if (initialAngle <= -360 || initialAngle >= 360) {
-		throw {'msg': 'Circle() expects first parameter "initialAngle" to be a number greater than -360 and less than 360.' + angleStep + ' given.'};
+		throw {'message': 'Circle() expects first parameter "initialAngle" to be a number greater than -360 and less than 360.' + angleStep + ' given.'};
 	}
-	if (typeof angleStep !== 'IncrementManager') {
-		throw {'msg': 'Circle() expects second parameter "angleStep" to be an IncrementManager object.' + typeof angleStep + ' given.'};
+	if (!angleStep instanceof IncrementManager) {
+		throw {'message': 'Circle() expects second parameter "angleStep" to be an IncrementManager object.' + typeof angleStep + ' given.'};
 	}
-	if (typeof radius !== 'IncrementManager') {
-		throw {'msg': 'Circle() expects third parameter "radius" to be an IncrementManager object.' + typeof radius + ' given.'};
+	if (!radius instanceof IncrementManager) {
+		throw {'message': 'Circle() expects third parameter "radius" to be an IncrementManager object.' + typeof radius + ' given.'};
 	}
 	if (radius.getMin() <= 0) {
-		throw {'msg': 'Circle() expects third parameter "radius" have a minimum greater than zero.' + radius.getMin() + ' given.'};
+		throw {'message': 'Circle() expects third parameter "radius" have a minimum greater than zero.' + radius.getMin() + ' given.'};
 	}
 	this.angleStep = angleStep;
 	this.initialAngle = this.deg2rad(initialAngle);
 	this.radius = radius;
-};
+}
 
-Circle.prototype = Object.create(CircleShape);
+
+// Circle.prototype = Object.create(CircleShape);
+
+Circle.prototype = new CircleShape();
+Circle.prototype.constructor = Circle;
+
 
 Circle.prototype.rotateXY = function (x, y) {
 	'use strict';
@@ -167,9 +174,16 @@ var Ellipse = function (initialAngle, angleStep, radiusX, radiusY, radiusOffsetX
 	this.radiusY = radiusY;
 	this.radiusoffsetX = radiusOffsetX;
 	this.radiusoffsetY = radiusOffsetY;
+
+	throw {'message': 'Ellipse type circleShape objects are not yet ready for use. Do NOT use them!!!'};
 };
 
-Ellipse.prototype = Object.create(CircleShape);
+// Ellipse.prototype = Object.create(CircleShape);
+
+
+Ellipse.prototype = new CircleShape();
+Ellipse.prototype.constructor = Ellipse;
+
 
 
 
