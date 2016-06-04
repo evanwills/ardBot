@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Test incrementManager.js</title>
+	</head>
+	<body>
+		<h1>Test incrementManager.js</h1>
+		<h2>Check console for results</h2>
+
+		<script type="application/ecmascript" charset="utf-8" src="../incrementManager.js"></script>
+		<script type="application/ecmascript" charset="utf-8">
+
+function report(name, obj, loops) {
+	var a = 0;
+	console.log(name + '.constructor.name = ', obj.constructor.name);
+	console.log(name + ' = ', obj);
+	console.log('!' + obj.constructor.name + ' instanceof IncrementManager = ', !obj instanceof IncrementManager);
+
+	if (loops === undefined) {
+		loops = 25;
+	}
+	for (a = 0; a < loops; a += 1) {
+		try {
+			obj.updateStep();
+		} catch(e) {
+			console.log(e.message);
+			return;
+		}
+
+		try {
+			obj.getStep();
+		} catch(e) {
+			console.log(e.message);
+			return;
+		}
+		console.log(name + '.getStep() = ', obj.getStep());
+	}
+}
+
+
+
+
+var fixedInc = new IncrementFixed(2.5);
+report('fixedInc', fixedInc);
+
+var fixedIncCumInfinite = new IncrementFixed(2.5);
+fixedIncCumInfinite.setDoCumulative();
+report('fixedIncCumInfinite', fixedIncCumInfinite);
+
+var fixedIncCumReset = new IncrementFixed(2.5);
+fixedIncCumReset.setDoCumulative(0 , 25);
+report('fixedIncCumReset', fixedIncCumReset);
+
+var fixedIncCumResetPreset = new IncrementFixed(2.5);
+fixedIncCumResetPreset.setDoCumulative(0 , 25, 'reset', 10);
+report('fixedIncCumResetPreset', fixedIncCumResetPreset);
+
+var fixedIncCumOscillate = new IncrementFixed(2.5);
+fixedIncCumOscillate.setDoCumulative(0, 25 , 'oscillate');
+report('fixedIncCumOscillate', fixedIncCumOscillate);
+
+var fixedIncCumOscillatePreset = new IncrementFixed(2.5);
+fixedIncCumOscillatePreset.setDoCumulative(0, 25 , 'oscillate', 10);
+report('fixedIncCumOscillatePreset', fixedIncCumOscillatePreset);
+
+
+var decayInc = new IncrementDecay(10, 0.99);
+report('decayInc', decayInc);
+
+var decayIncCumInfinite = new IncrementDecay(10, 0.99);
+decayIncCumInfinite.setDoCumulative();
+report('decayIncCumInfinite', decayIncCumInfinite);
+
+var decayIncCumReset = new IncrementDecay(20, 0.9);
+decayIncCumReset.setDoCumulative(0, 360, 'reset');
+report('decayIncCumReset', decayIncCumReset);
+
+var decayIncCumResetPreset = new IncrementDecay(20, 0.9);
+decayIncCumResetPreset.setDoCumulative(0, 360, 'reset', 20);
+report('decayIncCumResetPreset', decayIncCumResetPreset);
+
+var decayIncCumOscillate = new IncrementDecay(20, 0.99);
+decayIncCumOscillate.setDoCumulative(0,360,'oscillate');
+report('decayIncCumOscillate', decayIncCumOscillate, 50);
+
+var decayIncCumOscillatePreset = new IncrementDecay(20, 0.99);
+decayIncCumOscillatePreset.setDoCumulative(0,360,'oscillate', 120);
+report('decayIncCumOscillatePreset', decayIncCumOscillatePreset, 50);
+
+		</script>
+	</body>
+</html>
