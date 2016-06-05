@@ -1,8 +1,10 @@
 function deg2rad(degrees) {
-	return (( degrees * Math.PI ) / 180);
+	'use strict';
+	degrees = degrees * 1;
+	return ((degrees * Math.PI) / 180);
 }
 
-
+/*
 function hardRotate(angle, x, y) {
 	'use strict';
 	var radius = 0,
@@ -31,14 +33,22 @@ function hardRotate(angle, x, y) {
 
 	return [x, y];
 }
+*/
 
+function hardRotate(angle, x, y) {
+	'use strict';
+	var radius = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)),
+		newAngle = Math.atan(y / x) + angle;
+
+	return [Math.cos(newAngle) * radius, Math.sin(newAngle) * radius];
+}
 
 function rotate(angle, x, y) {
 	'use strict';
 	var cosA = 0,
 		sinA = 0;
 
-	angle = angle * 1;
+//	angle = angle * 1;
 	angle = deg2rad(angle);
 
 	console.log('angle = ' + angle);
@@ -50,7 +60,7 @@ function rotate(angle, x, y) {
 //	sinA = Math.floor(Math.sin(angle) * 100000) / 100000;
 
 	x = (x * cosA) - (y * sinA);
-	y = (x * sinA) + (y * cosA)	;
+	y = (x * sinA) + (y * cosA);
 
 	return [x, y];
 }
@@ -67,7 +77,7 @@ function doIt() {
 
 
 	b = 0;
-	for (a = 0; a < 5660; a += angleStep) {
+	for (a = 0; a < 11000; a += angleStep) {
 //		xy = hardRotate(angleStep, xy[0], xy[1]);
 		xy = rotate(angleStep, xy[0], xy[1]);
 		console.log("\nx: " + xy[0] + "\ny: " + xy[1] + "\n");
