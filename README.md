@@ -43,19 +43,22 @@ There are Five basic object used to build the whirliDoodle:
 incrementManager are used in all other objects as a way of getting dynamic change for various values without having to worry the client object about what's going on. They are also the only object that will be used in both the emulator and the physical whirliDoodle robot/machine.
 
 ## incrementManager
-The incrementManager handles stuff like changing the rate of rotation or expanding/contracting the radius. They have multiple modes of operation including:
+The incrementManager handles stuff like changing the rate of rotation or expanding/contracting the radius. They have multiple modes of operation.
 
 There are three implementations of incrementManager:
-1.	__fixed__: always gives out the same output value.
-2.	__decaying__: where the output value is multiplied by a decimal (normally between 0 & 1 but could be outside this range)
-3.	__oscillate__: the output value oscelates between a minimum and maximum value.
 
-### incrementManagerOscillate
-Oscillate has two additional modes that can be set at runtime:
-*	cumulative i.e. the increment is accumulated and the accumulated value is returned
-*	oscillate/reset
-	*	Oscillate: either the step or the cumulative value gets bigger and smaller within a min/max range
-	*	Reset: when step or cumulative value reach the max, their value is reset to the min value
+1.	__fixed__: always gives out the same output value.
+2.	__decay__: where the output value is multiplied by a decimal (normally between 0 & 1 but could be outside this range)
+3.	__ease__: (_Not yet implemented_) output value oscillates between a minimum and maximum value
+	*	as it moves from the mid-point to a limit, the steps get smaller and
+	*	as it moves from the limit to the mid-point, the steps get larger.
+
+### Cumulative
+Each implementation has three additional _Cumulative_ modes:
+
+1.	__infinite__: output accumulates infinitely
+2.	__reset__: when output reaches maximum, it's reset to minimum
+3.	__oscillate__: when output reaches limit, the step value is reversed so the output moves towards the opposite limit.
 
 
 ## circleInterface
@@ -64,9 +67,15 @@ Provides a common interface for different kinds of objects that basically rotate
 ## circleShape
 _uses circleInterface_
 
-circleShape handles bascially looks after the fundimental trigonometry used by the emulator for rotating XY coordinates around a centre. It has two implementations:
+It has two implementations:
 *	__circle__ which (unsurprisingly) does calculations based on a circle shape
 *	__ellipse__ (currently no idea how to manage this mathematically/programatically) the same as circle but based on ellipse shapes.
+
+### in the emulator:
+circleShape handles the fundimental trigonometry used by the emulator for rotating XY coordinates around a centre.
+
+### for the arduino:
+circleShape handles controlling the motors for rotation and radius.
 
 ## circleManager
 _uses circleInterface_
