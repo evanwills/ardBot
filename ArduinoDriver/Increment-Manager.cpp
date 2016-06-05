@@ -1,4 +1,3 @@
-
 #include "Increment-Manager.h"
 
 
@@ -18,8 +17,7 @@
 
 
 
-IncrementFixed IncrementFixed::incrementFixedFactory( double step, unsigned int cumulativeMode = 0 , double min = 0 , double max = 0 , bool oscillate = false)
-{
+IncrementFixed IncrementFixed::incrementFixedFactory( double step, unsigned int cumulativeMode = 0 , double min = 0 , double max = 0 , bool oscillate = false) {
 	if( cumulativeMode == 0 )
 	{
 		return new IncrementFixed(step);
@@ -41,46 +39,48 @@ IncrementFixed IncrementFixed::incrementFixedFactory( double step, unsigned int 
 		// throw
 	}
 }
-IncrementFixed::IncrementFixed( double step )
-{
+
+IncrementFixed::IncrementFixed( double step ) {
 	_step = step;
 }
-void IncrementFixed::updateStep()
-{
+
+void IncrementFixed::updateStep() {
 	_cumulative += _step;
 }
-double IncrementFixed::getStep()
-{
+
+double IncrementFixed::getStep() {
 	return _step;
 }
 
-double IncrementFixed::getIncrement()
-{
+double IncrementFixed::getIncrement() {
 	return 0;
 }
 
-double IncrementFixed::getCumulative()
-{
+double IncrementFixed::getCumulative() {
 	return _step;
 }
 
-double IncrementFixed::getLastStep()
-{
+double IncrementFixed::getLastStep() {
 	return _step;
 }
 
-double IncrementFixed::getMin()
-{
+double IncrementFixed::getMin() {
 	return _step;
 }
 
-double IncrementFixed::getMax()
-{
+double IncrementFixed::getMax() {
 	return _step;
 }
 
-bool IncrementFixed::withinMinMax(double min, double max)
-{
+bool IncrementFixed::isCumulative() {
+	return _isCumulative;
+}
+
+bool IncrementFixed::isInfinite() {
+	return _isInfinite;
+}
+
+bool IncrementFixed::withinMinMax(double min, double max) {
 	double tmp;
 
 	if( min > max ) {
@@ -99,10 +99,8 @@ bool IncrementFixed::withinMinMax(double min, double max)
 	}
 }
 
-
 /// presets the cumulative value
-void IncrementFixed::presetCumulative( double preset )
-{
+void IncrementFixed::presetCumulative( double preset ) {
 	// do nothing no preset for this class
 }
 
@@ -112,20 +110,17 @@ void IncrementFixed::presetCumulative( double preset )
 
 /// makes increment change (if it can)
 /// must be called once for every loop
-void IncFixedCumInfinite::updateStep()
-{
+void IncFixedCumInfinite::updateStep() {
 	_cumulative += step;
 }
 
 /// returns the current step value
-double IncFixedCumInfinite::getStep()
-{
+double IncFixedCumInfinite::getStep() {
 	return _cumulative;
 }
 
 /// presets the cumulative value
-void IncFixedCumInfinite::presetCumulative( double preset )
-{
+void IncFixedCumInfinite::presetCumulative( double preset ) {
 	if( preset < _min || preset > _max)
 	{
 		// throw
@@ -133,8 +128,7 @@ void IncFixedCumInfinite::presetCumulative( double preset )
 	 _cumulative = preset;
 }
 
-IncFixedCumInfinite::IncFixedCumInfinite( double step )
-{
+IncFixedCumInfinite::IncFixedCumInfinite( double step ) {
 	_step = step;
 }
 
@@ -146,8 +140,7 @@ IncFixedCumInfinite::IncFixedCumInfinite( double step )
 
 /// makes increment change (if it can)
 /// must be called once for every loop
-void IncFixedCumReset::updateStep()
-{
+void IncFixedCumReset::updateStep() {
 	_cumulative += step;
 	if (_cumulative >= _max) {
 		_cumulative = _min + (_cumulative - _max);
@@ -157,19 +150,16 @@ void IncFixedCumReset::updateStep()
 }
 
 /// returns the minimum value the step/increment/cumulative can be
-double IncFixedCumReset::getMin()
-{
+double IncFixedCumReset::getMin() {
 	return _min;
 }
 
 /// returns the maximum value the step/increment/cumulative can be
-double IncFixedCumReset::getMax()
-{
+double IncFixedCumReset::getMax() {
 	return _min;
 }
 
-void IncFixedCumReset::_fixMinMax()
-{
+void IncFixedCumReset::_fixMinMax() {
 	if( _min > _max ) {
 		tmp = _min;
 		_min = _max;
@@ -177,8 +167,7 @@ void IncFixedCumReset::_fixMinMax()
 	}
 }
 
-IncFixedCumReset::IncFixedCumReset( double step , double min , double max )
-{
+IncFixedCumReset::IncFixedCumReset( double step , double min , double max ) {
 	double tmp;
 	_step = step;
 	_min= min;
@@ -191,8 +180,7 @@ IncFixedCumReset::IncFixedCumReset( double step , double min , double max )
 
 /// makes increment change (if it can)
 /// must be called once for every loop
-void IncFixedCumOscillate::updateStep()
-{
+void IncFixedCumOscillate::updateStep() {
 	_cumulative += step;
 	if (_cumulative >= _max) {
 		_step = -_step;
@@ -219,8 +207,7 @@ void IncFixedCumOscillate::updateStep()
 
 
 
-IncrementDecay IncrementDecay::IncrementDecayFactory( double step, double decayFactor, unsigned int cumulativeMode = 0 , double min = 0 , double max = 0 , bool oscillate = false)
-{
+IncrementDecay IncrementDecay::IncrementDecayFactory( double step, double decayFactor, unsigned int cumulativeMode = 0 , double min = 0 , double max = 0 , bool oscillate = false) {
 	if( decayFactor < 0 || decayFactor > 1)
 	{
 		// throw
@@ -247,47 +234,41 @@ IncrementDecay IncrementDecay::IncrementDecayFactory( double step, double decayF
 		// throw
 	}
 }
-IncrementDecay::IncrementDecay( double step , double decayFactor )
-{
+
+IncrementDecay::IncrementDecay( double step , double decayFactor ) {
 	_step = step;
 	_decayFactor = decayFactor;
 }
-void IncrementDecay::updateStep()
-{
+
+void IncrementDecay::updateStep() {
 	_cumulative += _step;
 }
-double IncrementDecay::getStep()
-{
+
+double IncrementDecay::getStep() {
 	return _step;
 }
 
-double IncrementDecay::getIncrement()
-{
+double IncrementDecay::getIncrement() {
 	return 0;
 }
 
-double IncrementDecay::getCumulative()
-{
+double IncrementDecay::getCumulative() {
 	return _step;
 }
 
-double IncrementDecay::getLastStep()
-{
+double IncrementDecay::getLastStep() {
 	return _lastStep;
 }
 
-double IncrementDecay::getMin()
-{
+double IncrementDecay::getMin() {
 	return 0;
 }
 
-double IncrementDecay::getMax()
-{
+double IncrementDecay::getMax() {
 	return _step;
 }
 
-bool IncrementDecay::withinMinMax(double min, double max)
-{
+bool IncrementDecay::withinMinMax(double min, double max) {
 	double tmp;
 
 	if( min > max ) {
@@ -306,10 +287,8 @@ bool IncrementDecay::withinMinMax(double min, double max)
 	}
 }
 
-
 /// presets the cumulative value
-void IncrementDecay::presetCumulative( double preset )
-{
+void IncrementDecay::presetCumulative( double preset ) {
 	// do nothing no preset for this class
 }
 
@@ -319,21 +298,18 @@ void IncrementDecay::presetCumulative( double preset )
 
 /// makes increment change (if it can)
 /// must be called once for every loop
-void IncDecayCumInfinite::updateStep()
-{
+void IncDecayCumInfinite::updateStep() {
 	_cumulative += step;
 	_step *= _decayFactor;
 }
 
 /// returns the current step value
-double IncDecayCumInfinite::getStep()
-{
+double IncDecayCumInfinite::getStep() {
 	return _cumulative;
 }
 
 /// presets the cumulative value
-void IncDecayCumInfinite::presetCumulative( double preset )
-{
+void IncDecayCumInfinite::presetCumulative( double preset ) {
 	if( preset < _min || preset > _max)
 	{
 		// throw
@@ -341,8 +317,7 @@ void IncDecayCumInfinite::presetCumulative( double preset )
 	 _cumulative = preset;
 }
 
-IncDecayCumInfinite::IncDecayCumInfinite( double step , double decayFactor )
-{
+IncDecayCumInfinite::IncDecayCumInfinite( double step , double decayFactor ) {
 	_step = step;
 	_decayFactor = decayFactor
 }
@@ -355,8 +330,7 @@ IncDecayCumInfinite::IncDecayCumInfinite( double step , double decayFactor )
 
 /// makes increment change (if it can)
 /// must be called once for every loop
-void IncDecayCumReset::updateStep()
-{
+void IncDecayCumReset::updateStep() {
 	_cumulative += step;
 	_step *= _decayFactor;
 	if (_cumulative >= _max) {
@@ -367,19 +341,16 @@ void IncDecayCumReset::updateStep()
 }
 
 /// returns the minimum value the step/increment/cumulative can be
-double IncDecayCumReset::getMin()
-{
+double IncDecayCumReset::getMin() {
 	return _min;
 }
 
 /// returns the maximum value the step/increment/cumulative can be
-double IncDecayCumReset::getMax()
-{
+double IncDecayCumReset::getMax() {
 	return _min;
 }
 
-void IncDecayCumReset::_fixMinMax()
-{
+void IncDecayCumReset::_fixMinMax() {
 	if( _min > _max ) {
 		tmp = _min;
 		_min = _max;
@@ -387,8 +358,7 @@ void IncDecayCumReset::_fixMinMax()
 	}
 }
 
-IncDecayCumReset::IncDecayCumReset( double step , double decayFactor , double min , double max )
-{
+IncDecayCumReset::IncDecayCumReset( double step , double decayFactor , double min , double max ) {
 	double tmp;
 	_step = step;
 	_decayFactor = decayFactor;
@@ -402,8 +372,7 @@ IncDecayCumReset::IncDecayCumReset( double step , double decayFactor , double mi
 
 /// makes increment change (if it can)
 /// must be called once for every loop
-void IncDecayCumOscillate::updateStep()
-{
+void IncDecayCumOscillate::updateStep() {
 	_cumulative += step;
 	_step *= _decayFactor;
 	if (_cumulative >= _max) {
