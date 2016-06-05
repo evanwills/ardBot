@@ -15,7 +15,7 @@ function report(name, obj, loops) {
 	var a = 0;
 	console.log(name + '.constructor.name = ', obj.constructor.name);
 	console.log(name + ' = ', obj);
-	console.log('!' + obj.constructor.name + ' instanceof IncrementManager = ', !obj instanceof IncrementManager);
+	console.log(obj.constructor.name + ' instanceof IncrementManager = ', obj instanceof IncrementManager);
 
 	if (loops === undefined) {
 		loops = 25;
