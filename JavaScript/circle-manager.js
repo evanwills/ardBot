@@ -26,7 +26,8 @@ var CircleManager = function () {
 	this.depth = 0;
 };
 
-CircleManager.prototype = Object.create(CircleInterface);
+CircleManager.prototype = new CircleInterface();
+CircleManager.prototype.constructor = CircleManager;
 /**
  * @method	depthOK() is used to varify that the stack of
  *			circles is OK. By OK, I mean that the
@@ -137,6 +138,7 @@ var SingleCircle = function (circle) {
 	this.circle = circle;
 };
 
+SingleCircle.prototype =  new CircleManager();
 SingleCircle.prototype = Object.create(CircleManager);
 
 SingleCircle.prototype.setChildCircle = function (childCircle) {
@@ -217,10 +219,18 @@ var MultiCircle = function (circle) {
 
 	this.childCircle = null;
 };
-MultiCircle.prototype = Object.create(SingleCircle);
+//MultiCircle.prototype = Object.create(SingleCircle);
+
+MultiCircle.prototype =  new SingleCircle();
+MultiCircle.prototype = Object.create(MultiCircle);
 
 MultiCircle.prototype.setChildCircle = function (childCircle) {
 	'use strict';
+
+	if (!childCircle instanceof SingleCircle) {
+		throw {'message': 'MultiCircle.setChildCircle() expects only parameter "childCircle" to be an instance of SingleCircle.'};
+	}
+
 	this.depth += 1;
 	if (this.childCircle ===  null) {
 		this.childCircle = childCircle;
