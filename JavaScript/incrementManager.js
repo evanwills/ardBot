@@ -14,7 +14,6 @@ function IncrementManager() {
 IncrementManager.prototype = new Object();
 IncrementManager.prototype.constructor = IncrementManager;
 
-
 IncrementManager.prototype.updateStep = function () {
 	'use strict';
 	throw {"message": 'The inner workings of ' + this.constructor.name + '.updateStep() are undefined' };
@@ -89,7 +88,6 @@ IncrementManager.prototype.withinMinMax = function (min, max) {
 	}
 	return true;
 };
-
 
 IncrementManager.prototype._validateSetDoCumParam = function (min, max, presetCumulative) {
 	'use strict';
@@ -213,6 +211,7 @@ function IncrementFixed(step) {
 	}
 	this.step = step;
 }
+
 IncrementFixed.prototype = new IncrementManager;
 IncrementFixed.prototype.constructor = IncrementFixed;
 
@@ -281,7 +280,6 @@ function IncrementDecay(step, decayFactor) {
 
 IncrementDecay.prototype = new IncrementManager;
 IncrementDecay.prototype.constructor = IncrementDecay;
-
 
 IncrementDecay.prototype.updateStep = function () {
 	'use strict';
