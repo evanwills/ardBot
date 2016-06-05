@@ -1,77 +1,14 @@
-// IncrementManager fixed needs some rethinking I'm pretty sure the cumulative stuff is unnecessary
+
+#include "Increment-Manager.h"
 
 
-class IncrementManager {
-	public:
-		virtual void updateStep();
-		virtual double getStep();
-		virtual double getIncrement();
-		virtual double getLastStep();
-		virtual double getMin();
-		virtual double getMax();
-		virtual bool withinMinMax(double min, double max);
-}
-
-
-
-//  END:  IncrementManager (interface)
 // ==================================================================
-// START: AbstractIncrement
-
-class AbstractIncrement : IncrementManager {
-	protected:
-		double _step = 0;
-		double _min = 0;
-		double _max = 0;
-		double _lastStep = 0;
-		double _increment = 0;
-		double _cumulative = 0;
-
-	public:
-		void updateStep() {
-			_cumulative += _step;
-		}
-
-		double getStep() {
-			return _step;
-		}
-
-		double getIncrement() {
-			return _increment;
-		}
-
-		double getLastStep() {
-			return _lastStep;
-		}
-
-		double getMin() {
-			return _min;
-		}
-
-		double getMax() {
-			return _max;
-		}
-
-		bool withinMinMax(double min, double max) {
-			double tmp;
-
-			if( min > max ) {
-				tmp = min;
-				min = max;
-				max = tmp;
-			}
-
-			if( _step > max || _step < min || _min < min || _max >= max || _max <= min ) {
-				return false;
-			}
-			return true;
-		}
-
-}
+// START: IncrementManager
 
 
 
-//  END:  AbstractIncrement
+
+//  END:  IncrementManager
 // ==================================================================
 // START: IncrementFixed
 
@@ -80,16 +17,191 @@ class AbstractIncrement : IncrementManager {
 
 
 
-class IncrementFixed : AbstractIncrement {
-	public
-		IncrementFixed( double step ) {
-			_step = step;
-			_lastStep = step;
-			_min = step;
-			_max = step;
-		}
+
+IncrementFixed IncrementFixed::incrementFixedFactory( double step, unsigned int cumulativeMode = 0 , double min = 0 , double max = 0 , bool oscillate = false)
+{
+	if( cumulativeMode == 0 )
+	{
+		return new IncrementFixed(step);
+	}
+	else if( cumulativeMode == 1 )
+	{
+		return new IncFixedCumInfinite(step);
+	}
+	else if( cumulativeMode == 2 )
+	{
+		return new IncFixedCumReset(step, min, max);
+	}
+	else if( cumulativeMode == 3 )
+	{
+		return new IncFixedCumOscillate(step, min, max);
+	}
+	else
+	{
+		// throw
+	}
+}
+IncrementFixed::IncrementFixed( double step )
+{
+	_step = step;
+}
+void IncrementFixed::updateStep()
+{
+	_cumulative += _step;
+}
+double IncrementFixed::getStep()
+{
+	return _step;
 }
 
+double IncrementFixed::getIncrement()
+{
+	return 0;
+}
+
+double IncrementFixed::getCumulative()
+{
+	return _step;
+}
+
+double IncrementFixed::getLastStep()
+{
+	return _step;
+}
+
+double IncrementFixed::getMin()
+{
+	return _step;
+}
+
+double IncrementFixed::getMax()
+{
+	return _step;
+}
+
+bool IncrementFixed::withinMinMax(double min, double max)
+{
+	double tmp;
+
+	if( min > max ) {
+		tmp = min;
+		min = max;
+		max = tmp;
+	}
+
+	if( _step > max || _step < min )
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+/// presets the cumulative value
+void IncrementFixed::presetCumulative( double preset )
+{
+	// do nothing no preset for this class
+}
+
+
+// --------------------------------------------------------
+
+
+/// makes increment change (if it can)
+/// must be called once for every loop
+void IncFixedCumInfinite::updateStep()
+{
+	_cumulative += step;
+}
+
+/// returns the current step value
+double IncFixedCumInfinite::getStep()
+{
+	return _cumulative;
+}
+
+/// presets the cumulative value
+void IncFixedCumInfinite::presetCumulative( double preset )
+{
+	if( preset < _min || preset > _max)
+	{
+		// throw
+	}
+	 _cumulative = preset;
+}
+
+IncFixedCumInfinite::IncFixedCumInfinite( double step )
+{
+	_step = step;
+}
+
+
+
+// --------------------------------------------------------
+
+
+
+/// makes increment change (if it can)
+/// must be called once for every loop
+void IncFixedCumReset::updateStep()
+{
+	_cumulative += step;
+	if (_cumulative >= _max) {
+		_cumulative = _min + (_cumulative - _max);
+	} else if (_cumulative <= _min) {
+		_cumulative = _max - (_cumulative + _min);
+	}
+}
+
+/// returns the minimum value the step/increment/cumulative can be
+double IncFixedCumReset::getMin()
+{
+	return _min;
+}
+
+/// returns the maximum value the step/increment/cumulative can be
+double IncFixedCumReset::getMax()
+{
+	return _min;
+}
+
+void IncFixedCumReset::_fixMinMax()
+{
+	if( _min > _max ) {
+		tmp = _min;
+		_min = _max;
+		_max = tmp;
+	}
+}
+
+IncFixedCumReset::IncFixedCumReset( double step , double min , double max )
+{
+	double tmp;
+	_step = step;
+	_min= min;
+	_max = max;
+	this->_fixMinMax();
+}
+
+
+// --------------------------------------------------------
+
+/// makes increment change (if it can)
+/// must be called once for every loop
+void IncFixedCumOscillate::updateStep()
+{
+	_cumulative += step;
+	if (_cumulative >= _max) {
+		_step = -_step;
+		_cumulative = _max - (_cumulative - _max);
+	} else if (_cumulative <= _min) {
+		_step = -_step;
+		_cumulative = _min + (_cumulative + _min);
+	}
+}
 
 
 
@@ -105,29 +217,202 @@ class IncrementFixed : AbstractIncrement {
 
 
 
-/**
- * supplies an ever decreasing step
- * @param {double} step        the value that will be returned
- * @param {double} decayFactor a number between 0 and 1
- */
-class IncrementDecay : AbstractIncrement {
-	protected:
-		_decayFactor = 0;
 
-	public:
-		IncrementDecay( double step, double decayFactor ) {
-			if( decayFactor > 1 || decayFactor <= 0 ) {
-				// throw error
-			}
-			_decayFactor = decayFactor;
-			_step = step;
-			_max = step;
-		}
-		void updateStep() {
-			'use strict';
-			_lastStep = _step;
-			_step *= _decayFactor;
-		}
+
+IncrementDecay IncrementDecay::IncrementDecayFactory( double step, double decayFactor, unsigned int cumulativeMode = 0 , double min = 0 , double max = 0 , bool oscillate = false)
+{
+	if( decayFactor < 0 || decayFactor > 1)
+	{
+		// throw
+	}
+
+	if( cumulativeMode == 0 )
+	{
+		return new IncrementDecay(step, decayFactor);
+	}
+	else if( cumulativeMode == 1 )
+	{
+		return new IncDecayCumInfinite(step, decayFactor);
+	}
+	else if( cumulativeMode == 2 )
+	{
+		return new IncDecayCumReset(step, decayFactor, min, max);
+	}
+	else if( cumulativeMode == 3 )
+	{
+		return new IncDecayCumOscillate(step, decayFactor, min, max);
+	}
+	else
+	{
+		// throw
+	}
+}
+IncrementDecay::IncrementDecay( double step , double decayFactor )
+{
+	_step = step;
+	_decayFactor = decayFactor;
+}
+void IncrementDecay::updateStep()
+{
+	_cumulative += _step;
+}
+double IncrementDecay::getStep()
+{
+	return _step;
+}
+
+double IncrementDecay::getIncrement()
+{
+	return 0;
+}
+
+double IncrementDecay::getCumulative()
+{
+	return _step;
+}
+
+double IncrementDecay::getLastStep()
+{
+	return _lastStep;
+}
+
+double IncrementDecay::getMin()
+{
+	return 0;
+}
+
+double IncrementDecay::getMax()
+{
+	return _step;
+}
+
+bool IncrementDecay::withinMinMax(double min, double max)
+{
+	double tmp;
+
+	if( min > max ) {
+		tmp = min;
+		min = max;
+		max = tmp;
+	}
+
+	if( _step > max || _step < min )
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+/// presets the cumulative value
+void IncrementDecay::presetCumulative( double preset )
+{
+	// do nothing no preset for this class
+}
+
+
+// --------------------------------------------------------
+
+
+/// makes increment change (if it can)
+/// must be called once for every loop
+void IncDecayCumInfinite::updateStep()
+{
+	_cumulative += step;
+	_step *= _decayFactor;
+}
+
+/// returns the current step value
+double IncDecayCumInfinite::getStep()
+{
+	return _cumulative;
+}
+
+/// presets the cumulative value
+void IncDecayCumInfinite::presetCumulative( double preset )
+{
+	if( preset < _min || preset > _max)
+	{
+		// throw
+	}
+	 _cumulative = preset;
+}
+
+IncDecayCumInfinite::IncDecayCumInfinite( double step , double decayFactor )
+{
+	_step = step;
+	_decayFactor = decayFactor
+}
+
+
+
+// --------------------------------------------------------
+
+
+
+/// makes increment change (if it can)
+/// must be called once for every loop
+void IncDecayCumReset::updateStep()
+{
+	_cumulative += step;
+	_step *= _decayFactor;
+	if (_cumulative >= _max) {
+		_cumulative = _min + (_cumulative - _max);
+	} else if (_cumulative <= _min) {
+		_cumulative = _max - (_cumulative + _min);
+	}
+}
+
+/// returns the minimum value the step/increment/cumulative can be
+double IncDecayCumReset::getMin()
+{
+	return _min;
+}
+
+/// returns the maximum value the step/increment/cumulative can be
+double IncDecayCumReset::getMax()
+{
+	return _min;
+}
+
+void IncDecayCumReset::_fixMinMax()
+{
+	if( _min > _max ) {
+		tmp = _min;
+		_min = _max;
+		_max = tmp;
+	}
+}
+
+IncDecayCumReset::IncDecayCumReset( double step , double decayFactor , double min , double max )
+{
+	double tmp;
+	_step = step;
+	_decayFactor = decayFactor;
+	_min= min;
+	_max = max;
+	this->_fixMinMax();
+}
+
+
+// --------------------------------------------------------
+
+/// makes increment change (if it can)
+/// must be called once for every loop
+void IncDecayCumOscillate::updateStep()
+{
+	_cumulative += step;
+	_step *= _decayFactor;
+	if (_cumulative >= _max) {
+		_step = -_step;
+		_cumulative = _max - (_cumulative - _max);
+	} else if (_cumulative <= _min) {
+		_step = -_step;
+		_cumulative = _min + (_cumulative + _min);
+	}
 }
 
 
@@ -136,129 +421,15 @@ class IncrementDecay : AbstractIncrement {
 
 
 
-//  END:  IncrementFixed
+//  END:  IncrementDecay
 // ==================================================================
-// START: IncrementOscillate
+// START: IncrementEase
 
 
 
 
 
 
-class IncrementOscillate : AbstractIncrement {
-	protected:
-		char _minMaxMode = 'linier';
-		bool _doCumulative = false;
-		void _doMinMaxLinier() {
 
-			_step += _increment;
-
-			if (_step > _max) {
-				// bounce _step off max
-				_step = _max - (_step - _max);
-				_increment = -_increment;
-			} else if (_step < _min) {
-				// bounce _step off min
-				_step = _min + (_min - _step);
-				_increment = -_increment;
-			}
-		}
-
-		void _doMinMaxReset() {
-			_step += _increment;
-			if (_step > _max) {
-				// bounce _step off max
-				_step = _min + (_step - _max);
-			}
-		}
-
-		void _doMinMaxCurve() {
-			// calculate the X coordinate on a curve at a given angle
-		}
-
-
-	public:
-		IncrementOscillate( double step, double increment, double min, double max ) {
-			if (min > max) {
-				_min = max;
-				_max = min;
-			} else {
-				_max = max;
-				_min = min;
-			}
-			_step = step;
-			_increment = increment;
-		}
-
-		void doMinMax() {
-			if( _minMaxMode == 'linier' ) {
-				_doMinMaxLinier();
-			}
-			else  if( _minMaxMode == 'reset' ) {
-				_doMinMaxReset();
-			} else {
-				_doMinMaxCurve();
-			}
-		}
-
-		bool setIncrementMode( char mode ) {
-			if (mode == 'linier' || mode == 'reset' || mode == 'curve') {
-				_minMaxMode = mode;
-				return true;
-			} else {
-				// throw 'IncrementOscillate::setIncrementMode() expects only parameter to be a "linier", "reset" or "curve". "' + mode + '" given.'};
-				return false;
-			}
-		}
-
-		void setDoCumulative( bool mode ) {
-			_doCumulative = mode;
-		}
-}
-
-
-
-//  END:  IncrementOscillate
-// ==================================================================
-// START: IncrementCircular
-
-
-
-
-
-
-/*
-var IncrementCircular = function () {
-	'use strict';
-};
-IncrementCircular.prototype = Object.create(IncrementManager);
-*/
-
-
-
-
-
-
-//  END:  IncrementCircular
-// ==================================================================
-// START: IncrementEliptic
-
-
-
-
-
-
-/*
-var IncrementEliptic = function () {
-	'use strict';
-};
-IncrementEliptic.prototype = Object.create(IncrementManager);
-*/
-
-
-
-
-
-
-//  END:  IncrementEliptic
+//  END:  IncrementEase
 // ==================================================================
