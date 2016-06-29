@@ -1,11 +1,14 @@
 
-var Boom = function () {
+function Boom() {
 	'use strict';
 	this.firstBoom = null;
 	this.secondBoom = null;
 	this.endX = 0;
 	this.endY = 0;
-};
+}
+
+Boom.prototype = new Object();
+Boom.prototype.constructor = Boom;
 
 Boom.prototype.getEndPoint = function (firstOriginX, firstOriginY, secondOriginX, secondOriginY) {
 	'use strict';
@@ -22,6 +25,63 @@ Boom.prototype.getY = function () {
 	return this.endY;
 };
 
+Boom.prototype._getPosName = function (input) {
+	'use strict';
+	switch (input) {
+	case 1:
+		return 'first';
+
+	case 2:
+		return 'second';
+
+	case 3:
+		return 'third';
+
+	case 4:
+		return 'fourth';
+
+	case 5:
+		return 'fifth';
+
+	case 6:
+		return 'sixth';
+
+	case 7:
+		return 'seventh';
+
+	}
+};
+
+Boom.prototype._validateBoomParam = function (boom, pos, paramName) {
+	'use strict';
+	var _pos = this._getPosName(pos);
+
+	if (!boom instanceof IncrementManager) {
+		throw {'message': this.constructor.name + '() expects ' + _pos + ' parameter "' + paramName + '" to be an instance of IncrementManager. ' + typeof boom + ' given'};
+	}
+	if (boom.isInfinite() === true) {
+		throw {'message': this.constructor.name + '() ' + _pos + ' parameter "' + paramName + '" must not be in infinite mode.'};
+	} else if (boom.getMin() < 0) {
+		throw {'message': this.constructor.name + '() ' + _pos + ' parameter "' + paramName + '" must have a minimum of zero or greater. Minimum is: ' + boom.getMin()};
+	}
+	return boom;
+};
+
+
+Boom.prototype._validateOffsetParam = function (offset, pos, paramName) {
+	'use strict';
+	var _pos = this._getPosName(pos);
+
+	if (!offset instanceof IncrementManager) {
+		throw {'message': this.constructor.name + '() expects ' + _pos + ' parameter "' + paramName + '" to be an instance of IncrementManager. ' + typeof offset + ' given'};
+	}
+	if (offset.isInfinite() === true) {
+		throw {'message': this.constructor.name + '() ' + _pos + ' parameter "' + paramName + '" must not be in infinite mode.'};
+	} else if (offset.withinMinMax(0, 1) === true) {
+		throw {'message': this.constructor.name + '() ' + _pos + ' parameter "' + paramName + '" must be between zero and one. Minimum is: ' + offset.getMin() + ' Maximum is ' + offset.getMax()};
+	}
+	return offset;
+};
 
 
 
@@ -31,7 +91,7 @@ Boom.prototype.getY = function () {
 
 //  END:  Boom (interface)
 // ==================================================================
-// START: StraightBoom
+// START: Vboom (straight boom)
 
 
 
@@ -45,263 +105,239 @@ Boom.prototype.getY = function () {
  *			third point on the triangle
  */
 /**
- * @function StraightBoom()
+ * @function Vboom()
  *
  * @param firstBoom  provides   the offset and length for the
  *		                            first boom
  * @param secondBoom provides   the offset and length for the
  *		                            second boom
+ * @param hingeOffset provides  the point along the long boom that
+ *		                        the small boom connects and pivots
  */
-var StraightBoom = function (firstBoom, secondBoom) {
+function Vboom(firstBoom, secondBoom) {
 	'use strict';
-	if (typeof firstBoom !== 'Stepper') {
-		throw {'msg': 'StraightBoom expects first parameter "firstBoom" to be a stepper object. ' + typeof firstBoom + ' given'};
-	}
-	if (typeof secondBoom !== 'Stepper') {
-		throw {'msg': 'StraightBoom expects second parameter "secondBoom" to be a stepper object. ' + typeof secondBoom + ' given'};
-	}
-	this.firstBoom = firstBoom;
-	this.secondBoom = secondBoom;
-};
-StraightBoom.prototype = Object.create(Boom);
+	var tmp = this._validateBoomParam(firstBoom, secondBoom);
 
-StraightBoom.prototype.setEndPoint = function (firstOriginX, firstOriginY, secondOriginX, secondOriginY) {
+	this.firstBoom = this._validateBoomParam(firstBoom, 1, 'firstBoom');
+	if (secondBoom === undefined) {
+		secondBoom = firstBoom;
+	} else {
+		this.secondBoom = this._validateBoomParam(secondBoom, 2, 'secondBoom');
+	}
+}
+Vboom.prototype = new Boom();
+Vboom.prototype.constructor = Vboom;
+
+Vboom.prototype.setEndPoint = function (firstOriginX, firstOriginY, secondOriginX, secondOriginY) {
+	'use strict';
 	// do the actual calculations
 };
 
 
-var TBoom = function (boom, offset) {
+
+
+
+
+//  END:  Vboom (straight boom)
+// ==================================================================
+// START: TBoom
+
+
+
+
+
+
+function TBoom(boom, offset) {
 	'use strict';
-	if (typeof boom !== 'Stepper') {
-		throw {'msg': 'StraightBoom expects first parameter "boom" to be a stepper object. ' + typeof boom + ' given'};
-	}
-	if (typeof offset !== 'Stepper') {
-		throw {'msg': 'StraightBoom expects second parameter "offset" to be a stepper object. ' + typeof offset + ' given'};
-	}
-	this.boom = boom;
-	this.offset = offset;
-};
-TBoom.prototype = Object.create(Boom);
+
+	this.firstBoom = this._validateBoomParam(boom, 1, 'boom');
+	this.offset = this._validateOffsetParam(offset, 2, 'offset');
+}
+TBoom.prototype = new Boom();
+TBoom.prototype.constructor = TBoom;
 
 TBoom.prototype.setEndPoint = function (firstOriginX, firstOriginY, secondOriginX, secondOriginY) {
+	'use strict';
 	// do the actual calculations
 };
 
 
 
-var YBoom = function (firstBoom, secondBoom, offset) {
+
+
+
+//  END:  TBoom
+// ==================================================================
+// START: YBoom
+
+
+
+
+
+
+function YBoom(firstBoom, secondBoom, offset) {
 	'use strict';
-	if (typeof firstBoom !== 'Stepper') {
-		throw {'msg': 'StraightBoom expects first parameter "firstBoom" to be a stepper object. ' + typeof firstBoom + ' given'};
+	var firstLong = true;
+
+	this.firstBoom = this._validateBoomParam(firstBoom, 1, 'firstBoom');
+	this.secondBoom = this._validateBoomParam(secondBoom, 2, 'secondBoom');
+	this.offset = this._validateOffsetParam(offset, 3, 'offset');
+
+	// long boom must always be longer than short boom
+	// long boom min > short boom max
+	// oneMin = 10			oneMin = 10
+	// oneMax = 20			oneMax = 20
+	// twoMin = 30			twoMin = 15
+	// twoMax = 40			twoMax = 30
+	if (firstBoom.getMax() < secondBoom.getMin()) {
+		firstLong = false;
+	} else if (
+		(firstBoom.getMax() > secondBoom.getMin() && firstBoom.getMax() < secondBoom.getMax()) ||
+		(secondBoom.getMax() > firstBoom.getMin() && secondBoom.getMax() < firstBoom.getMax())
+	) {
+		throw {'message': 'YBoom expects one boom to be longer than the other. It is possible that the long boom will be shorter than the short boom at some point.'};
 	}
-	if (typeof secondBoom !== 'Stepper') {
-		throw {'msg': 'StraightBoom expects second parameter "secondBoom" to be a stepper object. ' + typeof secondBoom + ' given'};
-	}
-	if (typeof offset !== 'Stepper') {
-		throw {'msg': 'StraightBoom expects third parameter "offset" to be a stepper object. ' + typeof offset + ' given'};
-	}
-	this.firstBoom = firstBoom;
-	this.secondBoom = secondBoom;
-	this.offset = offset;
-};
-YBoom.prototype = Object.create(Boom);
+}
+
+YBoom.prototype = new Boom();
+YBoom.prototype.constructor = YBoom;
 
 YBoom.prototype.setEndPoint = function (firstOriginX, firstOriginY, secondOriginX, secondOriginY) {
+	'use strict';
 	// do the actual calculations
 };
 
+
+
+
+
+
+//  END:  yBoom
+// ==================================================================
+// START: xboom
+
+
+
+
+
+
 /**
- * @class	simpleScissorBoom is a symetrical scissor where the pivot
- *			position is the same for both booms. As the base points
- *			for the booms get further appart the length of the boom
- *			shortens and likewise, as they get closer together the
- *			boom lengthens.
+ * @class xboom or scissor boom (sheped like so: ><>)
  *
- * NOTE: the distance from the pivotPoint to the end of the boom is
- *		 mirrored to join the booms back together
+ * This type of boom accentuates or amplifies the relationship
+ * between the rotating discs when the bases of the scissor are close
+ * together, the boom is elongaged, when they are far apart, the boom
+ * is truncated. The movement of the "Pen" is much more dynamic than
+ * with any of the other boom types.
+ *
+ * @param {incrementManager} firstBoom object that manages the length
+ *                           of the first boom
+ * @param {incrementManager|undefined} firstOffset object that
+ *                           manages where along the first boom the
+ *                           pivot is situated.
+ *                           NOTE: If undefined, it defaults to 0.5
+ * @param {incrementManager|undefined} secondBoom object that manages
+ *                           the length of the second boom
+ *                           NOTE: if undefined, firstBoom is used
+ * @param {incrementManager|undefined} secondOffset object that
+ *                           manages where along the second boom the
+ *                           pivot is situated.
+ *                           NOTE: If undefined, firstOffest is used
+ * @param {incrementManager|undefined} firstReturnBoom object that
+ *                           manages the length of the first return
+ *                           boom
+ *                           NOTE: if undefined, it's length is
+ *                                 calculated dynamically each time
+ *                                 it is used
+ * @param {incrementManager|undefined} secondReturnBoom object that
+ *                           manages the length of the second return
+ *                           boom
+ *                           NOTE: if undefined, it's length is
+ *                                 calculated dynamically each time
+ *                                 it is used
+ * NOTE ALSO: if you are defining return booms manually and not
+ *            thinking carefully about the values used in return
+ *            booms, it's possible to these objects to return values
+ *            that cannot form trinagles.
  */
-var simpleScissorBoom = function (firstBoom, firstOffset, secondBoom, offset) {
+function Xboom(firstBoom, firstOffset, secondBoom, secondOffset, firstReturnBoom, secondReturnBoom) {
 	'use strict';
-	if (typeof firstBoom !== 'Stepper') {
-		throw {'msg': 'simpleScissorBoom() expects first parameter "firstBoom" to be a Stepper object ' + typeof firstBoom + ' given'};
-	}
-	if (firstBoom.getStep() <= 1 || firstBoom.getMin() <= 1) {
-		throw {'msg': 'simpleScissorBoom() expects first parameter (Steppper object) to have minimum step greater than 1. ' + typeof firstBoom.getMin() + ' given'};
-	}
-	if (typeof firstOffset !== 'Stepper') {
-		throw {'msg': 'simpleScissorBoom() expects second parameter to be a Stepper object ' + typeof firstOffset + ' given'};
-	}
-	if (firstOffset.getMin() < 0) {
-		throw {'msg': 'simpleScissorBoom() expects second parameter to be a Stepper object ' + typeof firstOffset + ' given'};
-	} else if (firstOffset.getMin() >= 0 && firstBoom.getMax() <= 1) {
-		this.firstBoomOffset = firstOffset;
+
+	this.boom1 = this._validateBoomParam(firstBoom, 1, 'firstBoom');
+	this.offset1 = null;
+	this.boom2 = null;
+	this.offset2 = null;
+	this.returnBoom1 = null;
+	this.returnBoom2 = null;
+
+	if (firstOffset === undefined) {
+		this.offset1 = new IncrementFixed(0.5);
+		this.boom2 = firstBoom;
+		this.offset2 = this.offset1;
 	} else {
-		this.secondBoom = firstOffset;
+		this.offset1 = this._validateOffsetParam(firstOffset, 2, 'firstOffset');
+		if (secondBoom === undefined) {
+			this.boom2 = firstBoom;
+			this.offset2 = this.offset1;
+		} else {
+			this.boom2 = this._validateBoomParam(secondBoom, 3, 'secondBoom');
+			if (secondOffset === undefined) {
+				this.offset2 = this.offset1;
+			} else {
+				this.offset2 = this._validateOffsetParam(secondOffset, 4, 'secondOffset');
+			}
+		}
 	}
 
-	private:
-		stepper * _pivotPosition;
+	if (firstReturnBoom === undefined) {
+		this._calc1stRetBoom = function () {
+			return this.boom1.getStep() - (this.boom1.getStep() * this.offset1.getStep());
+		};
+	} else {
+		this.returnBoom1 = this._validateBoomParam(firstReturnBoom, 5, 'firstReturnBoom');
+	}
 
-	public:
-		/**
-		 * @method simpleScissorBoom()
-		 *
-		 * @param firstBoom provides the offset for the first boom
-		 *		  and the length for both booms
-		 * @param secondBoom only provides the offset the length is
-		 *		  ignored
-		 * @param pivotPosition at what point along the boom to the
-		 *		  two booms connect then spread appart again.
-		 *		  The output of pivotPosition->getStep() be between
-		 *		  zero and one
-		 */
-		simpleScissorBoom(  stepper * firstBoom , stepper * secondBoom , stepper * pivotPosition ) {
-			_firstBoom = firstBoom;
-			_secondBoom = secondBoom;
-			if( pivotPosition->withinMinMax( 0 , 1 ) == false ) {
-				// throw error
-			}
-			_pivotPosition = pivotPosition;
-		}
-		void setEndPoint( double firstOriginX , double firstOriginY , double secondOriginX , double secondOriginY ) {
-			// do the actual calculations
-		}
+	if (secondReturnBoom === undefined) {
+		this._calc2ndRetBoom = function () {
+			return this.boom2.getStep() - (this.boom2.getStep() * this.offset2.getStep());
+		};
+	} else {
+		this.returnBoom2 = this._validateBoomParam(secondReturnBoom, 6, 'secondReturnBoom');
+	}
 }
 
+Xboom.prototype = new Boom();
+Xboom.prototype.constructor = Xboom;
 
-/**
- * @class	asymetricalScissorBoom is an asymetrical scissor where
- *			the pivot position is the same relative to the length of
- *			each boom but the booms can be different sizes.
- *
- * As the base points for the booms get further appart the length of
- * the boom shortens and likewise, as they get closer together the
- * boom lengthens.
- *
- * NOTE: the distance from the pivotPoint to the end of the boom is
- *		 mirrored to join the booms back together
- */
-class asymetricalScissorBoom : boomAbstract
-{
-	public:
-		/**
-		 * @method asymetricalScissorBoom()
-		 *
-		 * @param firstBoom provides the offset and length for the
-		 *		  boom
-		 * @param secondBoom provides the offset and length for the
-		 *		  boom
-		 * @param pivotFirstPosition at what point along each boom
-		 *		  they connects to each other then spread appart
-		 *		  again.
-		 *		  The output of pivotPosition->getStep() be between
-		 *		  zero and one
-		 */
-		asymetricalScissorBoom(  stepper * firstBoom , stepper * secondBoom , stepper * pivotPosition ) {
-			_firstBoom = firstBoom;
-			_secondBoom = secondBoom;
+Xboom.prototype._calc1stRetBoom = function () {
+	'use strict';
+	return this.firstReturnBoom.getStep();
+};
 
-			if( pivotPosition->withinMinMax( 0 , 1 ) == false ) {
-				// throw error
-			}
-			_pivotPosition = pivotPosition;
-		}
-		void setEndPoint( double firstOriginX , double firstOriginY , double secondOriginX , double secondOriginY ) {
-			// do the actual calculations
-		}
-}
+Xboom.prototype._calc2ndRetBoom = function () {
+	'use strict';
+	return this.secondReturnBoom.getStep();
+};
+
+Xboom.prototype.setEndPoint = function (firstOriginX, firstOriginY, secondOriginX, secondOriginY) {
+	'use strict';
+	var first = {
+			'len': this.firstBoom.getStep,
+			'off': this.firstOffset.getStep(),
+			'return': this._calc1stRetBoom()
+		},
+		second = {
+			'len': this.secondBoom.getStep,
+			'off': this.secondOffset.getStep(),
+			'return': this._calc1stRetBoom()
+		};
+	// do the actual calculations
+};
 
 
-/**
- * @class	whackyScissorBoom is an asymetrical scissor where the
- *			booms can be different sizes and the pivotPoints for each
- *			boom can also be different
- *
- * As the base points for the booms get further appart the length of
- * the boom shortens and likewise, as they get closer together the
- * boom lengthens.
- *
- * NOTE: the distance from the pivotPoint to the end of the boom is
- *		 mirrored to join the booms back together
- */
-class whackyScissorBoom : boomAbstract
-{
-	private:
-		stepper * _pivotFirstPosition;
-		stepper * _pivotSecondPosition;
-	public:
-		/**
-		 * @method whackyScissorBoom()
-		 *
-		 * @param firstBoom provides the offset for the first boom
-		 *		  and the length for both booms
-		 * @param secondBoom only provides the offset the length is
-		 *		  ignored
-		 * @param pivotFirstPosition at what point along the second
-		 *		  boom it connects to the first boom then spread
-		 *		  appart again.
-		 *		  The output of pivotFirstPosition->getStep() be
-		 *		  between zero and one
-		 * @param pivotSecondPosition at what point along the second
-		 *		  boom it connects to the first boom then spread
-		 *		  appart again.
-		 *		  The output of pivotSecondPosition->getStep() be
-		 *		  between zero and one
-		 */
-		whackyScissorBoom( stepper * firstBoom , stepper * secondBoom , stepper * pivotFirstPosition , stepper * pivotSecondPosition ) {
-			_firstBoom = firstBoom;
-			_secondBoom = secondBoom;
-
-			if( pivotFirstPosition->withinMinMax( 0 , 1 ) == false ) {
-				// throw error
-			}
-			_pivotFirstPosition = pivotFirstPosition;
-			if( pivotSecondPosition->withinMinMax( 0 , 1 ) == false ) {
-				// throw error
-			}
-			_pivotSecondPosition = pivotSecondPosition;
-		}
-		void setEndPoint( double firstOriginX , double firstOriginY , double secondOriginX , double secondOriginY ) {
-			// do the actual calculations
-		}
-}
 
 
-/**
- * @class	Tboom works on the principle that that the circles are
- *			connected by a straight line and the boom comes off that
- *			line at a given offset
- */
-class Tboom : boomAbstract
-{
-	private:
-		stepper * _boomOffset;
 
-	public:
-		/**
-		 * @method Tboom()
-		 *
-		 * @param firstBoom provides the offset for the first boom
-		 *		  and the length for both booms
-		 * @param secondBoom only provides the offset the length is
-		 *		  ignored
-		 * @param boomOffset at what point along the base line the
-		 *		  boom projects from
-		 *		  The output of boomOffset->getStep() be between zero
-		 *		  and one
-		 */
-		Tboom(  stepper * firstBoom , stepper * secondBoom , stepper * boomOffset ) {
-			_firstBoom = firstBoom;
-			_secondBoom = secondBoom;
 
-			if( boomOffset->withinMinMax( 0 , 1 ) == false ) {
-				// throw error
-			}
-			_boomOffset = boomOffset;
-		}
-
-		void setEndPoint( double firstOriginX , double firstOriginY , double secondOriginX , double secondOriginY ) {
-			// do the actual calculations
-		}
-}
-
+//  END:  xboom
+// ==================================================================
