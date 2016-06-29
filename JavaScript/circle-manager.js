@@ -20,11 +20,11 @@
 // this.childCircle.this.circle.this.originX should all share the same pointer.
 // The same goes for the this.radiusPointY
 
-var CircleManager = function () {
+function CircleManager() {
 	'use strict';
 	this.circle = null;
 	this.depth = 0;
-};
+}
 
 CircleManager.prototype = new CircleInterface();
 CircleManager.prototype.constructor = CircleManager;
@@ -130,13 +130,13 @@ CircleManager.prototype.getRadiusPointY = function (depth) {
 
 
 
-var SingleCircle = function (circle) {
+function SingleCircle(circle) {
 	'use strict';
 	if (typeof circle !== 'CircleShape') {
 		throw {'msg': 'SingleCircle expects only parameter to be a CircleShape object. ' + typeof circle + ' given'};
 	}
 	this.circle = circle;
-};
+}
 
 SingleCircle.prototype =  new CircleManager();
 SingleCircle.prototype = Object.create(CircleManager);
@@ -209,7 +209,7 @@ SingleCircle.prototype.getRadiusPointY = function (depth) {
 
 
 
-var MultiCircle = function (circle) {
+function MultiCircle(circle) {
 	'use strict';
 
 	if (typeof circle !== 'CircleShape') {
@@ -218,17 +218,17 @@ var MultiCircle = function (circle) {
 	this.circle = circle;
 
 	this.childCircle = null;
-};
-//MultiCircle.prototype = Object.create(SingleCircle);
+}
 
-MultiCircle.prototype =  new SingleCircle();
+
+MultiCircle.prototype = new SingleCircle();
 MultiCircle.prototype = Object.create(MultiCircle);
 
 MultiCircle.prototype.setChildCircle = function (childCircle) {
 	'use strict';
 
 	if (!childCircle instanceof SingleCircle) {
-		throw {'message': 'MultiCircle.setChildCircle() expects only parameter "childCircle" to be an instance of SingleCircle.'};
+		throw {'message': 'MultiCircle.setChildCircle() expects only parameter "childCircle" to be either a SingleCircle or MultiCircle object. ' + childCircle.prototype + ' given.'};
 	}
 
 	this.depth += 1;
