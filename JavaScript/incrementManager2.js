@@ -238,21 +238,10 @@ IncrementDecoratorCumulative.prototype.getMax = function () {
 
 
 
-function IncrementDecoratorReset(IncMan, min, max) {
+function IncrementDecoratorReset(IncMan, min, max, preset) {
 	'use strict';
-	if (!IncMan instanceof IIncrementManager) {
-		throw {"message": 'IncrementDecoratorReset constructor expects first parameter to be an instance of IIncrementManager.'};
-	}
 
-	if (!min instanceof IIncrementManager) {
-		throw {"message": 'IncrementDecoratorReset constructor expects second parameter "min" to be an instance of IIncrementManager.'};
-	}
-	if (!max instanceof IIncrementManager) {
-		throw {"message": 'IncrementDecoratorReset constructor expects third parameter "max" to be an instance of IIncrementManager.'};
-	}
-	this.incMgr = IncMan;
-	this.min = min;
-	this.max = max;
+	this.constructorFuncShared(IncMan, min, max, preset);
 
 	this.isCumulative = true;
 	this.isInfinite = false;
@@ -261,6 +250,30 @@ IncrementDecoratorReset.prototype = new IIncrementDecorator();
 IncrementDecoratorReset.prototype.constructor = IncrementDecoratorReset;
 IncrementDecoratorReset.prototype.min = null;
 IncrementDecoratorReset.prototype.max = null;
+
+IncrementDecoratorReset.prototype.constructorFuncShared = function (IncMan, min, max, preset) {
+	'use strict';
+
+	if (!IncMan instanceof IIncrementManager) {
+		throw {"message": this.constructor.name + ' constructor expects first parameter to be an instance of IIncrementManager.'};
+	}
+	if (!min instanceof IIncrementManager) {
+		throw {"message": this.constructor.name + ' constructor expects second parameter "min" to be an instance of IIncrementManager.'};
+	}
+	if (!max instanceof IIncrementManager) {
+		throw {"message": this.constructor.name + ' constructor expects third parameter "max" to be an instance of IIncrementManager.'};
+	}
+	if (preset !== undefined) {
+		if (typeof preset !== 'number' || preset < 0 || preset > 1) {
+			throw {"message": this.constructor.name + ' constructor expects fourth parameter "preset" to be a number between 0 and 1 (inclusive).'};
+		} else {
+			this.cumulative = min.getStep() + ((max.getStep() - min.getStep()) * preset);
+		}
+	}
+	this.incMgr = IncMan;
+	this.min = min;
+	this.max = max;
+};
 
 IncrementDecoratorReset.prototype.updateStep = function () {
 	'use strict';
@@ -304,25 +317,12 @@ IncrementDecoratorReset.prototype.getLastStep = function () {
 
 
 
-function IncrementDecoratorOscillate(IncMan, min, max) {
+function IncrementDecoratorOscillate(IncMan, min, max, preset) {
 	'use strict';
-	if (!IncMan instanceof IIncrementManager) {
-		throw {"message": 'IncrementDecoratorReset constructor expects first parameter to be an instance of IIncrementManager.'};
-	}
-
-	if (!min instanceof IIncrementManager) {
-		throw {"message": 'IncrementDecoratorReset constructor expects second parameter "min" to be an instance of IIncrementManager.'};
-	}
-	if (!max instanceof IIncrementManager) {
-		throw {"message": 'IncrementDecoratorReset constructor expects third parameter "max" to be an instance of IIncrementManager.'};
-	}
-	this.incMgr = IncMan;
-	this.min = min;
-	this.max = max;
+	this.constructorFuncShared(IncMan, min, max, preset);
 	this.isCumulative = false;
 	this.isInfinite = false;
 	this.doesOscillate = true;
-
 }
 IncrementDecoratorOscillate.prototype = new IncrementDecoratorReset();
 IncrementDecoratorOscillate.prototype.constructor = IncrementDecoratorOscillate;
