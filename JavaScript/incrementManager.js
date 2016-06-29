@@ -6,9 +6,11 @@ function IncrementManager() {
 	this.cumulative = 0;
 	this.cumulativeMin = 0;
 	this.cumulativeMax = 0;
-	this.doCumulative = false;
-	this.doInfinite = false;
+	this._isCumulative = false;
+	this._isInfinite = false;
+	this._doesOscillate = false;
 	this.step = 0;
+	this.steps = 0;
 }
 
 IncrementManager.prototype = new Object();
@@ -44,7 +46,12 @@ IncrementManager.prototype.getMax = function () {
 	throw {"message": 'The inner workings of ' + this.constructor.name + '.getMax() are undefined' };
 };
 
-IncrementManager.prototype.correctMinMax = function (min, max) {
+IncrementManager.prototype.getSteps = function () {
+	'use strict';
+	return this.steps;
+};
+
+IncrementManager.prototype._correctMinMax = function (min, max) {
 	'use strict';
 	if (min > max) {
 		return [max, min];
@@ -55,12 +62,17 @@ IncrementManager.prototype.correctMinMax = function (min, max) {
 
 IncrementManager.prototype.isCumulative = function () {
 	'use strict';
-	return this.doCumulative;
+	return this._isCumulative;
 };
 
 IncrementManager.prototype.isInfinite = function () {
 	'use strict';
-	return this.doInfinite;
+	return this._isInfinite;
+};
+
+IncrementManager.prototype.doesOscillate = function () {
+	'use strict';
+	return this._doesOscillate;
 };
 
 IncrementManager.prototype._validateMinMax = function (min, max) {
@@ -76,7 +88,7 @@ IncrementManager.prototype._validateMinMax = function (min, max) {
 		throw {'message': this.constructor.name + '.withinMinMax() expects "min" to be less than or equal to "max". min (' + min + ') > max (' + max + ')'};
 	}
 
-	return this.correctMinMax(min, max);
+	return this._correctMinMax(min, max);
 };
 
 IncrementManager.prototype.withinMinMax = function (min, max) {
@@ -99,7 +111,7 @@ IncrementManager.prototype._validateSetDoCumParam = function (min, max, presetCu
 		throw {"message": this.constructor.name + '.setDoCumulative() expects second parm "max" to be a number. ' + typeof max + ' given.'};
 	}
 
-	tmp = this.correctMinMax(min, max);
+	tmp = this._correctMinMax(min, max);
 	this.cumulativeMin = tmp[0];
 	this.cumulativeMax = tmp[1];
 
@@ -120,14 +132,14 @@ IncrementManager.prototype.setDoCumulative = function (min, max, mode, presetCum
 	'use strict';
 	var tmp = [];
 
-	if (this.doCumulative === true) {
+	if (this._isCumulative === true) {
 		return;
 	}
 
-	this.doCumulative = true;
+	this._isCumulative = true;
 
 	if (min === undefined) {
-		this.doInfinite = true;
+		this._isInfinite = true;
 		this.updateStep = function () {
 			// infinite accumulation mode
 			this.cumulative += this.step;
@@ -135,6 +147,9 @@ IncrementManager.prototype.setDoCumulative = function (min, max, mode, presetCum
 		this.getStep = function () {
 			// infinite accumulation mode
 			return this.cumulative;
+		};
+		this.getMax = function () {
+			return undefined;
 		};
 	} else {
 		if (mode !== 'reset' && mode !== 'oscillate') {
@@ -147,7 +162,9 @@ IncrementManager.prototype.setDoCumulative = function (min, max, mode, presetCum
 			// i.e. when the value of cumulative reaches the min or max,
 			// reset it to the other end and apply any excess to that value
 			this.updateStep = function () {
+				this.steps += 1;
 				this.cumulative += this.step;
+
 				if (this.cumulative > this.cumulativeMax) {
 					this.cumulative = this.cumulativeMin + (this.cumulative - this.cumulativeMax);
 				} else if (this.cumulative < this.cumulativeMin) {
@@ -158,8 +175,11 @@ IncrementManager.prototype.setDoCumulative = function (min, max, mode, presetCum
 			// run doCumulative in Oscillate mode
 			// i.e. when the value of cumulative reaches the min or max,
 			// reset it to the other end and apply any excess to that value
+			this._doesOscillate = true;
 			this.updateStep = function () {
+				this.steps += 1;
 				this.cumulative += this.step;
+
 				if (this.cumulative >= this.cumulativeMax) {
 					this.step = -this.step;
 					this.cumulative = this.cumulativeMax - (this.cumulative - this.cumulativeMax);
@@ -192,6 +212,17 @@ IncrementManager.prototype.setDoCumulative = function (min, max, mode, presetCum
 	}
 };
 
+IncrementManager.prototype.getType = function () {
+	'use strict';
+	return this.prototype.constructor.name;
+};
+
+IncrementManager.prototype.reverseStep = function () {
+	'use strict';
+	this.step = -this.step;
+};
+
+
 
 
 
@@ -212,11 +243,13 @@ function IncrementFixed(step) {
 	this.step = step;
 }
 
-IncrementFixed.prototype = new IncrementManager;
+IncrementFixed.prototype = new IncrementManager();
 IncrementFixed.prototype.constructor = IncrementFixed;
 
 IncrementFixed.prototype.updateStep = function () {
 	'use strict';
+	this.steps += 1;
+	this.cumulative += this.step;
 	// do nothing
 };
 
@@ -278,7 +311,7 @@ function IncrementDecay(step, decayFactor) {
 
 //IncrementDecay.prototype = Object.create(IncrementManager);
 
-IncrementDecay.prototype = new IncrementManager;
+IncrementDecay.prototype = new IncrementManager();
 IncrementDecay.prototype.constructor = IncrementDecay;
 
 IncrementDecay.prototype.updateStep = function () {
@@ -286,6 +319,7 @@ IncrementDecay.prototype.updateStep = function () {
 	this.lastStep = this.step;
 	this.step *= this.decayFactor;
 	this.cumulative += this.step;
+	this.steps += 1;
 };
 
 IncrementDecay.prototype.getIncrement = function () {
@@ -308,24 +342,30 @@ IncrementDecay.prototype.getMax = function () {
 	return this.step;
 };
 
-
+IncrementDecay.prototype.getDecay = function () {
+	'use strict';
+	return this.decayFactor;
+};
 
 IncrementDecay.prototype.setDoCumulative = function (min, max, mode, presetCumulative) {
 	'use strict';
 	var previousStep = 0,
 		tmp = [];
 
-	if (this.doCumulative === true) {
+	if (this._isCumulative === true) {
 		return;
 	}
 
-	this.doCumulative = true;
+	this._isCumulative = true;
 
 	if (min === undefined) {
-		this.doInfinite = true;
+		this._isInfinite = true;
 		this.getStep = function () {
 			// infinite accumulation mode
 			return this.cumulative;
+		};
+		this.getMax = function () {
+			return undefined;
 		};
 	} else {
 		if (mode !== 'reset' && mode !== 'oscillate') {
@@ -338,8 +378,10 @@ IncrementDecay.prototype.setDoCumulative = function (min, max, mode, presetCumul
 			// i.e. when the value of cumulative reaches the min or max,
 			// reset it to the other end and apply any excess to that value
 			this.updateStep = function () {
+				this.steps += 1;
 				this.step *= this.decayFactor;
 				this.cumulative += this.step;
+
 				if (this.cumulative > this.cumulativeMax) {
 					this.cumulative = this.cumulativeMin + (this.cumulative - this.cumulativeMax);
 				} else if (this.cumulative < this.cumulativeMin) {
@@ -347,7 +389,9 @@ IncrementDecay.prototype.setDoCumulative = function (min, max, mode, presetCumul
 				}
 			};
 		} else {
+			this._doesOscillate = true;
 			this.updateStep = function () {
+				this.steps += 1;
 				this.step *= this.decayFactor;
 				this.cumulative += this.step;
 				if (this.cumulative > this.cumulativeMax) {
@@ -414,7 +458,7 @@ function IncrementOscillate(step, increment, min, max) {
 		throw {'message': 'IncrementOscillate expects fourth parameter "max" to be a number. ' + typeof max + ' given!'};
 	}
 
-	tmp = this.correctMinMax(min, max);
+	tmp = this._correctMinMax(min, max);
 
 	this.min = tmp[0];
 	this.max = tmp[1];
@@ -423,7 +467,7 @@ function IncrementOscillate(step, increment, min, max) {
 	this.getStep();
 }
 //IncrementOscillate.prototype = Object.create(IncrementManager);
-IncrementOscillate.prototype = new IncrementManager;
+IncrementOscillate.prototype = new IncrementManager();
 IncrementOscillate.prototype.constructor = IncrementOscillate;
 
 
@@ -488,11 +532,11 @@ IncrementOscillate.prototype.setIncrementMode = function (mode) {
 IncrementOscillate.prototype.setDoCumulative = function (mode) {
 	'use strict';
 
-	if (this.doCumulative === true) {
+	if (this._isCumulative === true) {
 		return;
 	}
 
-	this.doCumulative = true;
+	this._isCumulative = true;
 
 	if (mode === undefined || typeof mode !== 'Boolean') {
 		throw {'message': 'IncrementOscillate.setMode() expects only parameter to be boolean. ' + typeof mode + ' given.'};
@@ -524,7 +568,7 @@ IncrementOscillate.prototype.setDoCumulative = function (doCumulative, min, max)
 					return this.cumulative;
 				};
 			} else {
-				tmp = this.correctMinMax(min, max);
+				tmp = this._correctMinMax(min, max);
 				min = tmp[0];
 				max = tmp[1];
 				// run doCumulative in Reset mode
