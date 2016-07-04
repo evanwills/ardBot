@@ -5,7 +5,6 @@
 
 
 
-
 // ==================================================================
 // START: IncrementManager Interface
 
@@ -24,6 +23,7 @@ IIncrementManager.prototype.constructor = IIncrementManager;
 IIncrementManager.prototype.step = 0;
 IIncrementManager.prototype.isCumulative = false;
 IIncrementManager.prototype.isInfinite = false;
+IIncrementManager.prototype.doesReset = false;
 IIncrementManager.prototype.doesOscillate = false;
 
 IIncrementManager.prototype.updateStep = function () {
@@ -70,44 +70,10 @@ IIncrementManager.prototype.getLastStep = function () {
 
 
 
-function IncrementManager(step) {
-	'use strict';
-	if (typeof step !== 'number') {
-		throw {"message": 'IncrementManager constructor expects only parameter "step" to be a number'};
-	}
-	this.step = step;
-}
-IncrementManager.prototype = new IIncrementManager();
-IncrementManager.prototype.constructor = IncrementManager;
-IIncrementManager.prototype.steps = 0;
-
-IncrementManager.prototype.updateStep = function () {
-	'use strict';
-	this.steps += 1;
-};
-IncrementManager.prototype.getSteps = function () {
-	'use strict';
-	return this.steps;
-};
-
-
-
-
-
-
-//  END:  IncrementManager interface
-// ==================================================================
-// START: IncrementDecorator interface
-
-
-
-
-
-
-
 function IIncrementDecorator(IncMan) {
 	'use strict';
 }
+//IIncrementDecorator.prototype = Object.create(IIncrementManager.prototype);
 IIncrementDecorator.prototype = new IIncrementManager();
 IIncrementDecorator.prototype.constructor = IIncrementDecorator;
 IIncrementDecorator.prototype.incMgr = null;
@@ -134,6 +100,46 @@ IIncrementDecorator.prototype.getSteps = function () {
 
 //  END:  IncrementDecorator interface
 // ==================================================================
+// START: IncrementManager
+
+
+
+
+
+
+
+function IncrementManager(step) {
+	'use strict';
+	var msg = '';
+	if (typeof step !== 'number') {
+		msg = 'IncrementManager constructor expects only parameter "step" to be a number';
+		console.error(msg);
+		throw {"message": msg};
+	}
+	this.step = step;
+}
+//IncrementManager.prototype = Object.create(IIncrementManager.prototype);
+IncrementManager.prototype = new IIncrementManager();
+IncrementManager.prototype.constructor = IncrementManager;
+IncrementManager.prototype.steps = 0;
+
+IncrementManager.prototype.updateStep = function () {
+	'use strict';
+	this.steps += 1;
+};
+IncrementManager.prototype.getSteps = function () {
+	'use strict';
+	return this.steps;
+};
+
+
+
+
+
+
+
+//  END:  IncrementManager
+// ==================================================================
 // START: IncrementDecoratorDecay
 
 
@@ -144,19 +150,30 @@ IIncrementDecorator.prototype.getSteps = function () {
 
 function IncrementDecoratorDecay(IncMan, decay) {
 	'use strict';
+	var msg = 'IncrementDecoratorDecay constructor expects ';
 	if (!IncMan instanceof IIncrementManager) {
-		throw {"message": 'IncrementDecoratorDecay constructor expects first parameter to be an instance of IIncrementManager.'};
+		msg += 'first parameter to be an instance of IIncrementManager.';
+		console.error(msg);
+		throw {"message": msg};
 	}
 
 	if (typeof decay !== 'number') {
-		throw {"message": 'IncrementDecoratorDecay constructor expects second parameter "decay" to be a number'};
+		msg += 'second parameter "decay" to be a number';
+		console.error(msg);
+		throw {"message": msg};
 	}
+
 	this.incMgr = IncMan;
 	this.decayFactor = decay;
 }
+//IncrementDecoratorDecay.prototype = Object.create(IIncrementDecorator.prototype);
 IncrementDecoratorDecay.prototype = new IIncrementDecorator();
 IncrementDecoratorDecay.prototype.constructor = IncrementDecoratorDecay;
 
+IncrementDecoratorDecay.prototype.isCumulative = false;
+IncrementDecoratorDecay.prototype.isInfinite = false;
+IncrementDecoratorDecay.prototype.doesOscillate = false;
+IncrementDecoratorDecay.prototype.doesReset = false;
 IncrementDecoratorDecay.prototype.decayFactor = 0;
 IncrementDecoratorDecay.prototype.decayValue = 1;
 
@@ -202,16 +219,21 @@ IncrementDecoratorDecay.prototype.updateStep = function () {
 
 function IncrementDecoratorCumulative(IncMan) {
 	'use strict';
+	var msg = '';
 	if (!IncMan instanceof IIncrementManager) {
-		throw {"message": 'IncrementDecoratorCumulative constructor expects first parameter to be an instance of IIncrementManager.'};
+		msg = 'IncrementDecoratorCumulative constructor expects first parameter to be an instance of IIncrementManager.';
+		console.error(msg);
+		throw {"message": msg};
 	}
 	this.incMgr = IncMan;
-
-	this.isCumulative = true;
-	this.isInfinite = true;
 }
+//IncrementDecoratorCumulative.prototype = Object.create(IIncrementDecorator.prototype);
 IncrementDecoratorCumulative.prototype = new IIncrementDecorator();
 IncrementDecoratorCumulative.prototype.constructor = IncrementDecoratorCumulative;
+IncrementDecoratorCumulative.prototype.isCumulative = true;
+IncrementDecoratorCumulative.prototype.isInfinite = true;
+IncrementDecoratorCumulative.prototype.doesOscillate = false;
+IncrementDecoratorCumulative.prototype.doesReset = false;
 IncrementDecoratorCumulative.prototype.updateStep = function () {
 	'use strict';
 	this.incMgr.updateStep();
@@ -241,51 +263,84 @@ IncrementDecoratorCumulative.prototype.getMax = function () {
 function IncrementDecoratorReset(IncMan, min, max, preset) {
 	'use strict';
 
-	this.constructorFuncShared(IncMan, min, max, preset);
+	var tmp = 0,
+		tmp2 = 0,
+		msg = this.constructor.name + ' constructor expects ';
 
-	this.isCumulative = true;
-	this.isInfinite = false;
+	if (!IncMan instanceof IIncrementManager) {
+		msg += 'first parameter to be an instance of IIncrementManager.';
+		console.error(msg);
+		throw {"message": msg};
+	}
+	this.incMgr = IncMan;
+	if (!min instanceof IIncrementManager) {
+		msg += 'second parameter "min" to be an instance of IIncrementManager.';
+		console.error(msg);
+		throw {"message": msg};
+	}
+	if (!max instanceof IIncrementManager) {
+		msg += 'third parameter "max" to be an instance of IIncrementManager.';
+		console.error(msg);
+		throw {"message": msg};
+	}
+	if (min.getStep() > max.getStep()) {
+		msg += 'second parameter min.getStep() to be less than third parameter max.getStep()';
+		console.error(msg);
+		throw {"message": msg};
+	}
+
+	tmp = max.getStep() - min.getStep();
+	tmp2 = IncMan.getStep();
+	if (tmp2 < 0) {
+		tmp2 = -tmp2;
+	}
+	if (tmp2 > tmp) {
+		msg += 'first parameter "IncMan" (' + IncMan.getStep() + ') to be a number that can be made to fit within ' + min.getStep() + ' and ' + max.getStep();
+		console.error(msg);
+		throw {"message": msg};
+	}
+
+	this.min = min;
+	this.max = max;
+
+	if (preset !== undefined) {
+		if (typeof preset !== 'number' || preset < 0 || preset > 1) {
+			msg += 'fourth parameter "preset" to be a number between 0 and 1 (inclusive).';
+			console.error(msg);
+			throw {"message": msg};
+		} else {
+			this.step = this.min.getStep() + ((this.max.getStep() - this.min.getStep()) * preset);
+		}
+	} else {
+		this.step = min.getStep();
+	}
 }
+//IncrementDecoratorCumulative.prototype = Object.create(IIncrementDecorator.prototype);
 IncrementDecoratorReset.prototype = new IIncrementDecorator();
 IncrementDecoratorReset.prototype.constructor = IncrementDecoratorReset;
 IncrementDecoratorReset.prototype.min = null;
 IncrementDecoratorReset.prototype.max = null;
-
-IncrementDecoratorReset.prototype.constructorFuncShared = function (IncMan, min, max, preset) {
-	'use strict';
-
-	if (!IncMan instanceof IIncrementManager) {
-		throw {"message": this.constructor.name + ' constructor expects first parameter to be an instance of IIncrementManager.'};
-	}
-	if (!min instanceof IIncrementManager) {
-		throw {"message": this.constructor.name + ' constructor expects second parameter "min" to be an instance of IIncrementManager.'};
-	}
-	if (!max instanceof IIncrementManager) {
-		throw {"message": this.constructor.name + ' constructor expects third parameter "max" to be an instance of IIncrementManager.'};
-	}
-	if (preset !== undefined) {
-		if (typeof preset !== 'number' || preset < 0 || preset > 1) {
-			throw {"message": this.constructor.name + ' constructor expects fourth parameter "preset" to be a number between 0 and 1 (inclusive).'};
-		} else {
-			this.cumulative = min.getStep() + ((max.getStep() - min.getStep()) * preset);
-		}
-	}
-	this.incMgr = IncMan;
-	this.min = min;
-	this.max = max;
-};
+IncrementDecoratorReset.prototype.isCumulative = true;
+IncrementDecoratorReset.prototype.doesReset = true;
+IncrementDecoratorReset.prototype.cumulative = 0;
 
 IncrementDecoratorReset.prototype.updateStep = function () {
 	'use strict';
 	this.lastStep = this.step;
+
 	this.incMgr.updateStep();
 	this.min.updateStep();
 	this.max.updateStep();
 	this.step += this.incMgr.getStep();
-	if (this.step > this.max.getStep()) {
+
+	if (this.step === this.max.getStep()) {
+		this.step = this.min.getStep();
+	} else if (this.step === this.min.getStep()) {
+		this.step = this.max.getStep();
+	} else if (this.step > this.max.getStep()) {
 		this.step = this.min.getStep() + this.step - this.max.getStep();
 	} else if (this.step < this.min.getStep()) {
-		this.step = this.max.getStep() - this.min.getStep() + this.step;
+		this.step = this.max.getStep() - (this.min.getStep() - this.step);
 	}
 };
 IncrementDecoratorReset.prototype.getMin = function () {
@@ -298,7 +353,7 @@ IncrementDecoratorReset.prototype.getMax = function () {
 };
 IncrementDecoratorReset.prototype.getLastStep = function () {
 	'use strict';
-	this.incMgr.getStep();
+	this.lastStep;
 };
 
 
@@ -319,39 +374,54 @@ IncrementDecoratorReset.prototype.getLastStep = function () {
 
 function IncrementDecoratorOscillate(IncMan, min, max, preset) {
 	'use strict';
-	this.constructorFuncShared(IncMan, min, max, preset);
-	this.isCumulative = false;
-	this.isInfinite = false;
-	this.doesOscillate = true;
+	IncrementDecoratorReset.call(this, IncMan, min, max, preset);
+//	this.constructorFuncShared(IncMan, min, max, preset);
 }
-IncrementDecoratorOscillate.prototype = new IncrementDecoratorReset();
+//IncrementDecoratorCumulative.prototype = Object.create(IncrementDecoratorReset.prototype);
+IncrementDecoratorOscillate.prototype = new IncrementDecoratorReset(new IncrementManager(0), new IncrementManager(0), new IncrementManager(0));
 IncrementDecoratorOscillate.prototype.constructor = IncrementDecoratorOscillate;
+IncrementDecoratorOscillate.prototype.isCumulative = true;
+IncrementDecoratorOscillate.prototype.isInfinite = false;
+IncrementDecoratorOscillate.prototype.doesOscillate = true;
+IncrementDecoratorOscillate.prototype.doesReset = false;
 IncrementDecoratorOscillate.prototype.cumulative = 0;
-IncrementDecoratorOscillate.prototype.isNegative = false;
+IncrementDecoratorOscillate.prototype.lastCumulative = 0;
+IncrementDecoratorOscillate.prototype.changeSign = false;
+
 
 IncrementDecoratorOscillate.prototype.updateStep = function () {
 	'use strict';
-	this.lastStep = this.cumulative;
+	var step;
+	this.lastCumulative = this.cumulative;
 	this.incMgr.updateStep();
 	this.min.updateStep();
 	this.max.updateStep();
+	this.lastStep = this.step;
+
+	this.step = this.incMgr.getStep();
+	if (this.changeSign === true) {
+		this.step = -this.step;
+	}
+
+	this.cumulative += this.step;
+
 
 	if (this.cumulative > this.max.getStep()) {
 		this.step = this.max.getStep() - this.cumulative;
-		this.isNegative = true;
+		this.cumulative = this.max.getStep() - this.step;
+		this.changeSign = true;
 	} else if (this.cumulative < this.min.getStep()) {
 		this.step = this.cumulative - this.min.getStep();
-		this.isNegative = false;
-	} else {
-		this.step = this.incMgr.getStep();
-		if (this.isNegative === true) {
-			this.step = -this.step;
-		}
+		this.cumulative = this.min.getStep() + this.step;
+		this.changeSign = false;
 	}
-	this.cumulative += this.step;
 };
 
 
+IncrementDecoratorOscillate.prototype.getStep = function () {
+	'use strict';
+	return this.step;
+};
 
 
 
