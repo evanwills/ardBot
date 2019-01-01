@@ -4,12 +4,12 @@ import {Coordinate, PenHolderArm, ScissorArm} from './whriliDoodle.interfaces';
 /**
  * circleRotator() is a pure function that simply rotates a given
  * point on a circle by the angle specified
- * 
+ *
  * @param centre the Coordinate of the centre point of the circle
  * @param point the Coordinate for the point on the circumference of
  *               the circle that is to be rotated
  * @param angle the amount the circumference point is to be rotated
- * 
+ *
  * @returns new Coordinate for the point on the circle's cirumference
  */
 export const circleRotator = function(centre: Coordinate, point: Coordinate, angle: number) : Coordinate {
@@ -75,13 +75,13 @@ const deg2rad = (degrees: number) : number => {
  * radiusModifier() is a pure function that adjusts the point
  * Coordinate on the circumference of a circle by increasing or
  * decreasing the radius of the circle
- * 
+ *
  * @param centre the Coordinate of the centre point of the circle
  * @param point the Coordinate for the point on the circumference of
  *               the circle that is to be rotated
  * @param modifier the amount to increase or decrease the radius of
  *               the circle
- * 
+ *
  * @returns new Coordinate for the point on the circle's cirumference
  */
 export const radiusModifier = function(centre: Coordinate, point: Coordinate, modifier: number) : Coordinate {
@@ -127,37 +127,37 @@ export const getRadiusPoint = (centre: Coordinate, length: number, angle: number
  * trianglePenHolder() calculates the Coordinates of the pen based on
  * the length of the arms of the pen holder and the Coordinates of
  * the base of each arm
- * 
+ *
  * @param arm1 the Coordinates for the base of arm 1
  * @param arm2 the Coordinates for the base of arm 2
  * @param length1 the length of arm 1
  * @param length2 the length of arm 2 (defaults to length of arm 1)
  */
 export const trianglePenHolder = function(arm1: PenHolderArm, arm2: PenHolderArm) : Coordinate {
-  
+
   if (arm1.length <= 0 || arm2.length <= 0 || arm1.length <= (arm2.length * 0.7) || arm1.length >= arm2.length * 1.3) {
     throw Error('trianglePenHolder expects at least one arm to have a length greater than zero and be no more than 130% bigger than the other arm and no smaller than 70% of the other arm.');
   }
-  
+
   return {
     x: 0,
     y: 0
   }
 }
 
-export const scissorPenHolder = function(arm1: ScissorArm, arm2: ScissorArm) : Coordinate {   
+export const scissorPenHolder = function(arm1: ScissorArm, arm2: ScissorArm) : Coordinate {
   if (arm1.length <= 0 || arm2.length <= 0 || arm1.length <= (arm2.length * 0.7) || arm1.length >= arm2.length * 1.3) {
     throw Error('trianglePenHolder expects at least one arm to have a length greater than zero and be no more than 130% bigger than the other arm and no smaller than 70% of the other arm.');
   }
 
-  
+
   return {
     x: 0,
     y: 0
   }
 }
 
-export const TPenHolder = function(origin1: Coordinate, origin2: Coordinate, length: number) : Coordinate {  
+export const TPenHolder = function(origin1: Coordinate, origin2: Coordinate, length: number) : Coordinate {
   return {
     x: 0,
     y: 0
