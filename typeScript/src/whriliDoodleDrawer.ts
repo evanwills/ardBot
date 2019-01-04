@@ -1,12 +1,15 @@
 import { Circle} from './circle.interface';
 import { PenHolder } from './penHolder.interface';
 import { DrawingTable, StaticDrawingTable } from './drawingTable.interface';
+import { Coordinate } from './whriliDoodle.interfaces';
 
 export class WhirliDoodleDrawer {
   private base1: Circle;
   private base2: Circle;
   private drawingSpace: DrawingTable;
   private penHolder: PenHolder;
+  private oldCoordinate: Coordinate;
+  private firstQuadratic: boolean = false;
 
   public constructor(base1: Circle, base2: Circle, penHolder: PenHolder, drawingSpace: DrawingTable = null) {
     this.base1 = base1;
@@ -20,12 +23,35 @@ export class WhirliDoodleDrawer {
     }
   }
 
-  public draw() {
-    return this.drawingSpace.movePen(
+  /**
+   * draw() outputs SVG quadratic curve coordinates
+   */
+  public draw(): string {
+    const newCoordinate = this.drawingSpace.movePen(
       this.penHolder.movePen(
         this.base1.rotatePoint(),
         this.base2.rotatePoint()
       )
     );
+    if (this.oldCoordinate === null) {
+      this.oldCoordinate = newCoordinate;
+      return "M " + newCoordinate.x + ',' + newCoordinate.y + ' Q';
+    } else {
+      // Need to work out how to set up cubic bezier points
+      // See https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths#Curve_commands
+      // for more info.
+      let quadratic = '';
+      if (this.firstQuadratic === false) {
+        // somehow calculate quatratic control node
+        quadratic += 'T';
+        this.firstQuadratic = true;
+      }
+      const relativeCoordinate = {
+        x: this.oldCoordinate.x - newCoordinate.x,
+        y: this.oldCoordinate.y - newCoordinate.y
+      }
+      this.oldCoordinate = newCoordinate;
+      return quadratic + ' ' + relativeCoordinate.x + ',' + relativeCoordinate.y;
+    }
   }
 }
