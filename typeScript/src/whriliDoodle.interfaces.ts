@@ -1,3 +1,5 @@
+import { IncrementManager } from "./incrementManager.interface";
+
 export interface Coordinate {
   x: number,
   y: number
@@ -8,12 +10,18 @@ export interface Circle {
   circumferencePoint: Coordinate
 }
 
+export interface CircleConstructor {
+  origin: Coordinate,
+  radiusLength: number,
+  angleIncrement: IncrementManager,
+  initialAngle?: number
+}
 
 export interface PenHolderArm {
   base: Coordinate,
   // one arm length must be no greater than 1.3 * larger than its
   // partner and no smaller than 0.7 * its partner
-  length: number 
+  length: number
 }
 
 export interface ScissorArm extends PenHolderArm {

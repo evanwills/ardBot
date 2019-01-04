@@ -13,7 +13,7 @@ export class IncrementManager {
 export class DecayIncrement extends IncrementManager {
   protected step: number;
   private decayFactor: number;
-  
+
   public constructor(initialValue: number, decayFactor: number) {
     super(initialValue)
     if (decayFactor < 0.25 || decayFactor > 1.75) {

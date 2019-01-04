@@ -157,7 +157,7 @@ export const scissorPenHolder = function(arm1: ScissorArm, arm2: ScissorArm) : C
   }
 }
 
-export const TPenHolder = function(origin1: Coordinate, origin2: Coordinate, length: number) : Coordinate {
+export const TpenHolder = function(origin1: Coordinate, origin2: Coordinate, length: number) : Coordinate {
   return {
     x: 0,
     y: 0
