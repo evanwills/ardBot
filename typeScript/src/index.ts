@@ -2,7 +2,7 @@ import { Circle, CompoundCircle } from './circle.interface';
 import {IncrementManager} from './incrementManager.interface';
 import { PenHolder, TrianglePenHolder, ScissorPenHolder, TSquarePenHolder } from './penHolder.interface';
 import { DrawingTable, StaticDrawingTable, RotatingDrawingTable } from './drawingTable.interface';
-import {WhirliDoodleDrawer} from './whriliDoodleDrawer'
+import {WhirliDoodleMachine} from './whriliDoodleDrawer'
 
 const init = {
   steps: 2000000,
@@ -138,7 +138,7 @@ if (init.drawingTable.type !== 'RotatingDrawingTable') {
   );
 }
 
-let drawer = new WhirliDoodleDrawer(base1, base2, penArm, drawingTable);
+let drawer = new WhirliDoodleMachine(base1, base2, penArm, drawingTable);
 
 
 let output = [];

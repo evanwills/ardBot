@@ -3,7 +3,7 @@ import { PenHolder } from './penHolder.interface';
 import { DrawingTable, StaticDrawingTable } from './drawingTable.interface';
 import { Coordinate } from './whriliDoodle.interfaces';
 
-export class WhirliDoodleDrawer {
+export class WhirliDoodleMachine {
   private base1: Circle;
   private base2: Circle;
   private drawingSpace: DrawingTable;
