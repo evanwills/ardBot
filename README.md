@@ -6,7 +6,7 @@ WhirliDoodle essentially creates algorythmic art.
 
 ![Triangle pen holder](./svg/whirliDoodle-design__triangle_sm.png)
 ![Scissor pen holder](./svg/whirliDoodle-design__scissor_sm.png)
-![T pen holder](./svg/whirlidoodle-design__T_sm.png)
+![T pen holder](./svg/whirliDoodle-design__T_sm.png)
 
 It is inspired by [Drawing Machine II](https://www.youtube.com/watch?v=BG9e06IWAxE) and [drawing machine maios 3](https://www.youtube.com/watch?v=rukYhTylK_M) (and others - see bottom for more links).
 
