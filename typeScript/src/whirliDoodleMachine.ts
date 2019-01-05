@@ -1,17 +1,17 @@
-import { Circle} from './circle.interface';
+import { Wheel} from './wheel.interface';
 import { PenHolder } from './penHolder.interface';
 import { DrawingTable, StaticDrawingTable } from './drawingTable.interface';
-import { Coordinate } from './whriliDoodle.interfaces';
+import { Coordinate } from './whirliDoodle.interfaces';
 
 export class WhirliDoodleMachine {
-  private base1: Circle;
-  private base2: Circle;
+  private base1: Wheel;
+  private base2: Wheel;
   private drawingSpace: DrawingTable;
   private penHolder: PenHolder;
   private oldCoordinate: Coordinate;
   private firstQuadratic: boolean = false;
 
-  public constructor(base1: Circle, base2: Circle, penHolder: PenHolder, drawingSpace: DrawingTable = null) {
+  public constructor(base1: Wheel, base2: Wheel, penHolder: PenHolder, drawingSpace: DrawingTable = null) {
     this.base1 = base1;
     this.base2 = base2;
     this.penHolder = penHolder;

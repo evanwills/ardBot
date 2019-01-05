@@ -1,9 +1,9 @@
-import {Coordinate, CircleConstructor} from './whriliDoodle.interfaces';
+import {Coordinate, CircleConstructor} from './whirliDoodle.interfaces';
 import {IncrementManager} from './incrementManager.interface';
-import {circleRotator, getRadiusPoint} from './whirliDoodle.pureFunctions';
+import {wheelRotator, getRadiusPoint} from './whirliDoodle.pureFunctions';
 
 
-export class Circle {
+export class Wheel {
   protected origin: Coordinate;
   protected radiusPoint: Coordinate;
   protected radiusLength: number;
@@ -20,7 +20,7 @@ export class Circle {
     if (origin === null) {
       origin = this.origin;
     }
-    this.radiusPoint = circleRotator(
+    this.radiusPoint = wheelRotator(
       origin,
       this.radiusPoint,
       this.angleIncrement.getIncrementedStep()
@@ -29,12 +29,12 @@ export class Circle {
   }
 
   public rotateOrigin (origin: Coordinate, angle: number) {
-    this.origin = circleRotator(
+    this.origin = wheelRotator(
       origin,
       this.origin,
       angle
     );
-    this.radiusPoint = circleRotator(
+    this.radiusPoint = wheelRotator(
       origin,
       this.radiusPoint,
       angle
@@ -46,19 +46,19 @@ export class Circle {
   public getOrigin () { return this.origin; }
 }
 
-export class CompoundCircle extends Circle {
-  private extraCircle: Circle;
+export class CompoundWheel extends Wheel {
+  private extraWheel: Wheel;
 
-  public constructor (primaryCircle: CircleConstructor, secondaryCircle: CircleConstructor) {
-    if (typeof primaryCircle.initialAngle === 'undefined') {
-      primaryCircle.initialAngle = 0;
+  public constructor (primaryWheel: CircleConstructor, secondaryWheel: CircleConstructor) {
+    if (typeof primaryWheel.initialAngle === 'undefined') {
+      primaryWheel.initialAngle = 0;
     }
-    super(primaryCircle.origin, primaryCircle.radiusLength, primaryCircle.angleIncrement, primaryCircle.initialAngle);
+    super(primaryWheel.origin, primaryWheel.radiusLength, primaryWheel.angleIncrement, primaryWheel.initialAngle);
 
-    if (typeof secondaryCircle.initialAngle === 'undefined') {
-      secondaryCircle.initialAngle = 0;
+    if (typeof secondaryWheel.initialAngle === 'undefined') {
+      secondaryWheel.initialAngle = 0;
     }
-    this.extraCircle = new Circle(this.radiusPoint, secondaryCircle.radiusLength, secondaryCircle.angleIncrement, secondaryCircle.initialAngle);
+    this.extraWheel = new Wheel(this.radiusPoint, secondaryWheel.radiusLength, secondaryWheel.angleIncrement, secondaryWheel.initialAngle);
   }
 
 
@@ -66,27 +66,27 @@ export class CompoundCircle extends Circle {
     if (origin === null) {
       origin = this.origin;
     }
-    this.extraCircle.rotateOrigin(
+    this.extraWheel.rotateOrigin(
       this.origin,
       this.angleIncrement.getIncrementedStep()
     );
 
-    return this.extraCircle.rotatePoint();
+    return this.extraWheel.rotatePoint();
   }
 
 
   public rotateOrigin (origin: Coordinate, angle: number) {
-    this.origin = circleRotator(
+    this.origin = wheelRotator(
       origin,
       this.origin,
       angle
     );
-    this.extraCircle.rotateOrigin(
+    this.extraWheel.rotateOrigin(
       origin,
       angle
     );
     return this.origin;
   }
 
-  public getRadiusPoint () { return this.extraCircle.getRadiusPoint(); }
+  public getRadiusPoint () { return this.extraWheel.getRadiusPoint(); }
 }

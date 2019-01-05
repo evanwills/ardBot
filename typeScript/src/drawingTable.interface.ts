@@ -1,6 +1,6 @@
-import { Coordinate } from "./whriliDoodle.interfaces";
+import { Coordinate } from "./whirliDoodle.interfaces";
 import {IncrementManager} from './incrementManager.interface';
-import {circleRotator} from './whirliDoodle.pureFunctions';
+import {wheelRotator} from './whirliDoodle.pureFunctions';
 
 export abstract class DrawingTable {
   public abstract movePen (position: Coordinate): Coordinate;
@@ -24,7 +24,7 @@ export class RotatingDrawingTable extends StaticDrawingTable {
   }
 
   public movePen (position: Coordinate) : Coordinate {
-    return circleRotator(
+    return wheelRotator(
       this.origin,
       position,
       this.accumulateAngle()

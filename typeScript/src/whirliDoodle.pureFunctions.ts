@@ -1,9 +1,9 @@
-import {Coordinate, PenHolderArm, ScissorArm} from './whriliDoodle.interfaces';
+import {Coordinate, PenHolderArm, ScissorArm} from './whirliDoodle.interfaces';
 
 
 /**
- * circleRotator() is a pure function that simply rotates a given
- * point on a circle by the angle specified
+ * wheelRotator() is a pure function that simply rotates a given
+ * point on a circle's circumference by the angle specified
  *
  * @param centre the Coordinate of the centre point of the circle
  * @param point the Coordinate for the point on the circumference of
@@ -12,7 +12,7 @@ import {Coordinate, PenHolderArm, ScissorArm} from './whriliDoodle.interfaces';
  *
  * @returns new Coordinate for the point on the circle's cirumference
  */
-export const circleRotator = function(centre: Coordinate, point: Coordinate, angle: number) : Coordinate {
+export const wheelRotator = function(centre: Coordinate, point: Coordinate, angle: number) : Coordinate {
   let tmpPoint = zeroOriginRadiusPoint(centre, point);
 
   // do rotation stuff

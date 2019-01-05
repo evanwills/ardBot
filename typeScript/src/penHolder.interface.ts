@@ -1,4 +1,4 @@
-import { Coordinate } from "./whriliDoodle.interfaces";
+import { Coordinate } from "./whirliDoodle.interfaces";
 import {trianglePenHolder, scissorPenHolder, TpenHolder} from './whirliDoodle.pureFunctions';
 
 export abstract class PenHolder {
