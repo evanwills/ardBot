@@ -128,15 +128,23 @@ export const getRadiusPoint = (centre: Coordinate, length: number, angle: number
  * the length of the arms of the pen holder and the Coordinates of
  * the base of each arm
  *
- * @param arm1 the Coordinates for the base of arm 1
- * @param arm2 the Coordinates for the base of arm 2
+ * @param base1 the Coordinates for the base of arm 1
+ * @param base2 the Coordinates for the base of arm 2
  * @param length1 the length of arm 1
  * @param length2 the length of arm 2 (defaults to length of arm 1)
  */
-export const trianglePenHolder = function(arm1: PenHolderArm, arm2: PenHolderArm) : Coordinate {
-
-  if (arm1.length <= 0 || arm2.length <= 0 || arm1.length <= (arm2.length * 0.7) || arm1.length >= arm2.length * 1.3) {
-    throw Error('trianglePenHolder expects at least one arm to have a length greater than zero and be no more than 130% bigger than the other arm and no smaller than 70% of the other arm.');
+export const trianglePenHolder = function(base1: Coordinate, base2: Coordinate, length1: number, length2: number = null) : Coordinate {
+  if (length2 === null) {
+    length2 = length1;
+  }
+  if (length1 <= 0) {
+    throw Error('scissorPenHolder expects third parameter length1 to be greater than zero');
+  }
+  if (length2 <= 0) {
+    throw Error('scissorPenHolder expects fifth parameter length2 to be greater than zero');
+  }
+  if (length1 <= (length2 * 0.7) || length1 >= length2 * 1.3) {
+    throw Error('scissorPenHolder expects length1 to be no more than 130% and no less than 70% of length2.');
   }
 
   return {
@@ -145,11 +153,42 @@ export const trianglePenHolder = function(arm1: PenHolderArm, arm2: PenHolderArm
   }
 }
 
-export const scissorPenHolder = function(arm1: ScissorArm, arm2: ScissorArm) : Coordinate {
-  if (arm1.length <= 0 || arm2.length <= 0 || arm1.length <= (arm2.length * 0.7) || arm1.length >= arm2.length * 1.3) {
-    throw Error('trianglePenHolder expects at least one arm to have a length greater than zero and be no more than 130% bigger than the other arm and no smaller than 70% of the other arm.');
+/**
+ * scissorPenHolder() calculates the Coordinates of the pen based on
+ * the length of the arms of the pen holder and the Coordinates of
+ * the base of each arm.
+ *
+ * Pen holder arms are arranged in a scissor configuration
+ * e.g.     /\ returnLength
+ *         /  \
+ *         \  /
+ *          \/
+ *          /\ hingeOffset
+ *         /  \
+ *        /    \ base
+ *
+ * @param base1 the Coordinates for the base of arm 1
+ * @param base2 the Coordinates for the base of arm 2
+ * @param length1 the length of arm 1
+ * @param hingeOffset the position of the hinge of the scissor
+ * @param length2 the length of arm 2 (defaults to length of arm 1)
+ */
+export const scissorPenHolder = function(base1: Coordinate, base2: Coordinate, length1: number, hingeOffset: number = 0.5, length2: number = null) : Coordinate {
+  if (length2 === null) {
+    length2 = length1;
+  }
+  if (length1 <= 0) {
+    throw Error('scissorPenHolder expects third parameter length1 to be greater than zero');
+  }
+  if (length2 <= 0) {
+    throw Error('scissorPenHolder expects fifth parameter length2 to be greater than zero');
+  }
+  if (length1 <= (length2 * 0.7) || length1 >= length2 * 1.3) {
+    throw Error('scissorPenHolder expects length1 to be no more than 130% and no less than 70% of length2.');
   }
 
+  const returnLength1 = length1 * (1 - hingeOffset)
+  const returnLength2 = length2 * (1 - hingeOffset)
 
   return {
     x: 0,
@@ -157,7 +196,10 @@ export const scissorPenHolder = function(arm1: ScissorArm, arm2: ScissorArm) : C
   }
 }
 
-export const TpenHolder = function(origin1: Coordinate, origin2: Coordinate, length: number) : Coordinate {
+export const TPenHolder = function(origin1: Coordinate, origin2: Coordinate, length: number) : Coordinate {
+  if (length <= 0) {
+    throw Error('TPenHolder() expects third parameter length to be greater than zero');
+  }
   return {
     x: 0,
     y: 0

@@ -37,7 +37,8 @@ export class WhirliDoodleMachine {
       this.oldCoordinate = newCoordinate;
       return "M " + newCoordinate.x + ',' + newCoordinate.y + ' Q';
     } else {
-      // Need to work out how to set up cubic bezier points
+      // Need to work out how to set up control points for quadratic
+      // bezier nodes
       // See https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths#Curve_commands
       // for more info.
       let quadratic = '';

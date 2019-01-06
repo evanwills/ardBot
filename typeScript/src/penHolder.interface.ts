@@ -1,5 +1,5 @@
 import { Coordinate } from "./whirliDoodle.interfaces";
-import {trianglePenHolder, scissorPenHolder, TpenHolder} from './whirliDoodle.pureFunctions';
+import {trianglePenHolder, scissorPenHolder, TPenHolder} from './whirliDoodle.pureFunctions';
 
 export abstract class PenHolder {
   public abstract movePen(base1: Coordinate, base2: Coordinate): Coordinate;
@@ -20,16 +20,9 @@ export class TrianglePenHolder extends PenHolder {
     this.length1 = length1;
     this.length2 = length2;
   }
+
   public movePen(base1: Coordinate, base2: Coordinate): Coordinate {
-    const arm1 = {
-      base: base1,
-      length: this.length1
-    }
-    const arm2 = {
-      base: base2,
-      length: this.length2
-    }
-    return trianglePenHolder(arm1, arm2);
+    return trianglePenHolder(base1, base2, this.length1, this.length2);
   }
 }
 
@@ -37,46 +30,32 @@ export class TrianglePenHolder extends PenHolder {
 export class ScissorPenHolder extends PenHolder {
   private length1: number;
   private length2: number;
-  private offset1: number;
-  private offset2: number;
-  private return1: number;
-  private return2: number;
+  private hingeOffset: number;
+  // private return1: number;
+  // private return2: number;
 
-  public constructor(length1: number, offset1: number, length2: number, offset2: number) {
+  public constructor(length1: number, hingeOffset: number = 0.5, length2: number = null) {
     super();
+    if (length2 === null) {
+      length2 = length1
+    }
     if (length1 <= 0) {
-      throw Error('TrianglePenHolder constructor expects first parameter length1 to be a number greater than zero. ' + length1 + ' given.');
+      throw Error('ScissorPenHolder constructor expects first parameter length1 to be a number greater than zero. ' + length1 + ' given.');
     }
     if (length2 <= 0) {
-      throw Error('TrianglePenHolder constructor expects three parameter length2 to be a number greater than zero. ' + length2 + ' given.');
+      throw Error('ScissorPenHolder constructor expects three parameter length2 to be a number greater than zero. ' + length2 + ' given.');
     }
-    if (offset1 <= 0.3 || offset1 >= 0.8) {
-      throw Error('TrianglePenHolder constructor expects two parameter offset1 to be a number greater than zero. ' + offset1 + ' given.');
+    if (hingeOffset <= 0.3 || hingeOffset >= 0.8) {
+      throw Error('ScissorPenHolder constructor expects two parameter offset1 to be a number greater than zero. ' + hingeOffset + ' given.');
     }
-    if (offset2 <= 0.3 || offset2 >= 0.8) {
-      throw Error('TrianglePenHolder constructor expects four parameter offset2 to be a number greater than zero. ' + offset2 + ' given.');
-    }
+
     this.length1 = length1;
     this.length2 = length2;
-    this.offset1 = offset1;
-    this.offset2 = offset2;
-    this.return1 = length1 * (1 - offset1);
-    this.return2 = length2 * (1 - offset2);
+    this.hingeOffset = hingeOffset;
   }
+
   public movePen(base1: Coordinate, base2: Coordinate): Coordinate {
-    const arm1 = {
-      base: base1,
-      length: this.length1,
-      pivotOffset: this.offset1,
-      returnLength: this.return1
-    }
-    const arm2 = {
-      base: base2,
-      length: this.length2,
-      pivotOffset: this.offset2,
-      returnLength: this.return2
-    }
-    return scissorPenHolder(arm1, arm2);
+    return scissorPenHolder(base1, base2, this.length1, this.hingeOffset, this.length2);
   }
 }
 
@@ -90,8 +69,9 @@ export class TSquarePenHolder extends PenHolder {
     }
     this.length = length;
   }
+
   public movePen(base1: Coordinate, base2: Coordinate): Coordinate {
-    return TpenHolder(base1, base2, this.length);
+    return TPenHolder(base1, base2, this.length);
   }
 }
 
