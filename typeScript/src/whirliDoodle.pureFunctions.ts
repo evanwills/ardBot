@@ -1,5 +1,7 @@
 import {Coordinate, PenHolderArm, ScissorArm} from './whirliDoodle.interfaces';
 
+// ==============================================
+// START: circle calculations
 
 /**
  * wheelRotator() is a pure function that simply rotates a given
@@ -123,10 +125,21 @@ export const getRadiusPoint = (centre: Coordinate, length: number, angle: number
   );
 }
 
+//  END:  circle calculations
+// ==============================================
+// START: pen holder calculations
+
 /**
  * trianglePenHolder() calculates the Coordinates of the pen based on
  * the length of the arms of the pen holder and the Coordinates of
  * the base of each arm
+ *
+ *            /\
+ *           /  \
+ *  length1 /    \ length2
+ *         /      \
+ *        /        \
+ *     base1      base2
  *
  * @param base1 the Coordinates for the base of arm 1
  * @param base2 the Coordinates for the base of arm 2
@@ -147,10 +160,25 @@ export const trianglePenHolder = function(base1: Coordinate, base2: Coordinate, 
     throw Error('scissorPenHolder expects length1 to be no more than 130% and no less than 70% of length2.');
   }
 
-  return {
-    x: 0,
-    y: 0
-  }
+  // adjust base2 so that base1 is 0, 0 (to make calculations easier)
+  const zeroed2 = zeroOriginRadiusPoint(base1, base2);
+  const baseLength = Math.sqrt(Math.pow(zeroed2.x, 2) + Math.pow(zeroed2.y, 2));
+
+  // Since it's easier to calculating things if the base is at zero
+  // degrees, we'll add the base's angle at the end
+  const baseAngle = Math.tan(zeroed2.y / zeroed2.x); // b
+  const angle1 = Math.cos(
+    (
+      Math.pow(baseLength, 2) +
+      Math.pow(length1, 2) - // c
+      Math.pow(length2, 2) // a
+    )
+    /
+    (2 * (baseLength * length2))
+  );
+
+  // add the base angle
+  return getRadiusPoint(base1, length1, angle1 + baseAngle);
 }
 
 /**
@@ -161,14 +189,14 @@ export const trianglePenHolder = function(base1: Coordinate, base2: Coordinate, 
  * Pen holder arms are arranged in a scissor configuration
  * e.g.     /\ returnLength
  *         /  \
- *         \  /
- *          \/
- *          /\ hingeOffset
- *         /  \
- *        /    \ base
+ *         \  /                    /        \
+ *          \/                    /          \
+ *          /\ hingeOffset       /            \ length2
+ *         /  \                 / length1      \
+ *  base1 /    \ base2         /                \
  *
- * @param base1 the Coordinates for the base of arm 1
- * @param base2 the Coordinates for the base of arm 2
+ * @param base1 the Coordinates for the base of length1
+ * @param base2 the Coordinates for the base of length2
  * @param length1 the length of arm 1
  * @param hingeOffset the position of the hinge of the scissor
  * @param length2 the length of arm 2 (defaults to length of arm 1)
@@ -187,21 +215,81 @@ export const scissorPenHolder = function(base1: Coordinate, base2: Coordinate, l
     throw Error('scissorPenHolder expects length1 to be no more than 130% and no less than 70% of length2.');
   }
 
-  const returnLength1 = length1 * (1 - hingeOffset)
-  const returnLength2 = length2 * (1 - hingeOffset)
+  const baseHinge1 = length1 * hingeOffset;
+  const baseHinge2 = length2 * hingeOffset;
+  const returnLength1 = length1 * (1 - hingeOffset);
+  const returnLength2 = length2 * (1 - hingeOffset);
 
-  return {
-    x: 0,
-    y: 0
-  }
+  // adjust base2 so that base1 is 0, 0 (to make calculations easier)
+  const zeroed2 = zeroOriginRadiusPoint(base1, base2);
+  const baseLength = Math.sqrt(Math.pow(zeroed2.x, 2) + Math.pow(zeroed2.y, 2));
+
+  // Since it's easier to calculating things if the base is at zero
+  // degrees, we'll add the base's angle at the end
+  const baseAngle = Math.tan(zeroed2.y / zeroed2.x);
+  const angle1 = Math.cos(
+    (
+      Math.pow(baseLength, 2) + // b
+      Math.pow(baseHinge1, 2) - // c
+      Math.pow(baseHinge2, 2) // a
+    )
+    /
+    (2 * (baseLength * baseHinge2))
+  );
+  const angle2 = Math.cos(
+    (
+      Math.pow(baseHinge2, 2) + // a
+      Math.pow(baseLength, 2) - // b
+      Math.pow(baseHinge1, 2) // c
+    )
+    /
+    (2 * (baseHinge2 * baseLength))
+  );
+
+  return trianglePenHolder(
+    getRadiusPoint(base1, length1, angle1 + baseAngle),
+    getRadiusPoint(base2, length2, angle2 + baseAngle),
+    returnLength1,
+    returnLength2
+  );
 }
 
-export const TPenHolder = function(origin1: Coordinate, origin2: Coordinate, length: number) : Coordinate {
+
+/**
+ * TPenHolder () calculates the Coordinates of the pen based on
+ * the length of a central arm (that is always halfway along the
+ * baseLength) and the Coordinates of each end of the baseLength
+ *
+ * Pen holder arms are arranged in a T configuration
+ * e.g.      |
+ *           | length
+ *           |
+ *           |
+ *  base1    |    base2
+ *    ---------------
+ *       baseLength
+ *
+ * @param base1 the Coordinates for the base of arm 1
+ * @param base2 the Coordinates for the base of arm 2
+ * @param length the length of vertical part of the T
+ */
+export const TPenHolder = function(base1: Coordinate, base2: Coordinate, length: number) : Coordinate {
   if (length <= 0) {
     throw Error('TPenHolder() expects third parameter length to be greater than zero');
   }
-  return {
-    x: 0,
-    y: 0
-  }
+
+  // adjust base2 so that base1 is 0, 0 (to make calculations easier)
+  const zeroed2 = zeroOriginRadiusPoint(base1, base2);
+  const baseLength = (Math.sqrt(Math.pow(zeroed2.x, 2) + Math.pow(zeroed2.y, 2)) / 2);
+
+  // Since it's easier to calculating things if the base is at zero
+  // degrees, we'll add the base's angle at the end
+  const baseAngle = Math.tan(zeroed2.y / zeroed2.x);
+
+  // the T pen holder essentially forms an isoscelese triangle so we
+  // can just use tan to calculate one angle
+  const angle1 = Math.tan(length / baseLength)
+
+  // add the base angle
+  return getRadiusPoint(base1, length, angle1 + baseAngle);
 }
