@@ -1,8 +1,6 @@
 # whirliDoodle
 
-whirliDoodle is a [machine](README_physical-whirliDoodle-machine.md) (or [virtual machine](README_virtual-whirliDoodle.md)) that draws patterns determined by the spacial relationship between the pen holder arms and the rotating wheels.
-
-WhirliDoodle essentially creates algorythmic art.
+WhirliDoodle is a [machine](README_physical-whirliDoodle-machine.md) (or [virtual machine](README_virtual-whirliDoodle.md)) that draws patterns determined by the spacial relationship between the pen holder arms and the rotating wheels. It essentially creates algorythmic art.
 
 It is inspired by [Drawing Machine II](https://www.youtube.com/watch?v=BG9e06IWAxE) and [drawing machine maios 3](https://www.youtube.com/watch?v=rukYhTylK_M) (and others - see bottom for more links).
 
