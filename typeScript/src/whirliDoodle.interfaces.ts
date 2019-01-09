@@ -28,3 +28,8 @@ export interface ScissorArm extends PenHolderArm {
   pivotOffset: number, // pivotOffset must be greater than 0.3 & less than 0.8
   returnLength: number
 }
+
+export interface minMax {
+  min: number,
+  max: number
+}

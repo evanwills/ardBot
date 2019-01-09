@@ -26,33 +26,12 @@ export class WhirliDoodleMachine {
   /**
    * draw() outputs SVG quadratic curve coordinates
    */
-  public draw(): string {
-    const newCoordinate = this.drawingSpace.movePen(
+  public draw(): Coordinate {
+    return this.drawingSpace.movePen(
       this.penHolder.movePen(
         this.base1.rotatePoint(),
         this.base2.rotatePoint()
       )
     );
-    if (this.oldCoordinate === null) {
-      this.oldCoordinate = newCoordinate;
-      return "M " + newCoordinate.x + ',' + newCoordinate.y + ' Q';
-    } else {
-      // Need to work out how to set up control points for quadratic
-      // bezier nodes
-      // See https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths#Curve_commands
-      // for more info.
-      let quadratic = '';
-      if (this.firstQuadratic === false) {
-        // somehow calculate quatratic control node
-        quadratic += 'T';
-        this.firstQuadratic = true;
-      }
-      const relativeCoordinate = {
-        x: this.oldCoordinate.x - newCoordinate.x,
-        y: this.oldCoordinate.y - newCoordinate.y
-      }
-      this.oldCoordinate = newCoordinate;
-      return quadratic + ' ' + relativeCoordinate.x + ',' + relativeCoordinate.y;
-    }
   }
 }
