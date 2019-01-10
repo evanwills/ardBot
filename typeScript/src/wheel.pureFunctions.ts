@@ -1,4 +1,4 @@
-import {Coordinate, PenHolderArm, ScissorArm} from './whirliDoodle.interfaces';
+import {Coordinate, PenHolderArm, ScissorArm} from './dataType.interfaces';
 
 /**
  * All functions within this file are "Pure"
