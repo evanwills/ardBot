@@ -2,8 +2,10 @@ import { Wheel, DoubleWheel } from './wheel.interface';
 import {IncrementManager} from './incrementManager.interface';
 import { PenHolder, TrianglePenHolder, ScissorPenHolder, TSquarePenHolder } from './penHolder.interface';
 import { DrawingTable, StaticDrawingTable, RotatingDrawingTable } from './drawingTable.interface';
-import {WhirliDoodleMachine} from './whirliDoodleMachine';
-import {init} from './initialState';
+import { WhirliDoodleMachine } from './whirliDoodleMachine';
+import { SVG } from 'SVG';
+import { SVGnodes } from './SVGnodes';
+import { init } from './initialState';
 
 
 let steps: number = init.steps;
@@ -77,11 +79,13 @@ if (init.drawingTable.type !== 'RotatingDrawingTable') {
   );
 }
 
-let drawer = new WhirliDoodleMachine(base1, base2, penArm, drawingTable);
+let machine = new WhirliDoodleMachine(base1, base2, penArm, drawingTable);
+let SVGcode = new SVG();
 
+let SVGelement = document.getElementById('svgWrap');
 
-let output = [];
+// let output = [];
 while (steps >= 0) {
-  output.push(drawer.draw());
+  $('svgWrap').attr('points', SVGcode.getNextPolylineNode(machine.draw()));
   steps -= 1;
 }

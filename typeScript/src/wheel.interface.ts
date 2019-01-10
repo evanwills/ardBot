@@ -1,4 +1,4 @@
-import {Coordinate, CircleConstructor} from './whirliDoodle.interfaces';
+import {Coordinate, CircleConstructor, FirstCircleConstructor} from './whirliDoodle.interfaces';
 import {IncrementManager} from './incrementManager.interface';
 import {wheelRotator, getRadiusPoint, plusMinus360, signedDifference} from './whirliDoodle.pureFunctions';
 
@@ -108,7 +108,7 @@ export abstract class MultiWheel extends Wheel {
 }
 
 export class DoubleWheel extends MultiWheel {
-  public constructor (primaryWheel: CircleConstructor, secondaryWheel: CircleConstructor) {
+  public constructor (primaryWheel: FirstCircleConstructor, secondaryWheel: CircleConstructor) {
     if (typeof primaryWheel.initialAngle === 'undefined') {
       primaryWheel.initialAngle = 0;
     }
@@ -130,7 +130,7 @@ export class DoubleWheel extends MultiWheel {
  * second parameter
  */
 export class CompoundWheel extends MultiWheel {
-  public constructor (primaryWheel: CircleConstructor, secondaryWheel: Wheel) {
+  public constructor (primaryWheel: FirstCircleConstructor, secondaryWheel: Wheel) {
     if (typeof primaryWheel.initialAngle === 'undefined') {
       primaryWheel.initialAngle = 0;
     }

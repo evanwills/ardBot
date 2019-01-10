@@ -1,5 +1,5 @@
 export const init = {
-  steps: 2000000,
+  steps: 20000,
   base1: {
     type: 'compound',
     origin: {

@@ -1,7 +1,7 @@
 
 import { Coordinate, minMax } from './whirliDoodle.interfaces';
 
-export class SVG {
+export class SVGnodes {
   private oldCoordinate: Coordinate;
   private xMin: number;
   private xMax: number;

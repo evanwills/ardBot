@@ -24,7 +24,7 @@ export class WhirliDoodleMachine {
   }
 
   /**
-   * draw() outputs SVG quadratic curve coordinates
+   * draw() outputs the next X/Y coordinate to be used in the artwork.
    */
   public draw(): Coordinate {
     return this.drawingSpace.movePen(

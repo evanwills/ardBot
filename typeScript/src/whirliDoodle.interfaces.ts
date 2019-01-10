@@ -11,10 +11,13 @@ export interface Circle {
 }
 
 export interface CircleConstructor {
-  origin: Coordinate,
+  origin?: Coordinate,
   radiusLength: number,
   angleIncrement: IncrementManager,
   initialAngle?: number
+}
+export interface FirstCircleConstructor extends CircleConstructor {
+  origin: Coordinate
 }
 
 export interface PenHolderArm {
