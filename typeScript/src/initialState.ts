@@ -44,16 +44,9 @@ export const init = {
   },
   penHolder: {
     type: 'ScissorPenHolder',
-    arms: [
-      {
-        length: 723,
-        offset: 0.67
-      },
-      {
-        length: 698,
-        offset: 0.65
-      }
-    ]
+    arm1Length: 723,
+    arm2Length: 698,
+    hingeOffset: 0.667
   },
   drawingTable: {
     type: 'RotatingDrawingTable',
@@ -61,6 +54,7 @@ export const init = {
       x: 350,
       y: 200
     },
+    radiusLength: 400,
     angleIncrement: {
       type: 'IncrementManager',
       value: 0.333

@@ -1,6 +1,6 @@
-import { Coordinate } from "./whirliDoodle.interfaces";
-import {IncrementManager} from './incrementManager.interface';
-import {wheelRotator, plusMinus360} from './whirliDoodle.pureFunctions';
+import { Coordinate } from "./dataType.interfaces";
+import { IncrementManager } from './incrementManager.interface';
+import { wheelRotator, plusMinus360 } from './wheel.pureFunctions';
 
 export abstract class DrawingTable {
   /**

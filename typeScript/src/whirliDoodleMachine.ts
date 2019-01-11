@@ -1,7 +1,7 @@
 import { Wheel} from './wheel.interface';
 import { PenHolder } from './penHolder.interface';
 import { DrawingTable, StaticDrawingTable } from './drawingTable.interface';
-import { Coordinate } from './whirliDoodle.interfaces';
+import { Coordinate } from './dataType.interfaces';
 
 export class WhirliDoodleMachine {
   private base1: Wheel;

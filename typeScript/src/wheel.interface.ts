@@ -1,6 +1,6 @@
-import {Coordinate, CircleConstructor, FirstCircleConstructor} from './whirliDoodle.interfaces';
-import {IncrementManager} from './incrementManager.interface';
-import {wheelRotator, getRadiusPoint, plusMinus360, signedDifference} from './whirliDoodle.pureFunctions';
+import { Coordinate, CircleConstructor, FirstCircleConstructor } from './dataType.interfaces';
+import { IncrementManager} from './incrementManager.interface';
+import { wheelRotator, getRadiusPoint, plusMinus360, signedDifference } from './wheel.pureFunctions';
 
 
 export class Wheel {

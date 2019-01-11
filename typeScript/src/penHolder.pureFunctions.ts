@@ -1,4 +1,5 @@
-import {Coordinate, PenHolderArm, ScissorArm} from './dataType.interfaces';
+import { Coordinate, PenHolderArm, ScissorArm } from './dataType.interfaces';
+import { zeroOriginRadiusPoint, getRadiusPoint } from './wheel.pureFunctions'
 
 /**
  * All functions within this file are "Pure"
@@ -185,7 +186,7 @@ export const TPenHolder = function(base1: Coordinate, base2: Coordinate, length:
   // adjust base2 so that base1 is 0, 0 (to make calculations easier)
   const zeroed2 = zeroOriginRadiusPoint(base1, base2);
 
-  // WE half the base length because we always want the vertical part
+  // We half the base length because we always want the vertical part
   // of the T to be centred on the base.
   const baseLength = (Math.sqrt(Math.pow(zeroed2.x, 2) + Math.pow(zeroed2.y, 2)) / 2);
 

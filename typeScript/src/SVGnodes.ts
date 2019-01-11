@@ -1,5 +1,5 @@
 
-import { Coordinate, minMax } from './whirliDoodle.interfaces';
+import { Coordinate, minMax } from './dataType.interfaces';
 
 export class SVGnodes {
   private oldCoordinate: Coordinate;

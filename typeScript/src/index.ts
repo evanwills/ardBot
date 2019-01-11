@@ -3,7 +3,7 @@ import {IncrementManager} from './incrementManager.interface';
 import { PenHolder, TrianglePenHolder, ScissorPenHolder, TSquarePenHolder } from './penHolder.interface';
 import { DrawingTable, StaticDrawingTable, RotatingDrawingTable } from './drawingTable.interface';
 import { WhirliDoodleMachine } from './whirliDoodleMachine';
-import { SVG } from 'SVG';
+// import { SVG } from 'SVG';
 import { SVGnodes } from './SVGnodes';
 import { init } from './initialState';
 
@@ -52,17 +52,17 @@ if (init.base2.type === 'DoubleWheel') {
 let penArm: PenHolder;
 if (init.penHolder.type === 'TrianglePenHolder') {
   penArm = new TrianglePenHolder(
-    init.penHolder.arms[0].length,
-    init.penHolder.arms[1].length
+    init.penHolder.arm1Length,
+    init.penHolder.arm2Length
   );
 } else if (init.penHolder.type === 'ScissorPenHolder') {
   penArm = new ScissorPenHolder(
-    init.penHolder.arms[0].length,
-    init.penHolder.arms[0].offset,
-    init.penHolder.arms[1].length);
+    init.penHolder.arm1Length,
+    init.penHolder.hingeOffset,
+    init.penHolder.arm2Length);
 } else if (init.penHolder.type === 'TSquarePenHolder') {
   penArm = new TSquarePenHolder(
-    init.penHolder.arms[0].length
+    init.penHolder.arm1Length
   );
 }
 
@@ -80,12 +80,17 @@ if (init.drawingTable.type !== 'RotatingDrawingTable') {
 }
 
 let machine = new WhirliDoodleMachine(base1, base2, penArm, drawingTable);
-let SVGcode = new SVG();
+let SVGnode = new SVGnodes();
 
-let SVGelement = document.getElementById('svgWrap');
+// let SVGelement = document.getElementById('svgWrap');
 
+let nodes = '';
+const SVGelementID = '#whirliDoodlePollyline';
+// const SVGelementID = '#whirliDoodlePath';
 // let output = [];
 while (steps >= 0) {
-  $('svgWrap').attr('points', SVGcode.getNextPolylineNode(machine.draw()));
+  nodes += SVGnode.getNextPolylineNode(machine.draw());
+  // nodes += SVGnode.getNextPathNode(machine.draw());
+  $(SVGelementID).attr('points', nodes);
   steps -= 1;
 }

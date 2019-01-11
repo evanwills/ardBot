@@ -1,5 +1,5 @@
-import { Coordinate } from "./whirliDoodle.interfaces";
-import {trianglePenHolder, scissorPenHolder, TPenHolder} from './whirliDoodle.pureFunctions';
+import { Coordinate } from "./dataType.interfaces";
+import { trianglePenHolder, scissorPenHolder, TPenHolder } from './penHolder.pureFunctions';
 
 export abstract class PenHolder {
   public abstract movePen(base1: Coordinate, base2: Coordinate): Coordinate;
