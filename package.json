@@ -1,0 +1,13 @@
+{
+  "name": "whirli-doodle",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jquery": "^3.3.29",
+    "svg.js": "^2.7.1"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "typescript": "^3.1.3"
+  }
+}

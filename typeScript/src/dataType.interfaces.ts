@@ -10,14 +10,10 @@ export interface Circle {
   circumferencePoint: Coordinate
 }
 
-export interface CircleConstructor {
-  origin?: Coordinate,
+export interface WheelConstructor {
   radiusLength: number,
   angleIncrement: IncrementManager,
   initialAngle?: number
-}
-export interface FirstCircleConstructor extends CircleConstructor {
-  origin: Coordinate
 }
 
 export interface PenHolderArm {
@@ -35,4 +31,10 @@ export interface ScissorArm extends PenHolderArm {
 export interface minMax {
   min: number,
   max: number
+}
+
+export interface BaseOffsets {
+  base1Length: number,
+  base2Length?: number,
+  offsetAngle: number
 }

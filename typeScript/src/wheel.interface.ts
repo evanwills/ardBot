@@ -1,19 +1,18 @@
-import { Coordinate, CircleConstructor, FirstCircleConstructor } from './dataType.interfaces';
+import { Coordinate, WheelConstructor } from './dataType.interfaces';
 import { IncrementManager} from './incrementManager.interface';
 import { wheelRotator, getRadiusPoint, plusMinus360, signedDifference } from './wheel.pureFunctions';
 
 
 export class Wheel {
-  protected origin: Coordinate;
+  protected origin: Coordinate = {x: 0, y: 0};
   protected radiusPoint: Coordinate;
   protected radiusLength: number;
   protected angleIncrement: IncrementManager;
 
-  public constructor (origin: Coordinate, radiusLength: number, angleIncrement: IncrementManager, initialAngle: number = 0) {
-    this.origin = origin;
+  public constructor (radiusLength: number, angleIncrement: IncrementManager, initialAngle: number = 0) {
     this.radiusLength = radiusLength;
     this.angleIncrement = angleIncrement;
-    this.radiusPoint = getRadiusPoint(origin, radiusLength, plusMinus360(initialAngle));
+    this.radiusPoint = getRadiusPoint(this.origin, radiusLength, plusMinus360(initialAngle));
   }
 
   /**
@@ -57,6 +56,7 @@ export class Wheel {
 
   public getRadiusPoint () : Coordinate { return this.radiusPoint; }
   public getOrigin () : Coordinate { return this.origin; }
+  public getRadiusLength () : number { return this.radiusLength; }
 
   public redefineOrigin(newOrigin: Coordinate) {
     const xOffset = signedDifference(newOrigin.x, this.origin.x);
@@ -100,6 +100,7 @@ export abstract class MultiWheel extends Wheel {
   }
 
   public getRadiusPoint () { return this.secondaryWheel.getRadiusPoint(); }
+  public getRadiusLength () : number { return this.radiusLength + this.secondaryWheel.getRadiusLength(); }
 
   public redefineOrigin(newOrigin: Coordinate) {
     super.redefineOrigin(newOrigin);
@@ -108,16 +109,17 @@ export abstract class MultiWheel extends Wheel {
 }
 
 export class DoubleWheel extends MultiWheel {
-  public constructor (primaryWheel: FirstCircleConstructor, secondaryWheel: CircleConstructor) {
+  public constructor (primaryWheel: WheelConstructor, secondaryWheel: WheelConstructor) {
     if (typeof primaryWheel.initialAngle === 'undefined') {
       primaryWheel.initialAngle = 0;
     }
-    super(primaryWheel.origin, primaryWheel.radiusLength, primaryWheel.angleIncrement, primaryWheel.initialAngle);
+    super(primaryWheel.radiusLength, primaryWheel.angleIncrement, primaryWheel.initialAngle);
 
     if (typeof secondaryWheel.initialAngle === 'undefined') {
       secondaryWheel.initialAngle = 0;
     }
-    this.secondaryWheel = new Wheel(this.radiusPoint, secondaryWheel.radiusLength, secondaryWheel.angleIncrement, secondaryWheel.initialAngle);
+    this.secondaryWheel = new Wheel(secondaryWheel.radiusLength, secondaryWheel.angleIncrement, secondaryWheel.initialAngle);
+    this.secondaryWheel.redefineOrigin(this.radiusPoint);
   }
 }
 
@@ -130,11 +132,11 @@ export class DoubleWheel extends MultiWheel {
  * second parameter
  */
 export class CompoundWheel extends MultiWheel {
-  public constructor (primaryWheel: FirstCircleConstructor, secondaryWheel: Wheel) {
+  public constructor (primaryWheel: WheelConstructor, secondaryWheel: Wheel) {
     if (typeof primaryWheel.initialAngle === 'undefined') {
       primaryWheel.initialAngle = 0;
     }
-    super(primaryWheel.origin, primaryWheel.radiusLength, primaryWheel.angleIncrement, primaryWheel.initialAngle);
+    super(primaryWheel.radiusLength, primaryWheel.angleIncrement, primaryWheel.initialAngle);
 
     this.secondaryWheel = secondaryWheel;
     this.secondaryWheel.redefineOrigin(this.radiusPoint);

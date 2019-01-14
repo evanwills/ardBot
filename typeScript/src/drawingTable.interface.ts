@@ -15,6 +15,8 @@ export abstract class DrawingTable {
    *                 penHolder
    */
   public abstract movePen (position: Coordinate): Coordinate;
+  public abstract redefineOrigin(newOrigin: Coordinate) : void;
+
 }
 export class StaticDrawingTable extends DrawingTable {
 
@@ -36,18 +38,19 @@ export class StaticDrawingTable extends DrawingTable {
   public movePen (position: Coordinate): Coordinate {
     return position;
   }
+
+  public redefineOrigin(newOrigin: Coordinate) {}
 }
 
 export class RotatingDrawingTable extends DrawingTable {
-  private origin: Coordinate;
+  private origin: Coordinate = {x: 0, y: 0};
   private angleIncrement: IncrementManager;
-  private cumulativeAngle: number;
+  private cumulativeAngle: number = 0;
 
-  public constructor(origin: Coordinate, angleIncrement: IncrementManager, initialAngle: number = 0) {
+  public constructor(origin: Coordinate, angleIncrement: IncrementManager) {
     super();
     this.origin = origin;
     this.angleIncrement = angleIncrement;
-    this.cumulativeAngle = plusMinus360(initialAngle);
   }
 
   public movePen (position: Coordinate) : Coordinate {
@@ -68,5 +71,11 @@ export class RotatingDrawingTable extends DrawingTable {
       this.cumulativeAngle + this.angleIncrement.getIncrementedStep()
     );
     return this.cumulativeAngle;
+  }
+
+
+  public redefineOrigin(newOrigin: Coordinate) {
+    this.origin.x = newOrigin.x;
+    this.origin.y = newOrigin.y;
   }
 }

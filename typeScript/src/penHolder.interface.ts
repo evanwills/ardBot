@@ -2,12 +2,21 @@ import { Coordinate } from "./dataType.interfaces";
 import { trianglePenHolder, scissorPenHolder, TPenHolder } from './penHolder.pureFunctions';
 
 export abstract class PenHolder {
+  readonly type: string = 'unknown';
+  readonly defaultOffsetAngle: number = 30;
+  readonly maxOffsetAngle: number = 90;
+
   public abstract movePen(base1: Coordinate, base2: Coordinate): Coordinate;
+
+  public abstract getArmExtent(arm: number) : number;
 }
 
 export class TrianglePenHolder extends PenHolder {
   private length1: number;
   private length2: number;
+  readonly type: string = 'triangle';
+  readonly defaultOffsetAngle: number = 90;
+  readonly maxOffsetAngle: number = 90;
 
   public constructor (length1: number, length2: number) {
     super();
@@ -24,6 +33,14 @@ export class TrianglePenHolder extends PenHolder {
   public movePen (base1: Coordinate, base2: Coordinate): Coordinate {
     return trianglePenHolder(base1, base2, this.length1, this.length2);
   }
+
+  public getArmExtent(arm: number) : number {
+    if (arm === 1) {
+      return this.length1;
+    } else {
+      return this.length2;
+    }
+  }
 }
 
 
@@ -31,6 +48,9 @@ export class ScissorPenHolder extends PenHolder {
   private length1: number;
   private length2: number;
   private hingeOffset: number;
+  readonly type: string = 'scissor';
+  readonly defaultOffsetAngle: number = 30;
+  readonly maxOffsetAngle: number = 45;
   // private return1: number;
   // private return2: number;
 
@@ -57,10 +77,23 @@ export class ScissorPenHolder extends PenHolder {
   public movePen (base1: Coordinate, base2: Coordinate): Coordinate {
     return scissorPenHolder(base1, base2, this.length1, this.hingeOffset, this.length2);
   }
+
+  public getArmExtent(arm: number) : number {
+    let len;
+    if (arm === 1) {
+      len = this.length1;
+    } else {
+      len = this.length2;
+    }
+    return ((len * (1 - this.hingeOffset)) + len);
+  }
 }
 
 export class TSquarePenHolder extends PenHolder {
   private length: number;
+  readonly type: string = 'tSquare';
+  readonly defaultOffsetAngle: number = 30;
+  readonly maxOffsetAngle: number = 45;
 
   public constructor (length: number) {
     super();
@@ -72,6 +105,10 @@ export class TSquarePenHolder extends PenHolder {
 
   public movePen (base1: Coordinate, base2: Coordinate): Coordinate {
     return TPenHolder(base1, base2, this.length);
+  }
+
+  public getArmExtent(arm: number) : number {
+    return this.length;
   }
 }
 

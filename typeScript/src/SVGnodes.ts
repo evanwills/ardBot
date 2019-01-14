@@ -2,15 +2,15 @@
 import { Coordinate, minMax } from './dataType.interfaces';
 
 export class SVGnodes {
-  private oldCoordinate: Coordinate;
-  private xMin: number;
-  private xMax: number;
-  private yMin: number;
-  private yMax: number;
+  private oldCoordinate: Coordinate = {x: 0, y: 0};
+  private xMin: number = 0;
+  private xMax: number = 0;
+  private yMin: number = 0;
+  private yMax: number = 0;
   private xHasChanged: boolean = false;
   private yHasChanged: boolean = false;
   private firstQuadratic: boolean = false
-  private allCoordinates: Coordinate[];
+  private allCoordinates: Coordinate[] = [];
 
 
   public getNextPathNode (newCoordinate: Coordinate, addToAll: boolean = true) : string {

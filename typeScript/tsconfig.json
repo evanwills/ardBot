@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
-      "outDir": "./built",
-      "allowJs": true,
-      "target": "es5"
+    "allowJs": true,
+    "outDir": "./built",
+    "sourceMap": true,
+    "target": "es6"
   },
+  "compileOnSave": true,
   "include": [
       "./src/**/*"
+  ],
+  "types": [
+    "jquery"
   ]
 }
