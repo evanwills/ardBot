@@ -1,4 +1,4 @@
-import { Coordinate } from "./dataType.interfaces";
+import { Coordinate } from './dataType.interfaces';
 import { IncrementManager } from './incrementManager.interface';
 import { wheelRotator, plusMinus360 } from './wheel.pureFunctions';
 

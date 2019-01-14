@@ -1,5 +1,6 @@
 
 import { Coordinate, minMax } from './dataType.interfaces';
+import { round } from './generic.pureFunctions';
 
 export class SVGnodes {
   private oldCoordinate: Coordinate = {x: 0, y: 0};
@@ -11,6 +12,7 @@ export class SVGnodes {
   private yHasChanged: boolean = false;
   private firstQuadratic: boolean = false
   private allCoordinates: Coordinate[] = [];
+  private decimalPlaces: number = 2;
 
 
   public getNextPathNode (newCoordinate: Coordinate, addToAll: boolean = true) : string {
@@ -39,7 +41,7 @@ export class SVGnodes {
         y: this.oldCoordinate.y - newCoordinate.y
       }
       this.oldCoordinate = newCoordinate;
-      return quadratic + ' ' + relativeCoordinate.x + ',' + relativeCoordinate.y;
+      return quadratic + ' ' + round(relativeCoordinate.x, this.decimalPlaces) + ',' + round(relativeCoordinate.y, this.decimalPlaces);
     }
   }
 
@@ -56,7 +58,7 @@ export class SVGnodes {
       sep = ' ';
     }
 
-    return sep + newCoordinate.x + ',' + newCoordinate.y;
+    return sep + round(newCoordinate.x, this.decimalPlaces) + ',' + round(newCoordinate.y, this.decimalPlaces);
   }
 
   public dimensionsHaveChanged() : boolean {
@@ -106,6 +108,8 @@ export class SVGnodes {
     this.yMax = coordinate.y;
     this.oldCoordinate = coordinate;
   }
+
+  private
 
   //  END:  private methods
   // ------------------------------------------------------
