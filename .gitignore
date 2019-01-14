@@ -1,1 +1,4 @@
 typeScript/built/*
+
+node_modules/
+typeScript/doTSC.sh
